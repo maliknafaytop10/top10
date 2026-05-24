@@ -1,206 +1,661 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>TOP 10 - MALIK NAFAY</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MALIK NAFAY STUDIO</title>
 
 <style>
-body{
-background:black;
-color:white;
-font-family:Arial;
-text-align:center;
+
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+font-family:Arial;
 scroll-behavior:smooth;
 }
 
-h1{
-color:gold;
-margin-top:50px;
-}
-
-.menu{
-background:#111;
-padding:20px;
-position:sticky;
-top:0;
-}
-
-.menu a{
+body{
+background:radial-gradient(circle at top,#111133,#000000);
 color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:cyan;
+text-shadow:0 0 20px cyan;
+animation:logoGlow 2s infinite alternate;
+}
+
+@keyframes logoGlow{
+
+from{
+text-shadow:0 0 10px cyan;
+}
+
+to{
+text-shadow:0 0 30px red;
+}
+
+}
+
+nav a{
 text-decoration:none;
-font-size:22px;
-margin:10px;
-padding:10px 20px;
-background:#222;
-border-radius:10px;
+color:white;
+margin-left:25px;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ff004c;
+text-shadow:0 0 10px red;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:100px 8%;
+background:linear-gradient(135deg,#000000,#111133,#220022);
+}
+
+.hero-content{
+max-width:600px;
+}
+
+.hero-content h1{
+font-size:70px;
+color:cyan;
+text-shadow:0 0 20px cyan;
+}
+
+.hero-content h2{
+font-size:32px;
+margin-top:10px;
+color:#ff004c;
+}
+
+.hero-content p{
+margin-top:20px;
+line-height:1.8;
+color:#ddd;
+}
+
+.hero-btn{
 display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#ff004c;
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+box-shadow:0 0 20px red;
+transition:0.4s;
 }
 
-.menu a:hover{
-background:gold;
-color:black;
+.hero-btn:hover{
+background:cyan;
+box-shadow:0 0 20px cyan;
+transform:scale(1.1);
 }
 
-ol{
-font-size:28px;
+.hero-image img{
+width:350px;
+border-radius:20px;
+margin-left:60px;
+box-shadow:0 0 30px cyan;
+}
+
+/* GENERAL SECTION */
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:50px;
+text-align:center;
+margin-bottom:50px;
+color:cyan;
+text-shadow:0 0 15px cyan;
+}
+
+/* ABOUT */
+
+.about{
+text-align:center;
 line-height:2;
+font-size:18px;
+color:#ccc;
 }
 
-footer{
-margin-top:50px;
-padding:20px;
+/* SERVICES */
+
+.services-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-box{
 background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid cyan;
+transition:0.4s;
+}
+
+.service-box:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px cyan;
+}
+
+.service-box h3{
+color:#ff004c;
+margin-bottom:15px;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.portfolio img{
+width:100%;
+border-radius:20px;
+transition:0.4s;
+}
+
+.portfolio img:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px cyan;
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.skill{
+padding:15px 30px;
+background:#111;
+border-radius:40px;
+border:1px solid cyan;
+box-shadow:0 0 15px cyan;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.testimonial-box{
+background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid red;
+box-shadow:0 0 15px red;
+}
+
+/* PRICING */
+
+.pricing{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.price-box{
+background:#111;
+padding:40px;
+width:300px;
+text-align:center;
+border-radius:20px;
+border:1px solid cyan;
+box-shadow:0 0 20px cyan;
+}
+
+.price-box h3{
+font-size:30px;
+color:#ff004c;
+margin-bottom:15px;
+}
+
+.price-box h1{
+font-size:50px;
+color:cyan;
+margin-bottom:15px;
+}
+
+/* MOTHER SECTION */
+
+.mother-section{
+padding:100px 20px;
+text-align:center;
+background:linear-gradient(135deg,#000000,#220022,#111133);
+}
+
+.mother-section h1{
+font-size:60px;
+color:#ff004c;
+text-shadow:0 0 20px red;
+margin-bottom:20px;
+animation:motherGlow 2s infinite alternate;
+}
+
+.mother-section h2{
+font-size:35px;
+color:cyan;
+text-shadow:0 0 20px cyan;
+}
+
+@keyframes motherGlow{
+
+from{
+text-shadow:0 0 10px red;
+}
+
+to{
+text-shadow:0 0 30px cyan;
+}
+
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+line-height:2;
 font-size:20px;
 }
+
+.contact a{
+color:cyan;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+padding:20px;
+text-align:center;
+color:#aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-image img{
+margin-left:0;
+margin-top:40px;
+width:280px;
+}
+
+.hero-content h1{
+font-size:45px;
+}
+
+.hero-content h2{
+font-size:24px;
+}
+
+nav{
+display:none;
+}
+
+}
+
 </style>
 
 </head>
+
 <body>
 
-<h1>TOP 10 👑</h1>
-<h2>By MALIK NAFAY</h2>
+<!-- HEADER -->
 
-<div class="menu">
-<a href="#cars">🚗 Cars</a>
-<a href="#games">🎮 Games</a>
-<a href="#rich">💰 Rich</a>
-<a href="#facts">🌍 Facts</a>
-<a href="#tiktok">🎵 TikTok</a>
-<a href="#drama">📺 Dramas</a>
-<a href="#brands">🏆 Brands</a>
-<a href="#phones">📱 Phones</a>
-<a href="#bikes">🏍️ Bikes</a>
+<header>
+
+<div class="logo">
+MALIK NAFAY STUDIO
 </div>
 
-<h1 id="cars">TOP 10 Cars 🚗</h1>
-<ol>
-<li>BMW</li>
-<li>Civic</li>
-<li>Lamborghini</li>
-<li>Ferrari</li>
-<li>Audi</li>
-<li>Mercedes</li>
-<li>Bugatti</li>
-<li>Supra</li>
-<li>Mustang</li>
-<li>Porsche</li>
-</ol>
+<nav>
 
-<h1 id="games">TOP 10 Games 🎮</h1>
-<ol>
-<li>GTA 5</li>
-<li>Free Fire</li>
-<li>PUBG</li>
-<li>Minecraft</li>
-<li>Call of Duty</li>
-<li>Fortnite</li>
-<li>Roblox</li>
-<li>Valorant</li>
-<li>Need for Speed</li>
-<li>FIFA</li>
-</ol>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#skills">Skills</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
 
-<h1 id="rich">TOP 10 Richest People 💰</h1>
-<ol>
-<li>MALIK NAFAY 👑</li>
-<li>Elon Musk</li>
-<li>Jeff Bezos</li>
-<li>Mark Zuckerberg</li>
-<li>Bill Gates</li>
-<li>Warren Buffett</li>
-<li>Larry Page</li>
-<li>Sergey Brin</li>
-<li>Bernard Arnault</li>
-<li>Steve Ballmer</li>
-</ol>
+</nav>
 
-<h1 id="facts">TOP 10 Facts 🌍</h1>
-<ol>
-<li>Honey never spoils 🍯</li>
-<li>Octopus has 3 hearts 🐙</li>
-<li>Bananas are berries 🍌</li>
-<li>Moon has moonquakes 🌙</li>
-<li>Sharks are older than dinosaurs 🦈</li>
-<li>Water can boil and freeze together 💧</li>
-<li>More stars than sand ✨</li>
-<li>Day on Venus is longer than a year ☀️</li>
-<li>Butterflies taste with feet 🦋</li>
-<li>Human brain is powerful 🧠</li>
-</ol>
+</header>
 
-<h1 id="tiktok">TOP 10 TikTokers 🎵</h1>
-<ol>
-<li>MALIK NAFAY 👑</li>
-<li>pakpattan123</li>
-<li>Khaby Lame</li>
-<li>Charli D’Amelio</li>
-<li>MrBeast</li>
-<li>Addison Rae</li>
-<li>Bella Poarch</li>
-<li>Zach King</li>
-<li>Dixie D’Amelio</li>
-<li>Spencer X</li>
-</ol>
+<!-- HERO -->
 
-<h1 id="drama">TOP 10 Pakistani Dramas 📺</h1>
-<ol>
-<li>Parizaad</li>
-<li>Kabhi Main Kabhi Tum</li>
-<li>Khuda Aur Mohabbat</li>
-<li>Mere Paas Tum Ho</li>
-<li>Suno Chanda</li>
-<li>Tere Bin</li>
-<li>Humsafar</li>
-<li>Ehd-e-Wafa</li>
-<li>Zindagi Gulzar Hai</li>
-<li>Ishq Murshid</li>
-</ol>
+<section class="hero" id="home">
 
-<h1 id="brands">TOP 10 Brands 🏆</h1>
-<ol>
-<li>Apple</li>
-<li>Samsung</li>
-<li>Nike</li>
-<li>BMW</li>
-<li>Adidas</li>
-<li>Gucci</li>
-<li>Louis Vuitton</li>
-<li>Mercedes</li>
-<li>Rolex</li>
-<li>Coca-Cola</li>
-</ol>
+<div class="hero-content">
 
-<h1 id="phones">TOP 10 Phones 📱</h1>
-<ol>
-<li>iPhone 16 Pro Max</li>
-<li>Samsung Galaxy S25 Ultra</li>
-<li>Google Pixel</li>
-<li>Xiaomi</li>
-<li>OnePlus</li>
-<li>Oppo</li>
-<li>Vivo</li>
-<li>Realme</li>
-<li>Infinix</li>
-<li>Tecno</li>
-</ol>
+<h1>MALIK NAFAY</h1>
 
-<h1 id="bikes">TOP 10 Bikes 🏍️</h1>
-<ol>
-<li>BMW S1000RR</li>
-<li>Kawasaki Ninja H2R</li>
-<li>Yamaha R1</li>
-<li>Honda CBR1000RR</li>
-<li>Suzuki Hayabusa</li>
-<li>Ducati Panigale</li>
-<li>KTM Duke</li>
-<li>Harley Davidson</li>
-<li>Royal Enfield</li>
-<li>Honda 125</li>
-</ol>
+<h2>Graphic Designer & Video Editor</h2>
+
+<p>
+Professional Thumbnail Maker,
+Video Editor,
+Poster Designer,
+Cyberpunk Style Designer.
+</p>
+
+<a href="#contact" class="hero-btn">
+Hire Me
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="image.jpg" alt="Malik Nafay">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h1 class="section-title">
+About Me
+</h1>
+
+<div class="about">
+
+<p>
+I am Malik Nafay.
+Professional Graphic Designer,
+Video Editor &
+Thumbnail Expert.
+I create modern cyberpunk style thumbnails,
+gaming posters,
+social media designs and edits.
+</p>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h1 class="section-title">
+Services
+</h1>
+
+<div class="services-container">
+
+<div class="service-box">
+
+<h3>Thumbnail Design</h3>
+
+<p>
+Professional YouTube thumbnails
+with glow effects.
+</p>
+
+</div>
+
+<div class="service-box">
+
+<h3>Video Editing</h3>
+
+<p>
+Gaming montage,
+shorts & reels editing.
+</p>
+
+</div>
+
+<div class="service-box">
+
+<h3>Poster Design</h3>
+
+<p>
+Gaming & business posters.
+</p>
+
+</div>
+
+<div class="service-box">
+
+<h3>Social Media Design</h3>
+
+<p>
+Professional branding designs.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+<h1 class="section-title">
+Portfolio
+</h1>
+
+<div class="portfolio">
+
+<img src="Gemini_Generated_Image_dstacddstacddsta.png">
+
+<img src="image.jpg">
+
+<img src="d5d6f996-8b19-4c49-b197-8cadeda86070.png">
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h1 class="section-title">
+Skills
+</h1>
+
+<div class="skills">
+
+<div class="skill">Graphic Designer</div>
+
+<div class="skill">Video Editor</div>
+
+<div class="skill">Thumbnail Maker</div>
+
+<div class="skill">Gaming Poster Designer</div>
+
+<div class="skill">Social Media Branding</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials">
+
+<h1 class="section-title">
+Testimonials
+</h1>
+
+<div class="testimonials">
+
+<div class="testimonial-box">
+
+<p>
+"Best Thumbnail Designer 🔥"
+</p>
+
+</div>
+
+<div class="testimonial-box">
+
+<p>
+"Professional Video Editing 💯"
+</p>
+
+</div>
+
+<div class="testimonial-box">
+
+<p>
+"Cyberpunk style designs are amazing ⚡"
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+<h1 class="section-title">
+Pricing
+</h1>
+
+<div class="pricing">
+
+<div class="price-box">
+
+<h3>Thumbnail</h3>
+
+<h1>500</h1>
+
+<p>
+Professional Thumbnail Design
+</p>
+
+</div>
+
+<div class="price-box">
+
+<h3>Video Edit</h3>
+
+<h1>500</h1>
+
+<p>
+Professional Video Editing
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MOTHER SECTION -->
+
+<section class="mother-section">
+
+<h1>
+I LOVE MY MOTHER ❤️
+</h1>
+
+<h2>
+( THANKS FOR WATCH )
+</h2>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h1 class="section-title">
+Contact
+</h1>
+
+<div class="contact">
+
+<p>
+📞 03022003786
+</p>
+
+<p>
+📧 maliknafay.pkp3@gmail.com
+</p>
+
+<p>
+Instagram:
+<a href="https://instagram.com/maliknafay321">
+@maliknafay321
+</a>
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer>
-© 2026 TOP 10 - By MALIK NAFAY 👑
+
+© 2026 MALIK NAFAY STUDIO
+| All Rights Reserved
+
 </footer>
 
 </body>

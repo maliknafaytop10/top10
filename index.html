@@ -368,12 +368,37 @@
 
             <!-- Form -->
             <div class="contact-form">
-                <form action="https://getform.io/f/brolvoga" method="POST" class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="4" placeholder="Your Project Details / Message" required></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+    <form action="https://formspree.io/f/xanygpkp" method="POST" class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Project Details / Message" required></textarea>
+        <button type="submit" class="submit-btn" onclick="playPerfectSound(event)">Send Message</button>
+    </form>
+</div>
+
+<audio id="myWebSound" src="music.mp4" preload="auto"></audio>
+
+<script>
+function playPerfectSound(e) {
+    var audio = document.getElementById("myWebSound");
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play().catch(function(err) {
+            console.log("Sound play blocked: ", err);
+        });
+    }
+}
+
+// Poori website ke har button aur link par automatic sound lagane ke liye:
+document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.querySelectorAll('button, .rect-btn, .submit-btn, a');
+    elements.forEach(function(el) {
+        el.addEventListener('click', function() {
+            playPerfectSound();
+        });
+    });
+});
+</script>
             </div>
         </div>
     </section>

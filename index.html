@@ -12,14 +12,13 @@
         * {
             margin: 0;
             padding: 0;
-            box-content: border-box;
             box-sizing: border-box;
         }
         html {
             scroll-behavior: smooth;
         }
         body {
-            background-color: #0b0c10;
+            background-color: #08090a;
             color: #ffffff;
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
@@ -30,26 +29,40 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(11, 12, 16, 0.95);
+            background: rgba(8, 9, 10, 0.95);
             backdrop-filter: blur(10px);
-            padding: 20px 40px;
+            padding: 15px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 2px solid #00ff66;
         }
-        .logo {
+        
+        /* Logo Styling */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .brand-logo {
+            height: 45px; /* Aap apne logo ke mutabiq size change kar sakte hain */
+            width: auto;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        .logo-text {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
             color: #ffffff;
-            text-decoration: none;
             letter-spacing: 1px;
         }
-        .logo span {
+        .logo-text span {
             color: #00ff66;
         }
+
         .nav-links {
             display: flex;
             list-style: none;
@@ -65,31 +78,18 @@
             transition: color 0.3s;
         }
         .nav-links a:hover {
-            color: #ff0033;
+            color: #00ff66;
         }
 
-        /* Custom Animations */
-        @keyframes smoothRotate {
+        /* Animations */
+        @keyframes greenGlow {
+            0% { box-shadow: 0 0 15px rgba(0, 255, 102, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(0, 255, 102, 0.7); }
+            100% { box-shadow: 0 0 15px rgba(0, 255, 102, 0.3); }
+        }
+        @keyframes spinLogo {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
-        }
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 15px rgba(0, 255, 102, 0.4); }
-            50% { box-shadow: 0 0 30px rgba(255, 0, 51, 0.6); }
-            100% { box-shadow: 0 0 15px rgba(0, 255, 102, 0.4); }
-        }
-        .rotate-outer {
-            animation: smoothRotate 12s linear infinite;
-        }
-        .rotate-inner {
-            animation: smoothRotate 8s linear infinite animation-direction: reverse;
-        }
-        .cta-btn {
-            transition: all 0.3s ease;
-            animation: pulseGlow 3s infinite;
-        }
-        .cta-btn:hover {
-            transform: translateY(-3px) scale(1.05);
         }
 
         /* Layout & Common Sections */
@@ -101,116 +101,203 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             font-weight: 800;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
+            color: #ffffff;
+        }
+        .section-title span {
+            color: #00ff66;
         }
 
-        /* Portfolio Grid */
-        .portfolio-grid {
+        /* Home Section Custom Styles */
+        .home-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 140px;
+            position: relative;
+            background: radial-gradient(circle at center, #0d1f14 0%, #08090a 70%);
+        }
+        .main-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(0, 255, 102, 0.2);
+        }
+        .main-heading span {
+            color: #00ff66;
+        }
+        .sub-heading {
+            font-size: 1.3rem;
+            color: #cccccc;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        /* Hire Me Button & Grid Container */
+        .hire-me-container {
+            width: 100%;
+            max-width: 900px;
+            margin-top: 20px;
+        }
+        .hire-me-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: #00ff66;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 800;
+        }
+        .rect-button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .rect-btn {
+            flex: 1;
+            min-width: 200px;
+            max-width: 400px;
+            padding: 22px;
+            background: #111413;
+            border: 2px solid #00ff66;
+            border-radius: 8px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: greenGlow 3s infinite;
+        }
+        .rect-btn:hover {
+            background: #00ff66;
+            color: #08090a;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 102, 0.4);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 40px auto 0 auto;
         }
-        .portfolio-item {
-            background: #111217;
+        .skill-box {
+            background: #111413;
             border: 1px solid #222;
+            padding: 35px 25px;
             border-radius: 12px;
-            padding: 15px;
             width: 300px;
-            text-align: left;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: all 0.3s;
         }
-        .portfolio-item:hover {
-            transform: translateY(-5px);
+        .skill-box:hover {
             border-color: #00ff66;
+            transform: translateY(-5px);
         }
-        .portfolio-item img, .portfolio-item video {
-            width: 100%;
-            border-radius: 8px;
+        .skill-icon {
+            font-size: 3rem;
             margin-bottom: 15px;
-        }
-        .portfolio-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-        .portfolio-item p {
-            font-size: 0.9rem;
-            color: #888;
+            display: inline-block;
         }
 
-        /* Contact Section Styling */
-        .contact-container {
+        /* Pricing Cards */
+        .price-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 40px auto 0 auto;
+        }
+        .price-card {
+            background: #111413;
+            border: 1px solid #222;
+            border-radius: 15px;
+            padding: 40px 30px;
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        .price-card.featured {
+            border: 2px solid #00ff66;
+            transform: scale(1.05);
+        }
+        .price-header h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .price-amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #00ff66;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Styling */
+        .contact-wrap {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 40px auto 0 auto;
             gap: 40px;
-        }
-        .contact-info {
-            flex: 1;
-            min-width: 280px;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .info-box {
-            background: #111217;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
-        }
-        .info-box:hover {
-            transform: scale(1.02);
         }
         .contact-form {
             flex: 1;
-            min-width: 300px;
-            background: #111217;
-            padding: 30px;
+            min-width: 320px;
+            background: #111413;
+            padding: 35px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             border: 1px solid #222;
         }
-        .form-group input, .form-group textarea {
+        .form-input {
             width: 100%;
-            padding: 12px;
-            background: #1a1c23;
+            padding: 14px;
+            background: #181c1a;
             border: 1px solid #333;
             border-radius: 8px;
             color: #fff;
             font-size: 1rem;
             outline: none;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-family: 'Poppins', sans-serif;
-            transition: border-color 0.3s;
         }
-        .form-group input:focus, .form-group textarea:focus {
+        .form-input:focus {
             border-color: #00ff66;
         }
         .submit-btn {
             width: 100%;
-            padding: 12px;
-            background: linear-gradient(45deg, #00ff66, #ff0033);
+            padding: 14px;
+            background: #00ff66;
+            color: #08090a;
             border: none;
             border-radius: 8px;
-            color: #fff;
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 700;
             cursor: pointer;
-            transition: 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: 0.3s;
         }
         .submit-btn:hover {
-            opacity: 0.9;
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
         }
     </style>
 </head>
@@ -218,160 +305,129 @@
 
     <!-- NAVBAR START -->
     <nav>
-        <a href="#home" class="logo">MALIK NAFAY<span>.</span></a>
+        <a href="#home" class="logo-container">
+            <!-- LOGO IMAGE TAG (Apna logo.png yahan add karein) -->
+            <img src="logo.png" alt="MNS Logo" class="brand-logo" onerror="this.style.display='none'">
+            <span class="logo-text">MALIK NAFAY<span>.</span></span>
+        </a>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#prices">Prices</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <!-- NAVBAR END -->
 
-    <!-- HOME / HERO SECTION START -->
-    <section id="home" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 120px;">
-        <!-- Background Abstract Glows -->
-        <div style="position: absolute; width: 300px; height: 300px; background: rgba(0, 255, 102, 0.12); filter: blur(120px); top: 15%; left: 10%; pointer-events: none;"></div>
-        <div style="position: absolute; width: 300px; height: 300px; background: rgba(255, 0, 51, 0.12); filter: blur(120px); bottom: 15%; right: 10%; pointer-events: none;"></div>
+    <!-- HOME SECTION START -->
+    <section id="home" class="home-section">
+        <h1 class="main-heading">MALIK NAFAY <span>STUDIO</span></h1>
+        <p class="sub-heading">Visual Masterpieces & High-End Video Editing</p>
 
-        <div style="max-width: 1200px; width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px; text-align: left;">
-            <!-- Left Side Text -->
-            <div style="flex: 1; min-width: 300px;">
-                <span style="color: #00ff66; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; display: inline-block; margin-bottom: 10px; border-left: 3px solid #ff0033; padding-left: 10px;">
-                    Welcome To The Next Level
-                </span>
-                <h1 style="font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 800; line-height: 1.2; margin: 0 0 20px 0; color: #ffffff;">
-                    MALIK NAFAY <br>
-                    <span style="background: linear-gradient(45deg, #00ff66, #ffffff, #ff0033); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                        STUDIO
-                    </span>
-                </h1>
-                <p style="font-size: 1.1rem; color: #b3b3b3; margin-bottom: 35px; max-width: 500px; line-height: 1.6;">
-                    Professional Graphic Designer & Video Editor. Transforming raw ideas into high-end visual masterpieces.
-                </p>
-                <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-                    <a href="#portfolio" class="cta-btn" style="text-decoration: none; padding: 14px 30px; background: linear-gradient(45deg, #00ff66, #ff0033); color: #fff; font-weight: 600; border-radius: 50px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;">
-                        View My Work
-                    </a>
-                    <a href="#contact" style="text-decoration: none; padding: 14px 30px; background: transparent; color: #fff; font-weight: 600; border-radius: 50px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; border: 2px solid #ffffff; transition: 0.3s;">
-                        Let's Talk
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right Side Rotating Element -->
-            <div style="flex: 1; min-width: 300px; display: flex; justify-content: center; align-items: center; position: relative;">
-                <div class="rotate-outer" style="width: 340px; height: 340px; border: 4px dashed #00ff66; border-radius: 50%; position: absolute; opacity: 0.4;"></div>
-                <div class="rotate-inner" style="width: 300px; height: 300px; border: 2px solid #ff0033; border-radius: 50%; position: absolute; opacity: 0.5;"></div>
-                <div style="width: 230px; height: 230px; background: radial-gradient(circle, #1a1c23 60%, #0b0c10 100%); border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 3px solid #ffffff; box-shadow: 0 0 40px rgba(0,0,0,0.8); z-index: 3; text-align: center; padding: 20px;">
-                    <span style="font-size: 2.8rem; margin-bottom: 5px;">🎬</span>
-                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 5px 0; color: #fff; letter-spacing: 1px;">CREATIVE</h3>
-                    <p style="margin: 0; color: #00ff66; font-size: 0.8rem; text-transform: uppercase; font-weight: bold; letter-spacing: 2px;">Editor & Designer</p>
-                </div>
+        <!-- Dynamic Hire Me Area -->
+        <div class="hire-me-container">
+            <h2 class="hire-me-title">⚡ Hire Me ⚡</h2>
+            <div class="rect-button-grid">
+                <a href="#about" class="rect-btn">Box 1 : About Me</a>
+                <a href="#skills" class="rect-btn">Box 2 : Skills</a>
+                <a href="#prices" class="rect-btn">Box 3 : Prices</a>
+                <a href="#contact" class="rect-btn">Box 4 : Send Message</a>
             </div>
         </div>
     </section>
-    <!-- HOME / HERO SECTION END -->
+    <!-- HOME SECTION END -->
 
     <!-- ABOUT SECTION START -->
-    <section id="about" style="background: #0f1015;">
-        <h2 class="section-title" style="color: #ffffff;">About Me</h2>
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: #ccc;">
+    <section id="about" style="background: #0c0e0f;">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div style="max-width: 850px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: #b3b3b3;">
             <p style="margin-bottom: 20px;">
-                Hey! I am Malik Nafay, a passionate Creative Specialist dedicated to crafting high-impact graphics and seamless video transitions.
+                Welcome to Malik Nafay Studio. I am a professional digital artist specializing in transforming raw footage into cinematic stories and creating eye-catching graphic designs that build brand identities.
             </p>
-            <p style="font-style: italic; color: #ff0033; font-weight: 600; font-size: 1.3rem; margin-top: 30px;">
+            <p style="font-style: italic; color: #00ff66; font-weight: 600; font-size: 1.4rem; margin-top: 30px; letter-spacing: 1px;">
                 "I LOVE MY MOTHER ❤️"
             </p>
         </div>
     </section>
     <!-- ABOUT SECTION END -->
 
-    <!-- PORTFOLIO SECTION START -->
-    <section id="portfolio">
-        <h2 class="section-title" style="color: #00ff66;">My Masterpieces</h2>
-        <div class="portfolio-grid">
-            
-            <!-- Item 1 -->
-            <div class="portfolio-item">
-                <div style="background: #222; height: 160px; border-radius: 8px; display: flex; justify-content: center; align-items: center; color: #555; margin-bottom: 15px;">
-                    <span style="font-size: 3rem;">🎨</span>
-                </div>
-                <h3>Graphic Design Project</h3>
-                <p>High quality gaming poster and custom social media branding.</p>
+    <!-- SKILLS SECTION START -->
+    <section id="skills">
+        <h2 class="section-title">My Pro <span>Skills</span></h2>
+        <p style="color: #888;">What I bring to the table for your brand</p>
+        
+        <div class="skills-grid">
+            <div class="skill-box">
+                <span class="skill-icon">🎬</span>
+                <h3 style="margin-bottom: 10px; font-family: 'Montserrat';">Video Editing</h3>
+                <p style="color: #aaa; font-size: 0.95rem;">Premium pacing, sound design, and insane sync transitions for Reels, Vlogs, and Gaming content.</p>
             </div>
-
-            <!-- Item 2 -->
-            <div class="portfolio-item">
-                <div style="background: #222; height: 160px; border-radius: 8px; display: flex; justify-content: center; align-items: center; color: #555; margin-bottom: 15px;">
-                    <span style="font-size: 3rem;">🎞️</span>
-                </div>
-                <h3>Video Editing Reels</h3>
-                <p>Smooth cinematic sync with premium pacing and text effects.</p>
+            <div class="skill-box">
+                <span class="skill-icon">🎨</span>
+                <h3 style="margin-bottom: 10px; font-family: 'Montserrat';">Graphic Design</h3>
+                <p style="color: #aaa; font-size: 0.95rem;">Custom stream packages, social media banner art, posters, and professional brand logos.</p>
             </div>
-
-            <!-- Item 3 -->
-            <div class="portfolio-item">
-                <div style="background: #222; height: 160px; border-radius: 8px; display: flex; justify-content: center; align-items: center; color: #555; margin-bottom: 15px;">
-                    <span style="font-size: 3rem;">💎</span>
-                </div>
-                <h3>Thumbnail Design</h3>
-                <p>High CTR, custom text-art, and eye-catching compositions.</p>
-            </div>
-
-        </div>
-    </section>
-    <!-- PORTFOLIO SECTION END -->
-
-    <!-- SERVICES SECTION START -->
-    <section id="services" style="background: #0f1015;">
-        <h2 class="section-title" style="color: #ffffff;">Services I Provide</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1100px; margin: 0 auto;">
-            <div style="background: #111217; padding: 30px; border-radius: 12px; width: 300px; border-top: 4px solid #00ff66;">
-                <h3 style="margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">Video Editing</h3>
-                <p style="color: #aaa; font-size: 0.95rem;">Vlogs, Gaming Videos, Reels, and Commercial Ads with engaging flow.</p>
-            </div>
-            <div style="background: #111217; padding: 30px; border-radius: 12px; width: 300px; border-top: 4px solid #ffffff;">
-                <h3 style="margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">Graphic Design</h3>
-                <p style="color: #aaa; font-size: 0.95rem;">Social Media Graphics, Stream Overlays, Logos, and brand kits.</p>
-            </div>
-            <div style="background: #111217; padding: 30px; border-radius: 12px; width: 300px; border-top: 4px solid #ff0033;">
-                <h3 style="margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">Thumbnails</h3>
-                <p style="color: #aaa; font-size: 0.95rem;">Clickable, ultra-vibrant Youtube thumbnails that drive massive traffic.</p>
+            <div class="skill-box">
+                <span class="skill-icon">🔥</span>
+                <h3 style="margin-bottom: 10px; font-family: 'Montserrat';">YouTube Thumbnails</h3>
+                <p style="color: #aaa; font-size: 0.95rem;">High click-through-rate compositions with glowing graphics that guarantee views.</p>
             </div>
         </div>
     </section>
-    <!-- SERVICES SECTION END -->
+    <!-- SKILLS SECTION END -->
+
+    <!-- PRICING SECTION START -->
+    <section id="prices" style="background: #0c0e0f;">
+        <h2 class="section-title">Service <span>Prices</span></h2>
+        <p style="color: #888;">Choose a package that fits your project budget</p>
+
+        <div class="price-grid">
+            <div class="price-card">
+                <div class="price-header">
+                    <h3>Basic Plan</h3>
+                    <div class="price-amount">Budget</div>
+                </div>
+                <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">Perfect for single standard video edit or a single custom social media post.</p>
+            </div>
+            <div class="price-card featured">
+                <div style="position: absolute; top: 15px; right: -30px; background: #00ff66; color: #000; padding: 4px 30px; font-size: 0.75rem; font-weight: bold; transform: rotate(45deg);">BEST</div>
+                <div class="price-header">
+                    <h3>Studio Pack</h3>
+                    <div class="price-amount">Premium</div>
+                </div>
+                <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">High-end video editing with custom graphic thumbnails and full asset formatting.</p>
+            </div>
+        </div>
+    </section>
+    <!-- PRICING SECTION END -->
 
     <!-- CONTACT SECTION START -->
     <section id="contact">
-        <h2 class="section-title" style="color: #ff0033;">Get In Touch</h2>
-        <p style="color: #ccc; margin-bottom: 40px;">Let's collaborate on your next big project. Drop a line!</p>
+        <h2 class="section-title">Send <span>Message</span></h2>
+        <p style="color: #888;">Have a project in mind? Let's talk business.</p>
 
-        <div class="contact-container">
-            <!-- Direct Info Boxes -->
-            <div class="contact-info">
-                <div class="info-box" style="border-left: 5px solid #00ff66;">
-                    <h4 style="color: #00ff66; margin-bottom: 5px;">📞 WhatsApp / Call</h4>
-                    <p style="font-weight: 600;">03022003786</p>
+        <div class="contact-wrap">
+            <div style="flex: 1; min-width: 280px; text-align: left; display: flex; flex-direction: column; gap: 15px;">
+                <div style="background: #111413; padding: 20px; border-radius: 8px; border-left: 4px solid #00ff66;">
+                    <h5 style="color: #00ff66; margin-bottom: 5px; font-size: 1rem;">WhatsApp</h5>
+                    <p style="font-size: 1.1rem;">03022003786</p>
                 </div>
-                <div class="info-box" style="border-left: 5px solid #ffffff;">
-                    <h4 style="color: #ffffff; margin-bottom: 5px;">📧 Official Email</h4>
-                    <p style="font-weight: 600;">maliknafay.pkp3@gmail.com</p>
+                <div style="background: #111413; padding: 20px; border-radius: 8px; border-left: 4px solid #ffffff;">
+                    <h5 style="color: #ffffff; margin-bottom: 5px; font-size: 1rem;">Email</h5>
+                    <p style="font-size: 1.1rem;">maliknafay.pkp3@gmail.com</p>
                 </div>
-                <div class="info-box" style="border-left: 5px solid #ff0033;">
-                    <h4 style="color: #ff0033; margin-bottom: 5px;">📸 Instagram</h4>
-                    <p><a href="https://instagram.com/maliknafay321" target="_blank" style="color: #fff; text-decoration: none; font-weight: 600;">@maliknafay321 ↗</a></p>
+                <div style="background: #111413; padding: 20px; border-radius: 8px; border-left: 4px solid #00ff66;">
+                    <h5 style="color: #00ff66; margin-bottom: 5px; font-size: 1rem;">Instagram</h5>
+                    <p><a href="https://instagram.com/maliknafay321" target="_blank" style="color: #fff; text-decoration: none;">@maliknafay321 ↗</a></p>
                 </div>
             </div>
 
-            <!-- Form -->
             <div class="contact-form">
-                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="4" placeholder="Your Project Details / Message" required></textarea>
+                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                    <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+                    <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+                    <textarea name="message" class="form-input" rows="4" placeholder="Your Message / Project Scope" style="resize: none;" required></textarea>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
@@ -380,7 +436,7 @@
     <!-- CONTACT SECTION END -->
 
     <!-- FOOTER -->
-    <footer style="padding: 30px; text-align: center; border-top: 1px solid #222; font-size: 0.9rem; color: #666;">
+    <footer style="padding: 40px; text-align: center; border-top: 1px solid #111; font-size: 0.9rem; color: #444; background: #060708;">
         &copy; 2026 Malik Nafay Studio. All Rights Reserved.
     </footer>
 

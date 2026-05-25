@@ -382,16 +382,12 @@
     <!-- FOOTER -->
     <footer style="padding: 30px; text-align: center; border-top: 1px solid #222; font-size: 0.9rem; color: #666;">
         &copy; 2026 Malik Nafay Studio. All Rights Reserved.
-    </footer>
-<!-- Floating Audio Controller Button -->
-<audio id="bgMusic" src="music.mp4" loop></audio>
-    
+    <
+<button id="audioToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; width: 60px; height: 60px; border-radius: 50%; background: #111217; border: 3px solid #00ff66; color: #00ff66; font-size: 1.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(0, 255, 102, 0.5); transition: all 0.3s ease;">
+    🔈
 </button>
 
-<!-- Audio Elements -->
-<!-- Background Music (Aap apni marzi ki mp3 file ka link bhi src me daal sakte hain) -->
-<audio id="bgMusic" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
-<!-- Hover Sound Effect -->
+<audio id="bgMusic" src="music.mp4" loop preload="auto"></audio>
 <audio id="hoverSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav" preload="auto"></audio>
 
 <script>
@@ -400,40 +396,39 @@
     const audioToggle = document.getElementById('audioToggle');
     let isPlaying = false;
 
-    // Volume sets (Background music ko halka rakha hai taaki chubhe na)
-    bgMusic.volume = 0.2; 
+    // Volume Adjustment (Music 30% background volume par)
+    bgMusic.volume = 0.3; 
     hoverSound.volume = 0.4;
 
-    // Click to Play/Pause Background Music
-    audioToggle.addEventListener('click', () => {
+    // Click to Play/Pause Function
+    audioToggle.addEventListener('click', function() {
         if (!isPlaying) {
             bgMusic.play().then(() => {
-                audioToggle.innerText = '🔊';
+                audioToggle.innerHTML = '🔊';
                 audioToggle.style.borderColor = '#ff0033';
                 audioToggle.style.color = '#ff0033';
-                audioToggle.style.boxShadow = '0 0 15px rgba(255, 0, 51, 0.4)';
+                audioToggle.style.boxShadow = '0 0 20px rgba(255, 0, 51, 0.6)';
                 isPlaying = true;
-            }).catch(err => console.log("Playback blocked or delayed."));
+            }).catch(err => {
+                console.log("Playback error: ", err);
+                alert("Song play nahi ho pa raha, check karein kya music.mp4 bilkul sahi upload hui hai?");
+            });
         } else {
             bgMusic.pause();
-            audioToggle.innerText = '🔈';
+            audioToggle.innerHTML = '🔈';
             audioToggle.style.borderColor = '#00ff66';
             audioToggle.style.color = '#00ff66';
-            audioToggle.style.boxShadow = '0 0 15px rgba(0, 255, 102, 0.4)';
+            audioToggle.style.boxShadow = '0 0 20px rgba(0, 255, 102, 0.5)';
             isPlaying = false;
         }
     });
 
-    // Add Hover Sound to the 4 Rectangular Buttons
-    // Yeh automatic aapke saare rect-btn class waale buttons par sound apply kar dega
-    const buttons = document.querySelectorAll('.rect-btn');
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', () => {
-            // Sound ko reset kar ke play karna taaki agar jaldi se mouse hilayein to har baar sound aaye
+    // Hover Sounds For Rectangular Buttons
+    const rectButtons = document.querySelectorAll('.rect-btn');
+    rectButtons.forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
             hoverSound.currentTime = 0;
-            hoverSound.play().catch(err => console.log("Audio play wrap issue"));
+            hoverSound.play().catch(e => console.log("Hover sound blocked"));
         });
     });
 </script>
-</body>
-</html>

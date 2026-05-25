@@ -389,18 +389,21 @@
 
 <audio id="bgMusic" src="music.mp4" loop preload="auto"></audio>
 <audio id="hoverSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav" preload="auto"></audio>
+<audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-86.wav" preload="auto"></audio>
 
 <script>
     const bgMusic = document.getElementById('bgMusic');
     const hoverSound = document.getElementById('hoverSound');
+    const clickSound = document.getElementById('clickSound');
     const audioToggle = document.getElementById('audioToggle');
     let isPlaying = false;
 
-    // Volume Adjustment (Music 30% background volume par)
-    bgMusic.volume = 0.3; 
-    hoverSound.volume = 0.4;
+    // Master Volumes Control (Aap yahan se sound kam/zyada kar sakte hain)
+    bgMusic.volume = 0.3;     // Background music volume at 30%
+    hoverSound.volume = 0.4;  // Hover effect volume at 40%
+    clickSound.volume = 0.5;  // Click effect volume at 50%
 
-    // Click to Play/Pause Function
+    // Background Music Play/Pause Toggle Function
     audioToggle.addEventListener('click', function() {
         if (!isPlaying) {
             bgMusic.play().then(() => {
@@ -411,7 +414,7 @@
                 isPlaying = true;
             }).catch(err => {
                 console.log("Playback error: ", err);
-                alert("Song play nahi ho pa raha, check karein kya music.mp4 bilkul sahi upload hui hai?");
+                alert("Song play nahi ho pa raha, check karein kya music.mp4 bilkul sahi name se uploaded hai?");
             });
         } else {
             bgMusic.pause();
@@ -423,12 +426,20 @@
         }
     });
 
-    // Hover Sounds For Rectangular Buttons
+    // Hover and Click Sound Effects for Rectangular Buttons
     const rectButtons = document.querySelectorAll('.rect-btn');
     rectButtons.forEach(btn => {
+        
+        // A. Hover (Mouse enter) sound trigger
         btn.addEventListener('mouseenter', () => {
             hoverSound.currentTime = 0;
             hoverSound.play().catch(e => console.log("Hover sound blocked"));
+        });
+
+        // B. Click sound trigger
+        btn.addEventListener('click', () => {
+            clickSound.currentTime = 0;
+            clickSound.play().catch(e => console.log("Click sound blocked"));
         });
     });
 </script>

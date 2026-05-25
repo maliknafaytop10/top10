@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,8 +8,6 @@
 
 <title>MALIK NAFAY STUDIO</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
 <style>
 
 /* RESET */
@@ -18,203 +16,967 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 font-family:Arial;
+text-decoration:none;
+scroll-behavior:smooth;
 }
 
 /* BODY */
 
 body{
 
-background:linear-gradient(135deg,#f5f7ff,#e3f2ff,#ffffff);
+background:linear-gradient(135deg,#f4fff7,#e8fff1,#ffffff);
 
-color:#111;
+overflow:hidden;
 
-overflow-x:hidden;
+height:100vh;
+
+position:relative;
 
 }
 
-/* HEADER */
+/* BACKGROUND GLOW */
 
-header{
+body::before{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+background:linear-gradient(#00ff99,#00ccff);
+
+border-radius:50%;
+
+top:-250px;
+left:-250px;
+
+filter:blur(140px);
+
+animation:rotateGlow 10s linear infinite;
+
+opacity:0.4;
+
+}
+
+body::after{
+
+content:"";
+
+position:absolute;
+
+width:600px;
+height:600px;
+
+background:linear-gradient(#00ff99,#ffffff);
+
+border-radius:50%;
+
+bottom:-250px;
+right:-250px;
+
+filter:blur(120px);
+
+animation:rotateGlowReverse 12s linear infinite;
+
+opacity:0.3;
+
+}
+
+/* ROTATE */
+
+@keyframes rotateGlow{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+@keyframes rotateGlowReverse{
+
+0%{
+transform:rotate(360deg);
+}
+
+100%{
+transform:rotate(0deg);
+}
+
+}
+
+/* HOME SCREEN */
+
+.home-screen{
 
 width:100%;
-
-padding:20px 8%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-position:fixed;
-
-top:0;
-
-background:rgba(255,255,255,0.7);
-
-backdrop-filter:blur(15px);
-
-z-index:1000;
-
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-
-}
-
-/* LOGO */
-
-.logo{
-
-font-size:30px;
-
-font-weight:bold;
-
-color:#5b5bff;
-
-animation:logoGlow 2s infinite alternate;
-
-}
-
-@keyframes logoGlow{
-
-from{
-text-shadow:0 0 5px #5b5bff;
-}
-
-to{
-text-shadow:0 0 20px #00c6ff;
-}
-
-}
-
-/* NAV */
-
-nav a{
-
-text-decoration:none;
-
-margin-left:25px;
-
-font-weight:bold;
-
-color:#111;
-
-transition:0.3s;
-
-}
-
-nav a:hover{
-
-color:#00bfff;
-
-}
-
-/* HERO */
-
-.hero{
-
 height:100vh;
 
 display:flex;
 
 justify-content:center;
-
 align-items:center;
 
-padding:100px 8%;
+text-align:center;
 
-background:linear-gradient(135deg,#ffffff,#edf4ff,#f5f5ff);
+position:relative;
+
+z-index:2;
+
+padding:20px;
+
+}
+
+/* CARD */
+
+.home-content{
+
+background:rgba(255,255,255,0.18);
+
+padding:50px;
+
+border-radius:35px;
+
+backdrop-filter:blur(15px);
+
+box-shadow:0 10px 40px rgba(0,0,0,0.12);
 
 animation:fadeUp 1s ease;
 
-}
+max-width:1100px;
 
-/* HERO CONTENT */
-
-.hero-content{
-
-max-width:600px;
+width:100%;
 
 }
 
-.hero-content h1{
+/* IMAGE */
+
+.home-content img{
+
+width:220px;
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:6px solid white;
+
+box-shadow:0 0 30px rgba(0,255,150,0.4);
+
+margin-bottom:25px;
+
+animation:imageFloat 4s ease-in-out infinite;
+
+}
+
+/* IMAGE FLOAT */
+
+@keyframes imageFloat{
+
+0%{
+transform:translateY(0px) rotate(0deg);
+}
+
+50%{
+transform:translateY(-15px) rotate(2deg);
+}
+
+100%{
+transform:translateY(0px) rotate(0deg);
+}
+
+}
+
+/* TITLE */
+
+.home-content h1{
 
 font-size:75px;
 
-color:#5b5bff;
+color:#00b86b;
+
+margin-bottom:15px;
+
+animation:textPulse 2s infinite alternate;
 
 }
 
-.hero-content h2{
+/* TITLE GLOW */
 
-font-size:35px;
+@keyframes textPulse{
 
-margin-top:10px;
+from{
+text-shadow:0 0 10px #00ff99;
+}
 
-color:#00bfff;
+to{
+text-shadow:0 0 35px #00ff99;
+}
 
 }
 
-.hero-content p{
+/* TYPING */
+
+.typing{
+
+font-size:28px;
+
+color:#111;
+
+margin-bottom:40px;
+
+height:40px;
+
+}
+
+.typing::after{
+
+content:"";
+
+animation:typing 8s infinite;
+
+color:#00b86b;
+
+font-weight:bold;
+
+}
+
+@keyframes typing{
+
+0%{
+content:"Graphic Designer";
+}
+
+25%{
+content:"Video Editor";
+}
+
+50%{
+content:"Thumbnail Maker";
+}
+
+75%{
+content:"Social Media Expert";
+}
+
+100%{
+content:"Graphic Designer";
+}
+
+}
+
+/* BUTTONS */
+
+.menu-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
 
 margin-top:20px;
-
-font-size:18px;
-
-line-height:1.8;
-
-color:#444;
 
 }
 
 /* BUTTON */
 
-.hero-btn{
+.menu-buttons a{
 
-display:inline-block;
+padding:18px 35px;
 
-margin-top:30px;
+min-width:170px;
 
-padding:15px 35px;
+background:white;
 
-border-radius:40px;
-
-text-decoration:none;
-
-background:linear-gradient(135deg,#6c63ff,#00c6ff);
-
-color:white;
+color:#00b86b;
 
 font-weight:bold;
 
-box-shadow:0 10px 25px rgba(0,198,255,0.3);
+border-radius:18px;
+
+box-shadow:0 8px 20px rgba(0,184,107,0.15);
 
 transition:0.4s;
 
-}
-
-.hero-btn:hover{
-
-transform:scale(1.08);
+animation:floatBtn 3s ease-in-out infinite;
 
 }
 
-/* HERO IMAGE */
+/* BUTTON FLOAT */
 
-.hero-image img{
+@keyframes floatBtn{
 
-width:350px;
+0%{
+transform:translateY(0px);
+}
 
-border-radius:25px;
+50%{
+transform:translateY(-10px);
+}
 
-margin-left:60px;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-
-animation:float 3s ease-in-out infinite;
+100%{
+transform:translateY(0px);
+}
 
 }
+
+/* BUTTON HOVER */
+
+.menu-buttons a:hover{
+
+background:#00c76f;
+
+color:white;
+
+transform:translateY(-10px) scale(1.05);
+
+box-shadow:0 15px 35px rgba(0,200,120,0.35);
+
+}
+
+/* FADE */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+body{
+
+overflow:auto;
+
+}
+
+.home-content{
+
+padding:30px;
+
+}
+
+.home-content h1{
+
+font-size:42px;
+
+}
+
+.typing{
+
+font-size:20px;
+
+}
+
+.home-content img{
+
+width:160px;
+height:160px;
+
+}
+
+.menu-buttons{
+
+gap:15px;
+
+}
+
+.menu-buttons a{
+
+min-width:130px;
+
+padding:14px 20px;
+
+font-size:14px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HOME SCREEN -->
+
+<section class="home-screen">
+
+<div class="home-content">
+
+<!-- IMAGE -->
+
+<img src="malik own.png" alt="Malik Nafay">
+
+<!-- TITLE -->
+
+<h1>
+
+MALIK NAFAY STUDIO
+
+</h1>
+
+<!-- TYPING -->
+
+<div class="typing"></div>
+
+<!-- BUTTONS -->
+
+<div class="menu-buttons">
+
+<a href="about.html">
+
+ABOUT
+
+</a>
+
+<a href="services.html">
+
+SERVICES
+
+</a>
+
+<a href="portfolio.html">
+
+PORTFOLIO
+
+</a>
+
+<a href="pricing.html">
+
+PRICING
+
+</a>
+
+<a href="contact.html">
+
+CONTACT
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MALIK NAFAY STUDIO</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="home-body">
+
+<div class="glow"></div>
+
+<section class="main-page">
+
+<div class="main-card">
+
+<img src="malik own.png" class="profile">
+
+<h1>MALIK NAFAY STUDIO</h1>
+
+<h2 class="typing"></h2>
+
+<div class="buttons">
+
+<a href="about.html">ABOUT</a>
+
+<a href="services.html">SERVICES</a>
+
+<a href="portfolio.html">PORTFOLIO</a>
+
+<a href="pricing.html">PRICING</a>
+
+<a href="contact.html">CONTACT</a>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="about-body">
+
+<div class="page">
+
+<h1>ABOUT ME</h1>
+
+<p>
+
+I am Malik Nafay —
+Professional Graphic Designer,
+Video Editor &
+Thumbnail Maker.
+
+I create:
+Gaming Posters,
+YouTube Thumbnails,
+Reels Editing,
+Social Media Branding
+and Premium Designs.
+
+</p>
+
+<div class="skills">
+
+<div>Graphic Designer</div>
+
+<div>Video Editor</div>
+
+<div>Thumbnail Maker</div>
+
+<div>Gaming Designer</div>
+
+<div>Social Media Expert</div>
+
+</div>
+
+<a href="index.html" class="back-btn">
+
+BACK HOME
+
+</a>
+
+</div>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="services-body">
+
+<div class="page">
+
+<h1>MY SERVICES</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>Thumbnail Design</h2>
+
+<p>Professional YouTube Thumbnails</p>
+
+</div>
+
+<div class="card">
+
+<h2>Video Editing</h2>
+
+<p>Gaming & Reels Editing</p>
+
+</div>
+
+<div class="card">
+
+<h2>Poster Design</h2>
+
+<p>Business & Gaming Posters</p>
+
+</div>
+
+<div class="card">
+
+<h2>Social Branding</h2>
+
+<p>Instagram & Facebook Designs</p>
+
+</div>
+
+</div>
+
+<a href="index.html" class="back-btn">
+
+BACK HOME
+
+</a>
+
+</div>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="portfolio-body">
+
+<div class="page">
+
+<h1>MY PORTFOLIO</h1>
+
+<div class="gallery">
+
+<img src="Gemini_Generated_Image_dstacddstacddsta.png">
+
+<img src="facebook cover.png">
+
+<img src="malik own.png">
+
+</div>
+
+<a href="index.html" class="back-btn">
+
+BACK HOME
+
+</a>
+
+</div>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pricing</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="pricing-body">
+
+<div class="page">
+
+<h1>PRICING</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>Thumbnail</h2>
+
+<h3>500 PKR</h3>
+
+</div>
+
+<div class="card">
+
+<h2>Video Editing</h2>
+
+<h3>500 PKR</h3>
+
+</div>
+
+</div>
+
+<a href="index.html" class="back-btn">
+
+BACK HOME
+
+</a>
+
+</div>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="contact-body">
+
+<div class="page">
+
+<h1>CONTACT ME</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>Instagram</h2>
+
+<p>@maliknafay321</p>
+
+</div>
+
+<div class="card">
+
+<h2>TikTok</h2>
+
+<p>@pakpattan123</p>
+
+</div>
+
+<div class="card">
+
+<h2>TikTok</h2>
+
+<p>@nafayedits7</p>
+
+</div>
+
+<div class="card">
+
+<h2>Facebook</h2>
+
+<p>graphic_dz</p>
+
+</div>
+
+<div class="card">
+
+<h2>Snapchat</h2>
+
+<p>maliknafay</p>
+
+</div>
+
+<div class="card">
+
+<h2>Phone</h2>
+
+<p>03022003786</p>
+
+</div>
+
+<div class="card">
+
+<h2>Gmail</h2>
+
+<p>maliknafay.pkp3@gmail.com</p>
+
+</div>
+
+</div>
+
+<a href="index.html" class="back-btn">
+
+BACK HOME
+
+</a>
+
+</div>
+
+</body>
+
+</html>
+/* RESET */
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+text-decoration:none;
+
+}
+
+/* BODY */
+
+body{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+overflow-x:hidden;
+
+padding:40px;
+
+}
+
+/* GLOW */
+
+.glow{
+
+position:absolute;
+
+width:600px;
+height:600px;
+
+background:linear-gradient(#00ff99,#00ccff);
+
+filter:blur(120px);
+
+border-radius:50%;
+
+animation:rotate 10s linear infinite;
+
+opacity:0.4;
+
+}
+
+/* ROTATE */
+
+@keyframes rotate{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+/* MAIN PAGE */
+
+.main-page{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+}
+
+/* CARD */
+
+.main-card,
+.page{
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(15px);
+
+padding:50px;
+
+border-radius:30px;
+
+text-align:center;
+
+max-width:1200px;
+
+width:100%;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.15);
+
+animation:fadeUp 1s ease;
+
+}
+
+/* PROFILE */
+
+.profile{
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid white;
+
+margin-bottom:25px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+/* FLOAT */
 
 @keyframes float{
 
@@ -232,63 +994,107 @@ transform:translateY(0px);
 
 }
 
-/* SECTION */
-
-section{
-
-padding:100px 8%;
-
-animation:fadeUp 1s ease;
-
-}
-
-/* ANIMATION */
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
 /* TITLE */
 
-.section-title{
+h1{
 
-font-size:50px;
+font-size:60px;
 
-text-align:center;
-
-margin-bottom:50px;
-
-color:#5b5bff;
+margin-bottom:20px;
 
 }
 
-/* ABOUT */
+/* TYPING */
 
-.about{
+.typing{
 
-text-align:center;
+font-size:28px;
 
-font-size:18px;
+height:40px;
 
-line-height:2;
-
-color:#444;
+margin-bottom:40px;
 
 }
 
-/* SERVICES */
+.typing::after{
 
-.services-container{
+content:"";
+
+animation:typing 8s infinite;
+
+}
+
+@keyframes typing{
+
+0%{
+content:"Graphic Designer";
+}
+
+25%{
+content:"Video Editor";
+}
+
+50%{
+content:"Thumbnail Maker";
+}
+
+75%{
+content:"Social Media Expert";
+}
+
+100%{
+content:"Graphic Designer";
+}
+
+}
+
+/* BUTTONS */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+/* BUTTON */
+
+.buttons a,
+.back-btn{
+
+padding:18px 35px;
+
+background:white;
+
+border-radius:18px;
+
+font-weight:bold;
+
+transition:0.4s;
+
+display:inline-block;
+
+margin-top:20px;
+
+}
+
+/* HOVER */
+
+.buttons a:hover,
+.back-btn:hover{
+
+transform:translateY(-10px) scale(1.05);
+
+}
+
+/* CARDS */
+
+.cards{
 
 display:grid;
 
@@ -296,43 +1102,35 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
 gap:25px;
 
+margin-top:40px;
+
 }
 
-/* SERVICE BOX */
+/* CARD */
 
-.service-box{
-
-background:rgba(255,255,255,0.7);
+.card{
 
 padding:30px;
 
-border-radius:25px;
+border-radius:20px;
+
+background:rgba(255,255,255,0.15);
 
 backdrop-filter:blur(15px);
-
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
 
 transition:0.4s;
 
 }
 
-.service-box:hover{
+.card:hover{
 
 transform:translateY(-10px);
 
 }
 
-.service-box h3{
+/* GALLERY */
 
-margin-bottom:15px;
-
-color:#5b5bff;
-
-}
-
-/* PORTFOLIO */
-
-.portfolio{
+.gallery{
 
 display:grid;
 
@@ -340,9 +1138,11 @@ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
 gap:25px;
 
+margin-top:40px;
+
 }
 
-.portfolio img{
+.gallery img{
 
 width:100%;
 
@@ -350,15 +1150,11 @@ border-radius:20px;
 
 transition:0.4s;
 
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-
 }
 
-.portfolio img:hover{
+.gallery img:hover{
 
 transform:scale(1.05);
-
-box-shadow:0 10px 30px rgba(0,198,255,0.4);
 
 }
 
@@ -374,618 +1170,156 @@ justify-content:center;
 
 gap:20px;
 
+margin-top:40px;
+
 }
 
-.skill{
+.skills div{
 
 padding:15px 30px;
 
 background:white;
 
-border-radius:40px;
-
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-
-transition:0.3s;
+border-radius:30px;
 
 }
 
-.skill:hover{
+/* FADE */
 
-transform:translateY(-5px);
+@keyframes fadeUp{
 
-}
+from{
 
-/* TESTIMONIALS */
+opacity:0;
 
-.testimonials{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:25px;
+transform:translateY(40px);
 
 }
 
-.testimonial-box{
+to{
 
-background:white;
+opacity:1;
 
-padding:30px;
-
-border-radius:20px;
-
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-
-transition:0.4s;
+transform:translateY(0);
 
 }
 
-.testimonial-box:hover{
+}
 
-transform:translateY(-10px);
+/* HOME */
+
+.home-body{
+
+background:linear-gradient(135deg,#f4fff7,#e8fff1,#ffffff);
+
+}
+
+.home-body h1{
+
+color:#00b86b;
+
+}
+
+/* ABOUT */
+
+.about-body{
+
+background:linear-gradient(135deg,#dbeeff,#f4f9ff);
+
+}
+
+.about-body h1{
+
+color:#0077ff;
+
+}
+
+/* SERVICES */
+
+.services-body{
+
+background:linear-gradient(135deg,#2d0036,#4a0066);
+
+color:white;
+
+}
+
+.services-body h1{
+
+color:#ff66ff;
+
+}
+
+/* PORTFOLIO */
+
+.portfolio-body{
+
+background:linear-gradient(135deg,#ffddb5,#ffb347);
+
+}
+
+.portfolio-body h1{
+
+color:#ff6600;
 
 }
 
 /* PRICING */
 
-.pricing{
+.pricing-body{
 
-display:flex;
+background:linear-gradient(135deg,#3a0000,#8b0000);
 
-justify-content:center;
-
-gap:30px;
-
-flex-wrap:wrap;
+color:white;
 
 }
 
-.price-box{
+.pricing-body h1{
 
-background:white;
-
-padding:40px;
-
-width:300px;
-
-border-radius:25px;
-
-text-align:center;
-
-box-shadow:0 8px 25px rgba(0,0,0,0.1);
-
-transition:0.4s;
-
-}
-
-.price-box:hover{
-
-transform:translateY(-10px);
-
-}
-
-.price-box h3{
-
-font-size:30px;
-
-margin-bottom:15px;
-
-color:#5b5bff;
-
-}
-
-.price-box h1{
-
-font-size:50px;
-
-margin-bottom:15px;
-
-color:#00bfff;
-
-}
-
-/* MOTHER SECTION */
-
-.mother-section{
-
-padding:100px 20px;
-
-text-align:center;
-
-background:linear-gradient(135deg,#edf4ff,#ffffff,#f5f5ff);
-
-}
-
-.mother-section h1{
-
-font-size:60px;
-
-color:#ff4d6d;
-
-margin-bottom:20px;
-
-animation:logoGlow 2s infinite alternate;
-
-}
-
-.mother-section h2{
-
-font-size:35px;
-
-color:#5b5bff;
+color:#ff4444;
 
 }
 
 /* CONTACT */
 
-.contact{
+.contact-body{
 
-text-align:center;
+background:linear-gradient(135deg,#000000,#003322);
 
-line-height:2.5;
-
-font-size:20px;
+color:white;
 
 }
 
-.contact a{
+.contact-body h1{
 
-text-decoration:none;
-
-color:#5b5bff;
+color:#00ff99;
 
 }
 
-/* FOOTER */
-
-footer{
-
-background:white;
-
-padding:20px;
-
-text-align:center;
-
-color:#555;
-
-box-shadow:0 -5px 15px rgba(0,0,0,0.05);
-
-}
-
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:900px){
 
-.hero{
+h1{
 
-flex-direction:column;
-
-text-align:center;
+font-size:38px;
 
 }
 
-.hero-image img{
+.profile{
 
-margin-left:0;
-
-margin-top:40px;
-
-width:280px;
+width:160px;
+height:160px;
 
 }
 
-.hero-content h1{
+.buttons a,
+.back-btn{
 
-font-size:45px;
+padding:14px 20px;
 
-}
-
-.hero-content h2{
-
-font-size:24px;
-
-}
-
-nav{
-
-display:none;
+font-size:14px;
 
 }
 
 }
-
-</style>
-
-</head>
-
-<body>
-
-<!-- HEADER -->
-
-<header>
-
-<div class="logo">
-
-MALIK NAFAY STUDIO
-
-</div>
-
-<nav>
-
-<a href="#home">Home</a>
-
-<a href="#about">About</a>
-
-<a href="#services">Services</a>
-
-<a href="#portfolio">Portfolio</a>
-
-<a href="#skills">Skills</a>
-
-<a href="#pricing">Pricing</a>
-
-<a href="#contact">Contact</a>
-
-</nav>
-
-</header>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<h1>MALIK NAFAY</h1>
-
-<h2>Graphic Designer & Video Editor</h2>
-
-<p>
-
-Professional Thumbnail Maker,
-Poster Designer,
-Video Editor &
-Social Media Branding Expert.
-
-</p>
-
-<a href="#contact" class="hero-btn">
-
-Hire Me
-
-</a>
-
-</div>
-
-<div class="hero-image">
-
-<img src="malik own.png" alt="Malik Nafay">
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h1 class="section-title">
-
-About Me
-
-</h1>
-
-<div class="about">
-
-<p>
-
-I am Malik Nafay —
-Professional Graphic Designer,
-Video Editor &
-Thumbnail Expert.
-I create modern designs,
-gaming posters,
-social media edits
-and professional thumbnails.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h1 class="section-title">
-
-Services
-
-</h1>
-
-<div class="services-container">
-
-<div class="service-box">
-
-<h3>Thumbnail Design</h3>
-
-<p>
-
-Professional YouTube thumbnails.
-
-</p>
-
-</div>
-
-<div class="service-box">
-
-<h3>Video Editing</h3>
-
-<p>
-
-Gaming montage,
-shorts & reels editing.
-
-</p>
-
-</div>
-
-<div class="service-box">
-
-<h3>Poster Design</h3>
-
-<p>
-
-Gaming & business posters.
-
-</p>
-
-</div>
-
-<div class="service-box">
-
-<h3>Social Media Design</h3>
-
-<p>
-
-Instagram & Facebook branding.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PORTFOLIO -->
-
-<section id="portfolio">
-
-<h1 class="section-title">
-
-Portfolio
-
-</h1>
-
-<div class="portfolio">
-
-<img src="Gemini_Generated_Image_dstacddstacddsta.png">
-
-<img src="malik own.png">
-
-<img src="facebook cover.png">
-
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<h1 class="section-title">
-
-Skills
-
-</h1>
-
-<div class="skills">
-
-<div class="skill">Graphic Designer</div>
-
-<div class="skill">Video Editor</div>
-
-<div class="skill">Thumbnail Maker</div>
-
-<div class="skill">Gaming Poster Designer</div>
-
-<div class="skill">Social Media Branding</div>
-
-</div>
-
-</section>
-
-<!-- TESTIMONIALS -->
-
-<section id="testimonials">
-
-<h1 class="section-title">
-
-Testimonials
-
-</h1>
-
-<div class="testimonials">
-
-<div class="testimonial-box">
-
-<p>
-
-"Best Thumbnail Designer 🔥"
-
-</p>
-
-</div>
-
-<div class="testimonial-box">
-
-<p>
-
-"Professional Editing 💯"
-
-</p>
-
-</div>
-
-<div class="testimonial-box">
-
-<p>
-
-"Modern clean designs & smooth work ⚡"
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PRICING -->
-
-<section id="pricing">
-
-<h1 class="section-title">
-
-Pricing
-
-</h1>
-
-<div class="pricing">
-
-<div class="price-box">
-
-<h3>Thumbnail</h3>
-
-<h1>500</h1>
-
-<p>
-
-Professional Thumbnail Design
-
-</p>
-
-</div>
-
-<div class="price-box">
-
-<h3>Video Edit</h3>
-
-<h1>500</h1>
-
-<p>
-
-Professional Video Editing
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MOTHER -->
-
-<section class="mother-section">
-
-<h1>
-
-I LOVE MY MOTHER ❤️
-
-</h1>
-
-<h2>
-
-( THANKS FOR WATCH )
-
-</h2>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h1 class="section-title">
-
-Contact
-
-</h1>
-
-<div class="contact">
-
-<p>
-
-📞 03022003786
-
-</p>
-
-<p>
-
-📧 maliknafay.pkp3@gmail.com
-
-</p>
-
-<p>
-
-Instagram:
-<a href="https://instagram.com/maliknafay321">
-
-@maliknafay321
-
-</a>
-
-</p>
-
-<p>
-
-TikTok:
-<a href="https://tiktok.com/@pakpattan123">
-
-@pakpattan123
-
-</a>
-
-</p>
-
-<p>
-
-TikTok:
-<a href="https://tiktok.com/@nafayedits7">
-
-@nafayedits7
-
-</a>
-
-</p>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 MALIK NAFAY STUDIO | All Rights Reserved
-
-</footer>
-
-</body>
-
-</html>

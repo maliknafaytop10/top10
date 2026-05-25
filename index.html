@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -9,313 +10,474 @@
 
 <style>
 
+/* RESET */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
 scroll-behavior:smooth;
+font-family:Arial;
 }
 
+/* BODY */
+
 body{
-background:radial-gradient(circle at top,#111133,#000000);
-color:white;
+
+background:linear-gradient(135deg,#f5f7ff,#e3f2ff,#ffffff);
+
+color:#111;
+
 overflow-x:hidden;
+
 }
 
 /* HEADER */
 
 header{
+
 width:100%;
+
 padding:20px 8%;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
 position:fixed;
+
 top:0;
-background:rgba(0,0,0,0.8);
-backdrop-filter:blur(10px);
+
+background:rgba(255,255,255,0.7);
+
+backdrop-filter:blur(15px);
+
 z-index:1000;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
 }
+
+/* LOGO */
 
 .logo{
-font-size:32px;
+
+font-size:30px;
+
 font-weight:bold;
-color:cyan;
-text-shadow:0 0 20px cyan;
-animation:logoGlow 2s infinite alternate;
-}
 
-@keyframes logoGlow{
-
-from{
-text-shadow:0 0 10px cyan;
-}
-
-to{
-text-shadow:0 0 30px red;
-}
+color:#5b5bff;
 
 }
+
+/* NAVIGATION */
 
 nav a{
+
 text-decoration:none;
-color:white;
+
+color:#111;
+
 margin-left:25px;
+
 font-weight:bold;
+
 transition:0.3s;
+
 }
 
 nav a:hover{
-color:#ff004c;
-text-shadow:0 0 10px red;
+
+color:#00bfff;
+
 }
 
 /* HERO SECTION */
 
 .hero{
+
 height:100vh;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 padding:100px 8%;
-background:linear-gradient(135deg,#000000,#111133,#220022);
+
+background:linear-gradient(135deg,#ffffff,#edf4ff,#f5f5ff);
+
 }
 
+/* HERO CONTENT */
+
 .hero-content{
+
 max-width:600px;
+
 }
 
 .hero-content h1{
-font-size:70px;
-color:cyan;
-text-shadow:0 0 20px cyan;
+
+font-size:75px;
+
+color:#5b5bff;
+
 }
 
 .hero-content h2{
-font-size:32px;
+
+font-size:35px;
+
 margin-top:10px;
-color:#ff004c;
+
+color:#00bfff;
+
 }
 
 .hero-content p{
+
 margin-top:20px;
+
 line-height:1.8;
-color:#ddd;
+
+font-size:18px;
+
+color:#444;
+
 }
 
+/* BUTTON */
+
 .hero-btn{
+
 display:inline-block;
+
 margin-top:30px;
+
 padding:15px 35px;
-background:#ff004c;
+
+background:linear-gradient(135deg,#6c63ff,#00c6ff);
+
 border-radius:40px;
+
 text-decoration:none;
+
 color:white;
+
 font-weight:bold;
-box-shadow:0 0 20px red;
+
+box-shadow:0 10px 25px rgba(0,198,255,0.3);
+
 transition:0.4s;
+
 }
 
 .hero-btn:hover{
-background:cyan;
-box-shadow:0 0 20px cyan;
-transform:scale(1.1);
+
+transform:translateY(-5px);
+
 }
+
+/* HERO IMAGE */
 
 .hero-image img{
+
 width:350px;
-border-radius:20px;
+
+border-radius:25px;
+
 margin-left:60px;
-box-shadow:0 0 30px cyan;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
 }
 
-/* GENERAL SECTION */
+/* GENERAL SECTIONS */
 
 section{
+
 padding:100px 8%;
+
 }
 
+/* SECTION TITLE */
+
 .section-title{
+
 font-size:50px;
+
 text-align:center;
+
 margin-bottom:50px;
-color:cyan;
-text-shadow:0 0 15px cyan;
+
+color:#5b5bff;
+
 }
 
 /* ABOUT */
 
 .about{
+
 text-align:center;
+
 line-height:2;
+
 font-size:18px;
-color:#ccc;
+
+color:#444;
+
 }
 
 /* SERVICES */
 
 .services-container{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
 gap:25px;
+
 }
 
+/* SERVICE CARD */
+
 .service-box{
-background:#111;
+
+background:rgba(255,255,255,0.7);
+
 padding:30px;
-border-radius:20px;
-border:1px solid cyan;
+
+border-radius:25px;
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,0.4);
+
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
 transition:0.4s;
+
 }
 
 .service-box:hover{
+
 transform:translateY(-10px);
-box-shadow:0 0 20px cyan;
+
 }
 
 .service-box h3{
-color:#ff004c;
+
 margin-bottom:15px;
+
+color:#5b5bff;
+
 }
 
 /* PORTFOLIO */
 
 .portfolio{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
 gap:25px;
+
 }
 
 .portfolio img{
+
 width:100%;
+
 border-radius:20px;
+
 transition:0.4s;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+
 }
 
 .portfolio img:hover{
+
 transform:scale(1.05);
-box-shadow:0 0 20px cyan;
+
 }
 
 /* SKILLS */
 
 .skills{
+
 display:flex;
+
 flex-wrap:wrap;
+
 justify-content:center;
+
 gap:20px;
+
 }
 
+/* SKILL */
+
 .skill{
+
 padding:15px 30px;
-background:#111;
+
+background:white;
+
 border-radius:40px;
-border:1px solid cyan;
-box-shadow:0 0 15px cyan;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
 }
 
 /* TESTIMONIALS */
 
 .testimonials{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
 gap:25px;
+
 }
 
+/* TESTIMONIAL CARD */
+
 .testimonial-box{
-background:#111;
+
+background:white;
+
 padding:30px;
+
 border-radius:20px;
-border:1px solid red;
-box-shadow:0 0 15px red;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
 }
 
 /* PRICING */
 
 .pricing{
+
 display:flex;
+
 justify-content:center;
+
 gap:30px;
+
 flex-wrap:wrap;
+
 }
 
+/* PRICE CARD */
+
 .price-box{
-background:#111;
+
+background:white;
+
 padding:40px;
+
 width:300px;
+
+border-radius:25px;
+
 text-align:center;
-border-radius:20px;
-border:1px solid cyan;
-box-shadow:0 0 20px cyan;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+
 }
 
 .price-box h3{
+
 font-size:30px;
-color:#ff004c;
+
+color:#5b5bff;
+
 margin-bottom:15px;
+
 }
 
 .price-box h1{
+
 font-size:50px;
-color:cyan;
+
+color:#00bfff;
+
 margin-bottom:15px;
+
 }
 
 /* MOTHER SECTION */
 
 .mother-section{
+
 padding:100px 20px;
+
 text-align:center;
-background:linear-gradient(135deg,#000000,#220022,#111133);
+
+background:linear-gradient(135deg,#edf4ff,#ffffff,#f5f5ff);
+
 }
 
 .mother-section h1{
+
 font-size:60px;
-color:#ff004c;
-text-shadow:0 0 20px red;
+
+color:#ff4d6d;
+
 margin-bottom:20px;
-animation:motherGlow 2s infinite alternate;
+
 }
 
 .mother-section h2{
+
 font-size:35px;
-color:cyan;
-text-shadow:0 0 20px cyan;
-}
 
-@keyframes motherGlow{
-
-from{
-text-shadow:0 0 10px red;
-}
-
-to{
-text-shadow:0 0 30px cyan;
-}
+color:#5b5bff;
 
 }
 
 /* CONTACT */
 
 .contact{
+
 text-align:center;
-line-height:2;
+
+line-height:2.5;
+
 font-size:20px;
+
 }
 
 .contact a{
-color:cyan;
+
 text-decoration:none;
+
+color:#5b5bff;
+
 }
 
 /* FOOTER */
 
 footer{
-background:#000;
+
+background:white;
+
 padding:20px;
+
 text-align:center;
-color:#aaa;
+
+color:#555;
+
+box-shadow:0 -5px 15px rgba(0,0,0,0.05);
+
 }
 
 /* RESPONSIVE */
@@ -323,26 +485,39 @@ color:#aaa;
 @media(max-width:900px){
 
 .hero{
+
 flex-direction:column;
+
 text-align:center;
+
 }
 
 .hero-image img{
+
 margin-left:0;
+
 margin-top:40px;
+
 width:280px;
+
 }
 
 .hero-content h1{
+
 font-size:45px;
+
 }
 
 .hero-content h2{
+
 font-size:24px;
+
 }
 
 nav{
+
 display:none;
+
 }
 
 }
@@ -358,17 +533,25 @@ display:none;
 <header>
 
 <div class="logo">
+
 MALIK NAFAY STUDIO
+
 </div>
 
 <nav>
 
 <a href="#home">Home</a>
+
 <a href="#about">About</a>
+
 <a href="#services">Services</a>
+
 <a href="#portfolio">Portfolio</a>
+
 <a href="#skills">Skills</a>
+
 <a href="#pricing">Pricing</a>
+
 <a href="#contact">Contact</a>
 
 </nav>
@@ -386,21 +569,25 @@ MALIK NAFAY STUDIO
 <h2>Graphic Designer & Video Editor</h2>
 
 <p>
+
 Professional Thumbnail Maker,
-Video Editor,
 Poster Designer,
-Cyberpunk Style Designer.
+Video Editor &
+Social Media Branding Expert.
+
 </p>
 
 <a href="#contact" class="hero-btn">
+
 Hire Me
+
 </a>
 
 </div>
 
 <div class="hero-image">
 
-<img src="image.jpg" alt="Malik Nafay">
+<img src="malik own.png" alt="Malik Nafay">
 
 </div>
 
@@ -411,19 +598,24 @@ Hire Me
 <section id="about">
 
 <h1 class="section-title">
+
 About Me
+
 </h1>
 
 <div class="about">
 
 <p>
-I am Malik Nafay.
+
+I am Malik Nafay —
 Professional Graphic Designer,
 Video Editor &
 Thumbnail Expert.
-I create modern cyberpunk style thumbnails,
+I create modern designs,
 gaming posters,
-social media designs and edits.
+social media edits
+and professional thumbnails.
+
 </p>
 
 </div>
@@ -435,7 +627,9 @@ social media designs and edits.
 <section id="services">
 
 <h1 class="section-title">
+
 Services
+
 </h1>
 
 <div class="services-container">
@@ -445,8 +639,9 @@ Services
 <h3>Thumbnail Design</h3>
 
 <p>
-Professional YouTube thumbnails
-with glow effects.
+
+Professional YouTube thumbnails.
+
 </p>
 
 </div>
@@ -456,8 +651,10 @@ with glow effects.
 <h3>Video Editing</h3>
 
 <p>
+
 Gaming montage,
 shorts & reels editing.
+
 </p>
 
 </div>
@@ -467,7 +664,9 @@ shorts & reels editing.
 <h3>Poster Design</h3>
 
 <p>
+
 Gaming & business posters.
+
 </p>
 
 </div>
@@ -477,7 +676,9 @@ Gaming & business posters.
 <h3>Social Media Design</h3>
 
 <p>
-Professional branding designs.
+
+Instagram & Facebook branding.
+
 </p>
 
 </div>
@@ -491,16 +692,18 @@ Professional branding designs.
 <section id="portfolio">
 
 <h1 class="section-title">
+
 Portfolio
+
 </h1>
 
 <div class="portfolio">
 
 <img src="Gemini_Generated_Image_dstacddstacddsta.png">
 
-<img src="image.jpg">
+<img src="malik own.png">
 
-<img src="d5d6f996-8b19-4c49-b197-8cadeda86070.png">
+<img src="facebook cover.png">
 
 </div>
 
@@ -511,7 +714,9 @@ Portfolio
 <section id="skills">
 
 <h1 class="section-title">
+
 Skills
+
 </h1>
 
 <div class="skills">
@@ -535,7 +740,9 @@ Skills
 <section id="testimonials">
 
 <h1 class="section-title">
+
 Testimonials
+
 </h1>
 
 <div class="testimonials">
@@ -543,7 +750,9 @@ Testimonials
 <div class="testimonial-box">
 
 <p>
+
 "Best Thumbnail Designer 🔥"
+
 </p>
 
 </div>
@@ -551,7 +760,9 @@ Testimonials
 <div class="testimonial-box">
 
 <p>
-"Professional Video Editing 💯"
+
+"Professional Editing 💯"
+
 </p>
 
 </div>
@@ -559,7 +770,9 @@ Testimonials
 <div class="testimonial-box">
 
 <p>
-"Cyberpunk style designs are amazing ⚡"
+
+"Modern clean designs & smooth work ⚡"
+
 </p>
 
 </div>
@@ -573,7 +786,9 @@ Testimonials
 <section id="pricing">
 
 <h1 class="section-title">
+
 Pricing
+
 </h1>
 
 <div class="pricing">
@@ -585,7 +800,9 @@ Pricing
 <h1>500</h1>
 
 <p>
+
 Professional Thumbnail Design
+
 </p>
 
 </div>
@@ -597,7 +814,9 @@ Professional Thumbnail Design
 <h1>500</h1>
 
 <p>
+
 Professional Video Editing
+
 </p>
 
 </div>
@@ -611,12 +830,15 @@ Professional Video Editing
 <section class="mother-section">
 
 <h1>
-I LOVE MY MOTHER ❤️i love 1000 time
-  
+
+I LOVE MY MOTHER ❤️
+
 </h1>
 
 <h2>
+
 ( THANKS FOR WATCH )
+
 </h2>
 
 </section>
@@ -626,24 +848,56 @@ I LOVE MY MOTHER ❤️i love 1000 time
 <section id="contact">
 
 <h1 class="section-title">
+
 Contact
+
 </h1>
 
 <div class="contact">
 
 <p>
+
 📞 03022003786
+
 </p>
 
 <p>
+
 📧 maliknafay.pkp3@gmail.com
+
 </p>
 
 <p>
+
 Instagram:
 <a href="https://instagram.com/maliknafay321">
+
 @maliknafay321
+
 </a>
+
+</p>
+
+<p>
+
+TikTok:
+<a href="https://tiktok.com/@pakpattan123">
+
+@pakpattan123
+
+</a>
+
+</p>
+
+<p>
+
+TikTok:
+<a href="https://tiktok.com/@nafayedits7">
+
+@nafayedits7
+
+</a>
+
 </p>
 
 </div>
@@ -654,10 +908,10 @@ Instagram:
 
 <footer>
 
-© 2026 MALIK NAFAY STUDIO
-| All Rights Reserved
+© 2026 MALIK NAFAY STUDIO | All Rights Reserved
 
 </footer>
 
 </body>
+
 </html>

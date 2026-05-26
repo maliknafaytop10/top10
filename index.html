@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MALIK NAFAY STUDIO</title>
-    <!-- Premium Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -12,7 +11,6 @@
         * {
             margin: 0;
             padding: 0;
-            box-content: border-box;
             box-sizing: border-box;
         }
         html {
@@ -82,7 +80,7 @@
             animation: smoothRotate 12s linear infinite;
         }
         .rotate-inner {
-            animation: smoothRotate 8s linear infinite animation-direction: reverse;
+            animation: smoothRotate 8s linear infinite reverse;
         }
         .cta-btn {
             transition: all 0.3s ease;
@@ -212,11 +210,159 @@
         .submit-btn:hover {
             opacity: 0.9;
         }
+
+        /* --- HIGH LEVEL EID MELA WRAPPER --- */
+        .top-mela-wrapper {
+            position: relative;
+            width: 100%;
+            background: linear-gradient(180deg, #071510 0%, #0b0c10 100%);
+            padding: 60px 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            text-align: center;
+            overflow: hidden; 
+            border-bottom: 3px solid #00ffcc;
+            margin-top: 80px; /* Navbar ke neeche space */
+        }
+
+        /* FLOATING BALLOONS */
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 65px;
+            animation: floatUp 6s infinite ease-in-out alternate;
+            opacity: 0.6;
+            z-index: 1;
+        }
+        .balloon::after {
+            content: "🎈";
+            font-size: 45px;
+            position: absolute;
+            top: 0; left: 0;
+        }
+        .b1 { left: 8%; top: 10%; animation-delay: 0s; }
+        .b2 { left: 22%; top: 40%; animation-delay: 2s; }
+        .b3 { right: 8%; top: 15%; animation-delay: 1s; }
+        .b4 { right: 22%; top: 45%; animation-delay: 3s; }
+
+        @keyframes floatUp {
+            0% { transform: translateY(15px) rotate(-5deg); }
+            100% { transform: translateY(-25px) rotate(5deg); }
+        }
+
+        /* BIG NEON LOGO CONTAINER */
+        .brand-logo-container-top {
+            display: inline-block;
+            width: 130px;  
+            height: 130px;
+            background: #111; 
+            padding: 18px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+            transition: all 0.4s ease;
+            z-index: 2;
+        }
+        .brand-logo-top {
+            width: 100%;
+            height: 100%;
+        }
+        .brand-logo-container-top:hover {
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 15px 40px rgba(0, 255, 204, 0.6);
+        }
+
+        /* ROTATING FIST STYLING */
+        .fist-animation-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .fist-icon-top {
+            font-size: 75px; 
+            display: inline-block;
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+        .fist-animation-top:hover .fist-icon-top {
+            transform: rotate(360deg) scale(1.2); 
+        }
+
+        /* MAA MOTHER LOVE VIP GLOWING LINE */
+        .mother-love-top {
+            color: #ff3366; 
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 2;
+            animation: pulseMotherGlow 2s infinite alternate;
+        }
+        .mother-emojis {
+            font-size: 32px;
+            display: block;
+            margin-top: 8px;
+        }
+
+        @keyframes pulseMotherGlow {
+            from { text-shadow: 0 0 10px rgba(255, 51, 102, 0.5); transform: scale(1); }
+            to { text-shadow: 0 0 25px rgba(255, 51, 102, 0.9); transform: scale(1.02); }
+        }
+
+        /* EID CARD SPECIFIC */
+        .eid-card-top {
+            background: linear-gradient(135deg, #052c1e, #0c1a15);
+            border: 2px solid #00ffcc;
+            border-radius: 20px;
+            padding: 25px;
+            width: 100%;
+            max-width: 550px;
+            box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3);
+            z-index: 2;
+        }
+        .eid-title-top {
+            color: #00ffcc;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        }
+        .eid-offer-badge {
+            background: #ffcc00;
+            color: #000;
+            font-size: 20px;
+            font-weight: 900;
+            padding: 8px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .eid-updates-marquee {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            padding: 15px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.6;
+            border-left: 4px solid #ffcc00;
+            text-align: left;
+        }
+        .eid-updates-marquee marquee {
+            height: 90px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR START -->
     <nav>
         <a href="#home" class="logo">MALIK NAFAY<span>.</span></a>
         <ul class="nav-links">
@@ -227,16 +373,50 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <!-- NAVBAR END -->
+    <div class="top-mela-wrapper">
+        <div class="balloon b1"></div>
+        <div class="balloon b2"></div>
+        <div class="balloon b3"></div>
+        <div class="balloon b4"></div>
 
-    <!-- HOME / HERO SECTION START -->
-    <section id="home" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 120px;">
-        <!-- Background Abstract Glows -->
+        <div class="brand-logo-container-top">
+            <svg class="brand-logo-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M20,35 L20,20 L35,20" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
+                <path d="M80,35 L80,20 L65,20" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
+                <path d="M20,65 L20,80 L35,80" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
+                <path d="M80,65 L80,80 L65,80" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
+                <polygon points="43,38 68,50 43,62" fill="#ffffff" />
+            </svg>
+        </div>
+
+        <div class="fist-animation-top">
+            <span class="fist-icon-top">✊</span>
+        </div>
+
+        <div class="mother-love-top">
+            MY LIFE IS UNCOMPLETE WITHOUT MY MOTHER
+            <span class="mother-emojis">🥰😘🤧</span>
+        </div>
+
+        <div class="eid-card-top">
+            <div class="eid-title-top">🐐 EID UL AZHA MUBARAK 🐂</div>
+            <div class="eid-offer-badge">🔥 SPECIAL EID OFFER: FLAT 30% OFF! 🔥</div>
+            <div class="eid-updates-marquee">
+                <marquee direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+                    • 📢 <b>EID MEGA SALE:</b> Nafay Edits ki taraf se Graphic Design aur Video Editing par poora <b>30% DISCOUNT</b>! <br><br>
+                    • ⚡ Limited Time Offer sirf Eid ke dino ke liye valid hai! <br><br>
+                    • 🥩 Order book karo aur premium templates par deal paki karo! <br><br>
+                    • 🚀 Stay tuned on Fiverr! Full high-level work delivered super fast!
+                </marquee>
+            </div>
+        </div>
+    </div>
+
+    <section id="home" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 40px;">
         <div style="position: absolute; width: 300px; height: 300px; background: rgba(0, 255, 102, 0.12); filter: blur(120px); top: 15%; left: 10%; pointer-events: none;"></div>
         <div style="position: absolute; width: 300px; height: 300px; background: rgba(255, 0, 51, 0.12); filter: blur(120px); bottom: 15%; right: 10%; pointer-events: none;"></div>
 
         <div style="max-width: 1200px; width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px; text-align: left;">
-            <!-- Left Side Text -->
             <div style="flex: 1; min-width: 300px;">
                 <span style="color: #00ff66; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; display: inline-block; margin-bottom: 10px; border-left: 3px solid #ff0033; padding-left: 10px;">
                     Welcome To The Next Level
@@ -260,7 +440,6 @@
                 </div>
             </div>
 
-            <!-- Right Side Rotating Element -->
             <div style="flex: 1; min-width: 300px; display: flex; justify-content: center; align-items: center; position: relative;">
                 <div class="rotate-outer" style="width: 340px; height: 340px; border: 4px dashed #00ff66; border-radius: 50%; position: absolute; opacity: 0.4;"></div>
                 <div class="rotate-inner" style="width: 300px; height: 300px; border: 2px solid #ff0033; border-radius: 50%; position: absolute; opacity: 0.5;"></div>
@@ -272,9 +451,6 @@
             </div>
         </div>
     </section>
-    <!-- HOME / HERO SECTION END -->
-
-    <!-- ABOUT SECTION START -->
     <section id="about" style="background: #0f1015;">
         <h2 class="section-title" style="color: #ffffff;">About Me</h2>
         <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: #ccc;">
@@ -286,14 +462,10 @@
             </p>
         </div>
     </section>
-    <!-- ABOUT SECTION END -->
-
-    <!-- PORTFOLIO SECTION START -->
     <section id="portfolio">
         <h2 class="section-title" style="color: #00ff66;">My Masterpieces</h2>
         <div class="portfolio-grid">
             
-            <!-- Item 1 -->
             <div class="portfolio-item">
                 <div style="background: #222; height: 160px; border-radius: 8px; display: flex; justify-content: center; align-items: center; color: #555; margin-bottom: 15px;">
                     <span style="font-size: 3rem;">🎨</span>
@@ -302,7 +474,6 @@
                 <p>High quality gaming poster and custom social media branding.</p>
             </div>
 
-            <!-- Item 2 -->
             <div class="portfolio-item">
                 <div style="background: #222; height: 160px; border-radius: 8px; display: flex; justify-content: center; align-items: center; color: #555; margin-bottom: 15px;">
                     <span style="font-size: 3rem;">🎞️</span>
@@ -311,7 +482,6 @@
                 <p>Smooth cinematic sync with premium pacing and text effects.</p>
             </div>
 
-            <!-- Item 3 -->
             <div class="portfolio-item">
                 <div style="background: #222; height: 160px; border-radius: 8px; display: flex; justify-content: center; align-items: center; color: #555; margin-bottom: 15px;">
                     <span style="font-size: 3rem;">💎</span>
@@ -322,9 +492,6 @@
 
         </div>
     </section>
-    <!-- PORTFOLIO SECTION END -->
-
-    <!-- SERVICES SECTION START -->
     <section id="services" style="background: #0f1015;">
         <h2 class="section-title" style="color: #ffffff;">Services I Provide</h2>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1100px; margin: 0 auto;">
@@ -342,15 +509,11 @@
             </div>
         </div>
     </section>
-    <!-- SERVICES SECTION END -->
-
-    <!-- CONTACT SECTION START -->
     <section id="contact">
         <h2 class="section-title" style="color: #ff0033;">Get In Touch</h2>
         <p style="color: #ccc; margin-bottom: 40px;">Let's collaborate on your next big project. Drop a line!</p>
 
         <div class="contact-container">
-            <!-- Direct Info Boxes -->
             <div class="contact-info">
                 <div class="info-box" style="border-left: 5px solid #00ff66;">
                     <h4 style="color: #00ff66; margin-bottom: 5px;">📞 WhatsApp / Call</h4>
@@ -366,459 +529,81 @@
                 </div>
             </div>
 
-            <!-- Form -->
             <div class="contact-form">
-    <form action="https://formspree.io/f/xanygpkp" method="POST" class="form-group">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="4" placeholder="Your Project Details / Message" required></textarea>
-        <button type="submit" class="submit-btn" onclick="playPerfectSound(event)">Send Message</button>
-    </form>
-</div>
-
-<audio id="myWebSound" src="music.mp4" preload="auto"></audio>
-
-<script>
-function playPerfectSound(e) {
-    var audio = document.getElementById("myWebSound");
-    if (audio) {
-        audio.currentTime = 0;
-        audio.play().catch(function(err) {
-            console.log("Sound play blocked: ", err);
-        });
-    }
-}
-
-// Poori website ke har button aur link par automatic sound lagane ke liye:
-document.addEventListener("DOMContentLoaded", function() {
-    var elements = document.querySelectorAll('button, .rect-btn, .submit-btn, a');
-    elements.forEach(function(el) {
-        el.addEventListener('click', function() {
-            playPerfectSound();
-        });
-    });
-});
-</script>
+                <form action="https://formspree.io/f/xanygpkp" method="POST" class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="4" placeholder="Your Project Details / Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
-    <!-- CONTACT SECTION END -->
-
-    <!-- FOOTER -->
     <footer style="padding: 30px; text-align: center; border-top: 1px solid #222; font-size: 0.9rem; color: #666;">
         &copy; 2026 Malik Nafay Studio. All Rights Reserved.
-    <
-<button id="audioToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; width: 60px; height: 60px; border-radius: 50%; background: #111217; border: 3px solid #00ff66; color: #00ff66; font-size: 1.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(0, 255, 102, 0.5); transition: all 0.3s ease;">
-    🔈
-</button>
+    </footer>
 
-<audio id="bgMusic" src="music.mp4" loop preload="auto"></audio>
-<audio id="hoverSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav" preload="auto"></audio>
-<audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-86.wav" preload="auto"></audio>
+    <button id="audioToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; width: 60px; height: 60px; border-radius: 50%; background: #111217; border: 3px solid #00ff66; color: #00ff66; font-size: 1.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(0, 255, 102, 0.5); transition: all 0.3s ease;">
+        🔈
+    </button>
 
-<script>
-    const bgMusic = document.getElementById('bgMusic');
-    const hoverSound = document.getElementById('hoverSound');
-    const clickSound = document.getElementById('clickSound');
-    const audioToggle = document.getElementById('audioToggle');
-    let isPlaying = false;
+    <audio id="bgMusic" src="music.mp4" loop preload="auto"></audio>
+    <audio id="hoverSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav" preload="auto"></audio>
+    <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-86.wav" preload="auto"></audio>
 
-    // Master Volumes Control (Aap yahan se sound kam/zyada kar sakte hain)
-    bgMusic.volume = 0.3;     // Background music volume at 30%
-    hoverSound.volume = 0.4;  // Hover effect volume at 40%
-    clickSound.volume = 0.5;  // Click effect volume at 50%
+    <script>
+        const bgMusic = document.getElementById('bgMusic');
+        const hoverSound = document.getElementById('hoverSound');
+        const clickSound = document.getElementById('clickSound');
+        const audioToggle = document.getElementById('audioToggle');
+        let isPlaying = false;
 
-    // Background Music Play/Pause Toggle Function
-    audioToggle.addEventListener('click', function() {
-        if (!isPlaying) {
-            bgMusic.play().then(() => {
-                audioToggle.innerHTML = '🔊';
-                audioToggle.style.borderColor = '#ff0033';
-                audioToggle.style.color = '#ff0033';
-                audioToggle.style.boxShadow = '0 0 20px rgba(255, 0, 51, 0.6)';
-                isPlaying = true;
-            }).catch(err => {
-                console.log("Playback error: ", err);
-                alert("Song play nahi ho pa raha, check karein kya music.mp4 bilkul sahi name se uploaded hai?");
+        // Master Volumes Control
+        bgMusic.volume = 0.3;     
+        hoverSound.volume = 0.4;  
+        clickSound.volume = 0.5;  
+
+        // Background Music Play/Pause Toggle
+        audioToggle.addEventListener('click', function() {
+            if (!isPlaying) {
+                bgMusic.play().then(() => {
+                    audioToggle.innerHTML = '🔊';
+                    audioToggle.style.borderColor = '#ff0033';
+                    audioToggle.style.color = '#ff0033';
+                    audioToggle.style.boxShadow = '0 0 20px rgba(255, 0, 51, 0.6)';
+                    isPlaying = true;
+                }).catch(err => {
+                    console.log("Playback error: ", err);
+                    alert("Song play nahi ho pa raha, check karein kya music.mp4 bilkul sahi name se uploaded hai?");
+                });
+            } else {
+                bgMusic.pause();
+                audioToggle.innerHTML = '🔈';
+                audioToggle.style.borderColor = '#00ff66';
+                audioToggle.style.color = '#00ff66';
+                audioToggle.style.boxShadow = '0 0 20px rgba(0, 255, 102, 0.5)';
+                isPlaying = false;
+            }
+        });
+
+        // Universal Hover and Click Sound Effects setup
+        document.addEventListener("DOMContentLoaded", function() {
+            const interactiveElements = document.querySelectorAll('button, .submit-btn, a, .portfolio-item, .brand-logo-container-top, .fist-animation-top');
+            
+            interactiveElements.forEach(el => {
+                // A. Hover Effect
+                el.addEventListener('mouseenter', () => {
+                    hoverSound.currentTime = 0;
+                    hoverSound.play().catch(e => console.log("Hover sound blocked"));
+                });
+
+                // B. Click Effect
+                el.addEventListener('click', () => {
+                    clickSound.currentTime = 0;
+                    clickSound.play().catch(e => console.log("Click sound blocked"));
+                });
             });
-        } else {
-            bgMusic.pause();
-            audioToggle.innerHTML = '🔈';
-            audioToggle.style.borderColor = '#00ff66';
-            audioToggle.style.color = '#00ff66';
-            audioToggle.style.boxShadow = '0 0 20px rgba(0, 255, 102, 0.5)';
-            isPlaying = false;
-        }
-    });
-
-    // Hover and Click Sound Effects for Rectangular Buttons
-    const rectButtons = document.querySelectorAll('.rect-btn, button, .submit-btn');
-    rectButtons.forEach(btn => {
-        
-        // A. Hover (Mouse enter) sound trigger
-        btn.addEventListener('mouseenter', () => {
-            hoverSound.currentTime = 0;
-            hoverSound.play().catch(e => console.log("Hover sound blocked"));
         });
-
-        // B. Click sound trigger
-        btn.addEventListener('click', () => {
-            clickSound.currentTime = 0;
-            clickSound.play().catch(e => console.log("Click sound blocked"));
-        });
-    });
-</script>
-<style>
-  .brand-logo-container {
-    display: inline-block;
-    width: 80px; 
-    height: 80px;
-    background: #111; 
-    padding: 10px;
-    border-radius: 12px;
-    margin-top: 20px;
-  }
-  .brand-logo {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
-  }
-  .brand-logo-container:hover .brand-logo {
-    transform: scale(1.05);
-  }
-  .fist-animation-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 120px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  .fist-icon {
-    font-size: 40px; 
-    display: inline-block;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-  }
-  .fist-animation-box:hover .fist-icon {
-    transform: rotate(360deg) scale(1.2); 
-  }
-  .fist-animation-box p {
-    color: #ffffff;
-    font-family: sans-serif;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-</style>
-
-<div class="brand-logo-container">
-  <svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-    <path d="M20,35 L20,20 L35,20" fill="none" stroke="#00ffcc" stroke-width="3" stroke-linecap="round"/>
-    <path d="M80,35 L80,20 L65,20" fill="none" stroke="#00ffcc" stroke-width="3" stroke-linecap="round"/>
-    <path d="M20,65 L20,80 L35,80" fill="none" stroke="#00ffcc" stroke-width="3" stroke-linecap="round"/>
-    <path d="M80,65 L80,80 L65,80" fill="none" stroke="#00ffcc" stroke-width="3" stroke-linecap="round"/>
-    <polygon points="45,40 65,50 45,60" fill="#ffffff" />
-  </svg>
-</div>
-
-<div class="fist-animation-box">
-  <span class="fist-icon">✊</span>
-  <p>Fist Power</p>
-</div>
-<style>
-  /* Main wrapper jo sab cheezon ko beech mein rakhega */
-  .vip-mother-combo-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    margin: 50px auto;
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  /* Bada Neon Logo */
-  .brand-logo-container-big {
-    display: inline-block;
-    width: 140px;  
-    height: 140px;
-    background: #111; 
-    padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.2);
-    transition: all 0.4s ease;
-  }
-  .brand-logo-big {
-    width: 100%;
-    height: 100%;
-  }
-  .brand-logo-container-big:hover {
-    transform: scale(1.1);
-    box-shadow: 0 15px 40px rgba(0, 255, 204, 0.5);
-  }
-
-  /* Ghoomne Wali Muthi */
-  .fist-animation-box-big {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  }
-  .fist-icon-big {
-    font-size: 80px; 
-    display: inline-block;
-    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-  }
-  .fist-animation-box-big:hover .fist-icon-big {
-    transform: rotate(360deg) scale(1.2); 
-  }
-
-  /* MAA VALI VIP LINE STYLING */
-  .mother-love-line {
-    color: #ff3366; /* Pyar wala Khoobsurat Red/Pink shade */
-    font-size: 26px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(255, 51, 102, 0.6); /* Glowing Text */
-    margin-top: 15px;
-    animation: pulseGlow 2s infinite alternate; /* Halka sa chamakne wala effect */
-  }
-
-  /* Emojis ke liye styling */
-  .mother-emojis {
-    font-size: 32px;
-    display: block;
-    margin-top: 10px;
-  }
-
-  /* Glowing Animation Effect */
-  @keyframes pulseGlow {
-    from { text-shadow: 0 0 10px rgba(255, 51, 102, 0.5); transform: scale(1); }
-    to { text-shadow: 0 0 25px rgba(255, 51, 102, 0.9); transform: scale(1.02); }
-  }
-</style>
-
-<div class="vip-mother-combo-wrapper">
-
-  <div class="brand-logo-container-big">
-    <svg class="brand-logo-big" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-      <path d="M20,35 L20,20 L35,20" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
-      <path d="M80,35 L80,20 L65,20" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
-      <path d="M20,65 L20,80 L35,80" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
-      <path d="M80,65 L80,80 L65,80" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
-      <polygon points="43,38 68,50 43,62" fill="#ffffff" />
-    </svg>
-  </div>
-
-  <div class="fist-animation-box-big">
-    <span class="fist-icon-big">✊</span>
-  </div>
-
-  <div class="mother-love-line">
-    MY LIFE IS UNCOMPLETE WITHOUT MY MOTHER
-    <span class="mother-emojis">🥰😘🤧</span>
-  </div>
-
-</div>
-<style>
-  /* Main wrapper jo sab cheezon ko beech mein aur start mein rakhega */
-  .top-mela-wrapper {
-    position: relative;
-    width: 100%;
-    background: #0a0a0a;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    text-align: center;
-    overflow: hidden; 
-    border-bottom: 3px solid #00ffcc;
-  }
-
-  /* --- SAJAWAT: FLOATING BALLOONS --- */
-  .balloon {
-    position: absolute;
-    width: 50px;
-    height: 65px;
-    animation: floatUp 6s infinite ease-in-out alternate;
-    opacity: 0.8;
-    z-index: 1;
-  }
-  .balloon::after {
-    content: "🎈";
-    font-size: 50px;
-    position: absolute;
-    top: 0; left: 0;
-  }
-  .b1 { left: 10%; animation-delay: 0s; }
-  .b2 { left: 25%; animation-delay: 2s; }
-  .b3 { right: 10%; animation-delay: 1s; }
-  .b4 { right: 25%; animation-delay: 3s; }
-
-  @keyframes floatUp {
-    0% { transform: translateY(20px) rotate(-5deg); }
-    100% { transform: translateY(-30px) rotate(5deg); }
-  }
-
-  /* --- LOGO STYLING --- */
-  .brand-logo-container-top {
-    display: inline-block;
-    width: 120px;  
-    height: 120px;
-    background: #111; 
-    padding: 18px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
-    transition: all 0.4s ease;
-    z-index: 2;
-  }
-  .brand-logo-top {
-    width: 100%;
-    height: 100%;
-  }
-  .brand-logo-container-top:hover {
-    transform: scale(1.1);
-    box-shadow: 0 15px 40px rgba(0, 255, 204, 0.6);
-  }
-
-  /* --- ROTATE FIST ANIMATION --- */
-  .fist-animation-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    z-index: 2;
-  }
-  .fist-icon-top {
-    font-size: 70px; 
-    display: inline-block;
-    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-  }
-  .fist-animation-top:hover .fist-icon-top {
-    transform: rotate(360deg) scale(1.2); 
-  }
-
-  /* --- MAA VALI VIP LINE --- */
-  .mother-love-top {
-    color: #ff3366; 
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(255, 51, 102, 0.7);
-    animation: pulseGlow 2s infinite alternate;
-    z-index: 2;
-  }
-  .mother-emojis {
-    font-size: 30px;
-    display: block;
-    margin-top: 5px;
-  }
-
-  /* --- EID-UL-AZHA CARD MIT 30% OFF --- */
-  .eid-card-top {
-    background: linear-gradient(135deg, #052c1e, #0c1a15);
-    border: 2px solid #00ffcc;
-    border-radius: 20px;
-    padding: 25px;
-    width: 100%;
-    max-width: 550px;
-    box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3);
-    z-index: 2;
-  }
-  .eid-title-top {
-    color: #00ffcc;
-    font-size: 24px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-  }
-  
-  /* NEW: 30% OFF BIG NEON BADGE */
-  .eid-offer-badge {
-    background: #ffcc00;
-    color: #000;
-    font-size: 20px;
-    font-weight: 900;
-    padding: 8px 15px;
-    border-radius: 50px;
-    display: inline-block;
-    margin-bottom: 15px;
-    box-shadow: 0 0 15px #ffcc00;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .eid-updates-marquee {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 12px;
-    padding: 12px;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.6;
-    border-left: 4px solid #ffcc00;
-    text-align: left;
-  }
-  .eid-updates-marquee marquee {
-    height: 65px;
-  }
-
-  @keyframes pulseGlow {
-    from { text-shadow: 0 0 10px rgba(255, 51, 102, 0.5); transform: scale(1); }
-    to { text-shadow: 0 0 25px rgba(255, 51, 102, 0.9); transform: scale(1.02); }
-  }
-</style>
-
-<div class="top-mela-wrapper">
-
-  <div class="balloon b1"></div>
-  <div class="balloon b2"></div>
-  <div class="balloon b3"></div>
-  <div class="balloon b4"></div>
-
-  <div class="brand-logo-container-top">
-    <svg class="brand-logo-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-      <path d="M20,35 L20,20 L35,20" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
-      <path d="M80,35 L80,20 L65,20" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
-      <path d="M20,65 L20,80 L35,80" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
-      <path d="M80,65 L80,80 L65,80" fill="none" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
-      <polygon points="43,38 68,50 43,62" fill="#ffffff" />
-    </svg>
-  </div>
-
-  <div class="fist-animation-top">
-    <span class="fist-icon-top">✊</span>
-  </div>
-
-  <div class="mother-love-top">
-    MY LIFE IS UNCOMPLETE WITHOUT MY MOTHER
-    <span class="mother-emojis">🥰😘🤧</span>
-  </div>
-
-  <div class="eid-card-top">
-    <div class="eid-title-top">🐐 EID UL AZHA MUBARAK 🐂</div>
-    
-    <div class="eid-offer-badge">🔥 SPECIAL EID OFFER: FLAT 30% OFF! 🔥</div>
-    
-    <div class="eid-updates-marquee">
-      <marquee direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
-        • 📢 **EID MEGA SALE:** Nafay Edits ki taraf se Graphic Design aur Video Editing par poora **30% DISCOUNT**! <br>
-        • ⚡ Limited Time Offer sirf Eid ke dino ke liye valid hai! <br>
-        • 🥩 Order book karo aur premium templates par deal paki karo! <br>
-        • 🚀 Stay tuned on Fiverr! Full high-level work delivered super fast!
-      </marquee>
-    </div>
-  </div>
-
-</div>
+    </script>
+</body>
+</html>

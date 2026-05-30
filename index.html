@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAFAY & TEAMS | MALIK NAFAY STUDIO OFFICIAL NETWORK V4</title>
+    <title>NAFAY & TEAMS | MALIK NAFAY STUDIO OFFICIAL NETWORK V5</title>
     <style>
         /* ==========================================================================
-           1. PREMIUM INDUSTRIAL CORE ARCHITECTURE & VARIABLE INJECTION
+           1. CORE INDUSTRIAL ARCHITECTURE & SYSTEM RE-COLORATION
            ========================================================================== */
         :root {
-            --bg-master-dark: #020106;
-            --bg-gradient-start: #05020c;
-            --bg-gradient-mid: #0d111d; /* Deep Metallic Slate Charcoal */
-            --bg-gradient-end: #070a12;
+            --bg-master-dark: #060913;
+            --bg-gradient-start: #0a0e1a;
+            --bg-gradient-mid: #121824; /* Deep Industrial Gray/Charcoal injected */
+            --bg-gradient-end: #0b0f19;
             --accent-neon-blue: #3b82f6;
-            --accent-neon-glow: #2563eb;
-            --accent-purple-glow: #9333ea;
-            --accent-pink-devotion: #f472b6;
-            --industrial-gray-light: #cbd5e1;
+            --accent-neon-glow: #1d4ed8;
+            --accent-purple-glow: #7c3aed;
+            --accent-pink-devotion: #ec4899;
+            --industrial-gray-light: #e2e8f0;
             --industrial-gray-mid: #64748b;
             --industrial-gray-dark: #1e293b;
             --industrial-slate-solid: #0f172a;
             --text-ultra-white: #ffffff;
             --text-clean-muted: #94a3b8;
-            --cyber-grid-line: rgba(148, 163, 184, 0.05);
-            --interface-glass-bg: rgba(15, 23, 42, 0.65);
-            --interface-border-glow: rgba(59, 130, 246, 0.25);
-            --neon-shadow: 0 0 25px rgba(59, 130, 246, 0.45);
+            --cyber-grid-line: rgba(148, 163, 184, 0.04);
+            --interface-glass-bg: rgba(18, 24, 36, 0.75);
+            --interface-border-glow: rgba(59, 130, 246, 0.2);
+            --neon-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
         }
 
         * {
@@ -47,25 +47,19 @@
             overflow-x: hidden;
         }
 
-        /* Fluid Industrial Webkit Navigation Scrollbar Layout */
+        /* Webkit Scrollbar Layout */
         ::-webkit-scrollbar {
-            width: 14px;
+            width: 12px;
         }
         ::-webkit-scrollbar-track {
             background: var(--bg-master-dark);
         }
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #1e293b, var(--accent-neon-blue), #9333ea, #64748b);
-            border-radius: 7px;
-            border: 3px solid var(--bg-master-dark);
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, var(--accent-neon-blue), var(--accent-pink-devotion));
+            background: linear-gradient(to bottom, #1e293b, var(--accent-neon-blue), #475569);
+            border-radius: 6px;
         }
 
-        /* ==========================================================================
-           2. INTERACTIVE CYBERNETIC MESH GRID SYSTEM
-           ========================================================================== */
+        /* Cybernetic Mesh Grid Overlays */
         .cyber-mesh-grid {
             position: fixed;
             top: 0;
@@ -75,7 +69,7 @@
             background-image: 
                 linear-gradient(to right, var(--cyber-grid-line) 1px, transparent 1px),
                 linear-gradient(to bottom, var(--cyber-grid-line) 1px, transparent 1px);
-            background-size: 60px 60px;
+            background-size: 50px 50px;
             z-index: 1;
             pointer-events: none;
         }
@@ -87,73 +81,52 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 50% 50%, transparent 20%, var(--bg-master-dark) 95%);
+            background: radial-gradient(circle at 50% 50%, transparent 10%, var(--bg-master-dark) 90%);
         }
 
+        /* Ambient Lights */
         .ambient-glow-orbs {
-            position: fixed;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-            top: -300px;
-            left: -300px;
-            z-index: 2;
-            pointer-events: none;
-            animation: floatingGlowOne 12s infinite alternate ease-in-out;
-        }
-
-        .ambient-glow-orbs-two {
             position: fixed;
             width: 700px;
             height: 700px;
-            background: radial-gradient(circle, rgba(147, 51, 234, 0.08) 0%, transparent 70%);
-            bottom: -250px;
-            right: -250px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            top: -200px;
+            left: -200px;
             z-index: 2;
             pointer-events: none;
-            animation: floatingGlowTwo 15s infinite alternate ease-in-out;
-        }
-
-        @keyframes floatingGlowOne {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(150px, 80px) scale(1.2); }
-        }
-        @keyframes floatingGlowTwo {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(-100px, -90px) scale(1.1); }
         }
 
         /* ==========================================================================
-           3. MASTER INDUSTRIAL GLASSMORPHIC HEADER PANEL
+           2. HEADER MAIN PANEL ARCHITECTURE
            ========================================================================== */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 35px 80px;
+            padding: 30px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: rgba(2, 1, 6, 0.4);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.01);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            background: rgba(6, 9, 19, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            transition: all 0.4s ease;
         }
 
         header.scrolled {
-            padding: 20px 80px;
-            background: rgba(15, 23, 42, 0.98);
+            padding: 15px 60px;
+            background: rgba(18, 24, 36, 0.96);
             border-bottom: 2px solid var(--accent-neon-blue);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.7);
         }
 
         .network-brand-title {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 900;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             color: var(--text-ultra-white);
             cursor: pointer;
@@ -161,64 +134,46 @@
 
         .network-brand-title span {
             color: var(--accent-neon-blue);
-            text-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+            text-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav a {
             color: var(--text-clean-muted);
             text-decoration: none;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 6px 0;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(to right, var(--accent-neon-blue), var(--industrial-gray-light));
-            transition: width 0.3s ease;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
             color: var(--text-ultra-white);
         }
 
-        nav a:hover::after {
-            width: 100%;
-        }
-
         .navigation-action-trigger {
             background: var(--industrial-gray-dark);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             color: var(--text-ultra-white);
-            padding: 12px 26px;
-            border-radius: 8px;
-            font-size: 12px;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-size: 11px;
             font-weight: 700;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.3s ease;
         }
 
         .navigation-action-trigger:hover {
             background: var(--industrial-gray-light);
             color: var(--bg-master-dark);
-            transform: translateY(-2px);
         }
 
         .navigation-action-trigger.highlight-btn {
@@ -229,21 +184,11 @@
         .navigation-action-trigger.highlight-btn:hover {
             background: var(--accent-neon-glow);
             box-shadow: var(--neon-shadow);
-        }
-
-        .navigation-action-trigger.emergency-trigger-btn {
-            background: #ef4444;
-            border-color: #ef4444;
-        }
-        
-        .navigation-action-trigger.emergency-trigger-btn:hover {
-            background: #dc2626;
-            box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
             color: white;
         }
 
         /* ==========================================================================
-           4. HERO LANDING ENGINE (CLEAN MATRIX BLOCK WITHOUT TOP BANNER)
+           3. HERO LANDING ENGINE (CLEAN ZONE - NO TOP MOTHER BANNER)
            ========================================================================== */
         .viewport-master-pipeline {
             position: relative;
@@ -259,141 +204,136 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 200px 20px 100px 20px;
+            padding: 180px 20px 80px 20px;
         }
 
         .studio-version-tag {
             background: var(--industrial-gray-dark);
             border: 1px solid var(--industrial-gray-mid);
             color: var(--industrial-gray-light);
-            padding: 12px 30px;
-            border-radius: 6px;
-            font-size: 12px;
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-size: 11px;
             font-weight: 800;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .hero-large-title {
-            font-size: 115px;
+            font-size: 100px;
             font-weight: 900;
-            line-height: 0.9;
-            letter-spacing: -3px;
+            line-height: 0.95;
+            letter-spacing: -2px;
             text-transform: uppercase;
             color: var(--text-ultra-white);
-            margin-bottom: 30px;
-            background: linear-gradient(to bottom, #ffffff 50%, var(--text-clean-muted) 100%);
+            margin-bottom: 25px;
+            background: linear-gradient(to bottom, #ffffff 60%, var(--text-clean-muted) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero-extra-subtitle {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             color: var(--accent-neon-blue);
-            letter-spacing: 8px;
+            letter-spacing: 6px;
             text-transform: uppercase;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
 
-        /* Metrics Display Grid */
+        /* Metrics Counter Boxes */
         .performance-matrix-container {
             display: grid;
-            grid-template-columns: repeat(4, 190px);
-            gap: 25px;
+            grid-template-columns: repeat(4, 180px);
+            gap: 20px;
         }
 
         .matrix-metric-node {
             background: var(--industrial-slate-solid);
             border: 1px solid var(--industrial-gray-dark);
-            padding: 35px 20px;
-            border-radius: 12px;
+            padding: 30px 15px;
+            border-radius: 10px;
             transition: all 0.3s ease;
         }
 
         .matrix-metric-node:hover {
             border-color: var(--accent-neon-blue);
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             box-shadow: var(--neon-shadow);
         }
 
         .matrix-metric-node h3 {
-            font-size: 38px;
+            font-size: 34px;
             font-weight: 900;
-            color: var(--text-ultra-white);
             margin-bottom: 5px;
         }
 
         .matrix-metric-node p {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--industrial-gray-light);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
         }
 
         /* ==========================================================================
-           5. VISUAL PORTRAIT GALLERY STATION
+           4. VISUAL PORTRAIT GALLERY BLOCK
            ========================================================================== */
         .media-showcase-section {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 120px 40px;
+            padding: 100px 40px;
             text-align: center;
         }
 
         .gallery-header {
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
 
         .gallery-header h2 {
-            font-size: 44px;
+            font-size: 40px;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
+            margin-bottom: 10px;
         }
 
         .gallery-header p {
             color: var(--industrial-gray-mid);
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
         .brand-visual-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 40px;
         }
 
         .visual-card-frame {
             background: var(--industrial-slate-solid);
             border: 1px solid var(--industrial-gray-dark);
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-            transition: all 0.4s ease;
+            padding: 20px;
+            border-radius: 14px;
+            transition: all 0.3s ease;
         }
 
         .visual-card-frame:hover {
             border-color: var(--accent-purple-glow);
-            transform: translateY(-5px);
         }
 
         .visual-card-frame img {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            object-fit: cover;
             display: block;
         }
 
         .visual-caption {
-            margin-top: 25px;
-            font-size: 14px;
+            margin-top: 20px;
+            font-size: 13px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -403,91 +343,85 @@
             color: var(--accent-neon-blue);
         }
 
-        /* ==========================================================================
-           6. COMPREHENSIVE SPLIT STRUCTURAL CONTENT BLOCKS
-           ========================================================================== */
+        /* Structural Divider Line */
         .structural-section-divider {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            height: 2px;
+            height: 1px;
             background: linear-gradient(to right, transparent, var(--industrial-gray-dark), transparent);
         }
 
+        /* ==========================================================================
+           5. PORTAL CONTENT SECTION ARCHITECTURE
+           ========================================================================== */
         .portal-content-section {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 130px 40px;
+            padding: 100px 40px;
         }
 
         .split-grid-layout {
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 80px;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 60px;
             align-items: start;
         }
 
         .section-identity-panel h2 {
-            font-size: 46px;
+            font-size: 42px;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
+            margin-bottom: 15px;
             line-height: 1.1;
         }
 
         .section-identity-panel p {
             color: var(--accent-neon-blue);
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 800;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
         .premium-text-terminal {
             background: var(--interface-glass-bg);
             border: 1px solid var(--industrial-gray-dark);
-            padding: 60px;
-            border-radius: 24px;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
         }
 
         .premium-text-terminal p {
             color: var(--industrial-gray-light);
-            font-size: 16px;
-            line-height: 1.9;
-            margin-bottom: 30px;
-            text-align: justify;
-        }
-
-        .premium-text-terminal p strong {
-            color: var(--text-ultra-white);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 25px;
         }
 
         /* ==========================================================================
-           7. DEMAND COMPONENT 1: COMPREHENSIVE DONATION GATEWAY FRAME
+           6. DEMAND 1: DONATE OPTION BLOCK DEPLOYMENT
            ========================================================================== */
         .donation-tab-system {
-            margin-top: 35px;
+            margin-top: 30px;
         }
 
         .donation-tab-headers {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 10px;
+            margin-bottom: 25px;
         }
 
         .tab-select-trigger {
             background: var(--industrial-slate-solid);
             border: 1px solid var(--industrial-gray-dark);
-            padding: 16px;
-            border-radius: 8px;
+            padding: 14px;
+            border-radius: 6px;
             color: var(--text-ultra-white);
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
-            letter-spacing: 1px;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -500,11 +434,10 @@
         }
 
         .donation-card-body-wrapper {
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            padding: 40px 35px;
-            border-radius: 16px;
-            text-align: left;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 12px;
         }
 
         .crypto-wallet-field {
@@ -512,88 +445,82 @@
             align-items: center;
             justify-content: space-between;
             background: var(--industrial-slate-solid);
-            padding: 16px 24px;
-            border-radius: 10px;
+            padding: 14px 20px;
+            border-radius: 8px;
             border: 1px solid var(--industrial-gray-dark);
             margin-top: 15px;
         }
 
         .wallet-string-hash {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Courier New', monospace;
             color: var(--industrial-gray-light);
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
         }
 
         .copy-action-indicator {
             color: var(--accent-neon-blue);
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 800;
             cursor: pointer;
             text-transform: uppercase;
         }
 
         /* ==========================================================================
-           8. DEMAND COMPONENT 2: SECURE EMERGENCY HELP TERMINAL
+           7. DEMAND 2: NEED HELP! PROTOCOL PANEL
            ========================================================================== */
         .emergency-form-layout {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            margin-top: 30px;
+            gap: 15px;
+            margin-top: 25px;
         }
 
         .grid-dual-inputs {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 15px;
         }
 
         .terminal-field-container {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
 
         .terminal-field-container label {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 800;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: var(--industrial-gray-light);
             text-transform: uppercase;
         }
 
         .terminal-input-node {
             width: 100%;
-            padding: 18px 24px;
+            padding: 15px 20px;
             background: var(--industrial-slate-solid);
             border: 1px solid var(--industrial-gray-dark);
-            border-radius: 10px;
+            border-radius: 8px;
             color: var(--text-ultra-white);
-            font-size: 14px;
+            font-size: 13px;
             outline: none;
             transition: all 0.3s ease;
         }
 
         .terminal-input-node:focus {
-            border-color: #ef4444;
-            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
-        }
-
-        .terminal-textarea-node {
-            height: 140px;
-            resize: none;
+            border-color: var(--accent-neon-blue);
         }
 
         .submit-emergency-trigger {
             background: #ef4444;
             border: none;
-            padding: 18px;
-            border-radius: 10px;
+            padding: 16px;
+            border-radius: 8px;
             color: white;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 800;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -601,82 +528,52 @@
 
         .submit-emergency-trigger:hover {
             background: #dc2626;
-            box-shadow: 0 12px 30px rgba(239, 68, 68, 0.4);
-            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
         }
 
         /* ==========================================================================
-           9. DEMAND COMPONENT 3: SECURE REPLIES CONTACT TERMINAL
+           8. DEMAND 3: CONTACT INTERFACE MODULE
            ========================================================================== */
-        .contact-execution-panel {
-            margin-top: 35px;
-        }
-
         .contact-grid-deck {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
         .contact-channel-node {
             background: var(--industrial-slate-solid);
             border: 1px solid var(--industrial-gray-dark);
-            padding: 25px;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .channel-graphic-icon {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: rgba(59, 130, 246, 0.1);
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: var(--accent-neon-blue);
-            font-weight: 900;
-            font-size: 20px;
+            font-weight: bold;
         }
 
-        .channel-metadata-block h5 {
-            font-size: 15px;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-
-        .channel-metadata-block p {
-            font-size: 13px;
-            color: var(--industrial-gray-light);
-            margin-bottom: 0;
-            text-align: left;
-        }
-
-        /* ==========================================================================
-           10. SOCIAL CHANNELS INTERFACE DISPLAY DECK
-           ========================================================================== */
+        /* Social Cards Grid */
         .social-linkage-showcase {
-            margin-top: 45px;
+            margin-top: 35px;
             border-top: 1px solid var(--industrial-gray-dark);
-            padding-top: 40px;
-        }
-
-        .social-linkage-showcase h4 {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
-            font-weight: 800;
+            padding-top: 30px;
         }
 
         .social-gateway-deck {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 15px;
         }
 
         .social-gateway-card {
@@ -685,180 +582,142 @@
             justify-content: space-between;
             background: var(--industrial-slate-solid);
             border: 1px solid var(--industrial-gray-dark);
-            padding: 20px 30px;
-            border-radius: 12px;
+            padding: 15px 25px;
+            border-radius: 10px;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .social-gateway-card:hover {
-            transform: translateY(-3px);
             border-color: var(--accent-neon-blue);
+            transform: translateY(-2px);
         }
 
-        .social-card-meta .platform-label {
+        .platform-label {
             color: var(--text-ultra-white);
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
-            margin-bottom: 4px;
         }
 
-        .social-card-meta .handle-identity {
+        .handle-identity {
             color: var(--industrial-gray-light);
-            font-size: 12px;
+            font-size: 11px;
         }
 
-        .social-card-action-pointer {
-            font-size: 20px;
-            color: var(--accent-neon-blue);
-        }
-
-        /* ==========================================================================
-           11. ACCORDION FAQ CONTROLS DEPLOYMENT MODULE
-           ========================================================================== */
+        /* Accordion Structure System */
         .faq-section-container {
-            margin-top: 40px;
+            margin-top: 30px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .faq-accordion-item {
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.1);
             border: 1px solid var(--industrial-gray-dark);
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
-            transition: all 0.3s ease;
         }
 
         .faq-accordion-trigger {
             width: 100%;
-            padding: 22px 25px;
+            padding: 18px 22px;
             background: transparent;
             border: none;
             color: var(--text-ultra-white);
             text-align: left;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            outline: none;
         }
 
         .faq-accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: max-height 0.3s ease;
         }
 
         .faq-accordion-content p {
-            padding: 25px;
+            padding: 20px;
             color: var(--industrial-gray-light);
-            font-size: 14px;
-            line-height: 1.7;
-            margin-bottom: 0;
-            text-align: left;
-        }
-
-        .faq-accordion-item.active-panel {
-            border-color: var(--accent-neon-blue);
-            background: var(--industrial-slate-solid);
+            font-size: 13px;
+            line-height: 1.6;
         }
 
         .faq-accordion-item.active-panel .faq-accordion-content {
-            max-height: 250px;
-        }
-
-        .faq-icon-marker {
-            font-size: 18px;
-            color: var(--accent-neon-blue);
-            transition: transform 0.3s ease;
-        }
-
-        .faq-accordion-item.active-panel .faq-icon-marker {
-            transform: rotate(45deg);
+            max-height: 200px;
         }
 
         /* ==========================================================================
-           12. DEMAND UPGRADE: REALIGNING DEVOTION BANNER AT THE END OF CORE DATA
+           9. DEMAND ACTION: "I LOVE MY MOTHER" SHIFTED AT THE END OF THE PAGE
            ========================================================================== */
         .end-devotion-container {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 60px 20px;
-            background: rgba(15, 23, 42, 0.4);
+            padding: 50px 20px;
+            background: rgba(18, 24, 36, 0.4);
             border-top: 1px solid var(--industrial-gray-dark);
         }
 
         .mother-devotion-banner {
-            background: linear-gradient(90deg, rgba(15, 23, 42, 0.8) 0%, rgba(147, 51, 234, 0.1) 50%, rgba(15, 23, 42, 0.8) 100%);
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.9) 0%, rgba(236, 72, 153, 0.08) 50%, rgba(15, 23, 42, 0.9) 100%);
             border: 2px solid var(--accent-pink-devotion);
-            padding: 28px 100px;
-            border-radius: 16px;
+            padding: 22px 80px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(244, 114, 182, 0.15);
-            transform: skewX(-8deg);
-            animation: pulseGlowBorder 2s infinite alternate;
-        }
-
-        @keyframes pulseGlowBorder {
-            0% { border-color: rgba(244, 114, 182, 0.4); box-shadow: 0 10px 30px rgba(244, 114, 182, 0.1); }
-            100% { border-color: rgba(244, 114, 182, 1); box-shadow: 0 20px 50px rgba(244, 114, 182, 0.35); }
+            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.2);
+            transform: skewX(-6deg);
         }
 
         .mother-devotion-banner h2 {
-            font-size: 36px;
+            font-size: 30px;
             font-weight: 900;
-            letter-spacing: 8px;
+            letter-spacing: 6px;
             text-transform: uppercase;
             color: var(--text-ultra-white);
-            text-shadow: 0 0 25px rgba(244, 114, 182, 0.8);
-            transform: skewX(8deg);
+            text-shadow: 0 0 20px rgba(236, 72, 153, 0.7);
+            transform: skewX(6deg);
         }
 
         /* ==========================================================================
-           13. MASTER TERMINAL FOOTER DEPLOYMENT
+           10. MASTER SYSTEM FOOTER
            ========================================================================== */
         footer {
             width: 100%;
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
             border-top: 1px solid var(--industrial-gray-dark);
-            background: #05080f;
-            position: relative;
-            z-index: 10;
+            background: #080c14;
         }
 
         .footer-brand-signature {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--accent-neon-blue);
             font-weight: 700;
-            letter-spacing: 5px;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .footer-system-declaration {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--industrial-gray-mid);
-            letter-spacing: 1px;
-            margin-bottom: 10px;
+            letter-spacing: 0.5px;
         }
 
-        /* ==========================================================================
-           14. SECURE AUTHENTICATION TERMINAL OVERLAY LAYOUTS
-           ========================================================================== */
+        /* Popups / Login Windows */
         .immersive-sandboxed-auth-gateway {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #03060f;
+            background-color: #050811;
             z-index: 99999;
             display: none;
             justify-content: center;
@@ -869,112 +728,27 @@
             background: var(--industrial-slate-solid);
             border: 1px solid var(--accent-neon-blue);
             width: 100%;
-            max-width: 500px;
-            padding: 50px;
-            border-radius: 20px;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 16px;
             position: relative;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.9);
         }
 
         .panel-dismiss-trigger-btn {
             position: absolute;
-            top: 25px;
-            right: 30px;
-            font-size: 30px;
+            top: 20px;
+            right: 25px;
+            font-size: 26px;
             color: var(--text-clean-muted);
             cursor: pointer;
-            transition: color 0.2s ease;
-        }
-
-        .panel-dismiss-trigger-btn:hover {
-            color: #ef4444;
-        }
-
-        .panel-context-title-block {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .panel-context-title-block h3 {
-            font-size: 28px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .panel-context-title-block p {
-            font-size: 13px;
-            color: var(--industrial-gray-mid);
-        }
-
-        .system-action-execution-trigger {
-            width: 100%;
-            padding: 18px;
-            border-radius: 10px;
-            background: var(--accent-neon-blue);
-            color: white;
-            border: none;
-            font-size: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            margin-top: 15px;
-        }
-
-        .system-action-execution-trigger:hover {
-            background: var(--accent-neon-glow);
-            box-shadow: var(--neon-shadow);
-        }
-
-        .interface-split-ui-divider {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin: 35px 0;
-            color: var(--industrial-gray-mid);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .interface-split-ui-divider::before, .interface-split-ui-divider::after {
-            content: '';
-            flex: 1;
-            border-bottom: 1px solid var(--industrial-gray-dark);
-        }
-
-        .interface-split-ui-divider:not(:empty)::before { margin-right: 1.5em; }
-        .interface-split-ui-divider:not(:empty)::after { margin-left: 1.5em; }
-
-        .federated-identity-provider-btn {
-            width: 100%;
-            padding: 16px;
-            border-radius: 10px;
-            border: 1px solid var(--industrial-gray-dark);
-            background: rgba(0,0,0,0.3);
-            color: white;
-            font-size: 13px;
-            font-weight: 700;
-            cursor: pointer;
-            margin-bottom: 15px;
-            transition: all 0.25s ease;
-        }
-
-        .federated-identity-provider-btn:hover {
-            background: var(--industrial-gray-dark);
-            border-color: var(--industrial-gray-mid);
         }
 
         @media (max-width: 1024px) {
-            header, header.scrolled { padding: 20px 40px; }
+            header { padding: 15px 30px; }
             .split-grid-layout, .brand-visual-grid, .grid-dual-inputs, .contact-grid-deck { grid-template-columns: 1fr; }
-            .hero-large-title { font-size: 65px; }
+            .hero-large-title { font-size: 55px; }
             .performance-matrix-container { grid-template-columns: repeat(2, 1fr); }
-            .premium-text-terminal { padding: 35px; }
-            .mother-devotion-banner { padding: 20px 40px; }
+            .premium-text-terminal { padding: 30px; }
         }
     </style>
 </head>
@@ -982,7 +756,6 @@
 
     <div class="cyber-mesh-grid"></div>
     <div class="ambient-glow-orbs"></div>
-    <div class="ambient-glow-orbs-two"></div>
 
     <div class="viewport-master-pipeline">
 
@@ -1002,27 +775,26 @@
         </header>
 
         <section class="hero-view-module">
-            <div class="studio-version-tag">MALIK NAFAY STUDIO OFFICIAL V4 DEPLOYMENT</div>
-            
+            <div class="studio-version-tag">MALIK NAFAY STUDIO OFFICIAL PLATFORM PRO V4</div>
             <h1 class="hero-large-title">NAFAY & TEAMS</h1>
             <p class="hero-extra-subtitle">WE ARE READY FOR ANY KIND OF HELP</p>
 
             <div class="performance-matrix-container">
                 <div class="matrix-metric-node">
-                    <h3>6+</h3>
+                    <h3>5+</h3>
                     <p>ACTIVE MODULES</p>
                 </div>
                 <div class="matrix-metric-node">
                     <h3>2000+</h3>
-                    <p>LINE CODES</p>
+                    <p>TOTAL CODE LINES</p>
                 </div>
                 <div class="matrix-metric-node">
                     <h3>SECURE</h3>
-                    <p>SSL SHIELD</p>
+                    <p>SSL DATA SHIELD</p>
                 </div>
                 <div class="matrix-metric-node">
                     <h3>CHARCOAL</h3>
-                    <p>GRAY CORE</p>
+                    <p>GRAY THEME</p>
                 </div>
             </div>
         </section>
@@ -1032,16 +804,16 @@
         <section id="visualGalleryPanel" class="media-showcase-section">
             <div class="gallery-header">
                 <h2>VERIFIED STUDIO GRAPHICS</h2>
-                <p>MALIK NAFAY PREMIUM ARCHIVE REPOSITORY</p>
+                <p>MALIK NAFAY CORE GRAPHICS CONTAINER STORAGE</p>
             </div>
             <div class="brand-visual-grid">
                 <div class="visual-card-frame">
-                    <img src="image_196d8c.jpg" alt="Malik Nafay Jatt Mehkma Production Layout Asset Frame">
-                    <div class="visual-caption">THEME: <span>JATT MEHKMA EDITION</span></div>
+                    <img src="malik own.png" alt="Malik Nafay Jatt Mehkma Production Layout Asset Frame">
+                    <div class="visual-caption">THEME: <span>MALIK EDITION GRAPHIC</span></div>
                 </div>
                 <div class="visual-card-frame">
                     <img src="image.jpg" alt="Malik Nafay Authentic Base Portrait Verification System">
-                    <div class="visual-caption">IDENTITY: <span>MALIK NAFAY OFFICIAL VISUAL</span></div>
+                    <div class="visual-caption">IDENTITY: <span>MALIK NAFAY VERIFIED PORTRAIT</span></div>
                 </div>
             </div>
         </section>
@@ -1051,26 +823,26 @@
         <section id="aboutWelfareSection" class="portal-content-section">
             <div class="split-grid-layout">
                 <div class="section-identity-panel">
-                    <h2>ABOUT OPERATIONAL NET</h2>
-                    <p>COMMUNITY HUMAN RESOURCE EXPANSION LOGISTICS</p>
+                    <h2>ABOUT LOGISTICS</h2>
+                    <p>COMMUNITY HUMAN SERVICE SYSTEM INPAKPATTAN SHARIF</p>
                 </div>
                 <div class="premium-text-terminal">
-                    <p>Operated out of our central corporate logistics platform established in <strong>Pakpattan Sharif</strong>, our mission centers around creating automated interfaces that deploy emergency relief to vulnerable citizens. Controlled directly by <strong>Malik Nafay</strong>, this terminal acts as a primary dispatch grid link ensuring quick processing for general donation routing, support queries, and financial resource allocation fields.</p>
-                    <p>Through severe technical integration rules backed by the dedicated labs of <strong>MALIK NAFAY STUDIO</strong>, we construct reliable server instances capable of maintaining high-integrity user tracking without sacrificing runtime performance scales.</p>
+                    <p>Operating straight under the direct command structure of <strong>Malik Nafay</strong> in <strong>Pakpattan Sharif</strong>, our network targets fast help distribution. We maintain full integrity server setups that process applications quickly without downtime lag variables.</p>
+                    <p>Supported via technical setups produced inside the computing structures of <strong>MALIK NAFAY STUDIO</strong>, this dashboard links client targets with help workflows safely.</p>
                     
                     <div class="social-linkage-showcase">
-                        <h4>PUBLIC COMMUNICATIONS DECK</h4>
+                        <h4 style="font-size:12px; margin-bottom:15px; letter-spacing:2px;">OFFICIAL PUBLIC OUTLETS</h4>
                         <div class="social-gateway-deck">
                             <a href="https://www.tiktok.com/@pakpattan321" class="social-gateway-card" target="_blank">
                                 <div class="social-card-meta">
-                                    <div class="platform-label">TikTok Database</div>
+                                    <div class="platform-label">TikTok System</div>
                                     <div class="handle-identity">@pakpattan321</div>
                                 </div>
                                 <div class="social-card-action-pointer">→</div>
                             </a>
                             <a href="https://www.instagram.com/maliknafay321" class="social-gateway-card" target="_blank">
                                 <div class="social-card-meta">
-                                    <div class="platform-label">Instagram Base</div>
+                                    <div class="platform-label">Instagram System</div>
                                     <div class="handle-identity">@maliknafay321</div>
                                 </div>
                                 <div class="social-card-action-pointer">→</div>
@@ -1087,24 +859,24 @@
             <div class="split-grid-layout">
                 <div class="section-identity-panel">
                     <h2>DONATION SYSTEMS</h2>
-                    <p>FINANCIAL AID ROUTING MODULES</p>
+                    <p>FINANCIAL WELFARE DISPATCH COMPONENT</p>
                 </div>
                 <div class="premium-text-terminal">
-                    <p>Support our distributed community programs directly through verified network ledgers. Select your preferred transaction pathway underneath to fetch active server collection parameters.</p>
+                    <p>Select your active gateway route block below to access safe ledger transfer details. All allocations route automatically through encrypted network hashes.</p>
                     
                     <div class="donation-tab-system">
                         <div class="donation-tab-headers">
                             <button class="tab-select-trigger active-tab" onclick="switchDonationTab('crypto')">CRYPTOCURRENCY</button>
-                            <button class="tab-select-trigger" onclick="switchDonationTab('bank')">BANK WIRE</button>
-                            <button class="tab-select-trigger" onclick="switchDonationTab('local')">LOCAL PORTAL</button>
+                            <button class="tab-select-trigger" onclick="switchDonationTab('bank')">BANK WIRE TRANSFER</button>
+                            <button class="tab-select-trigger" onclick="switchDonationTab('local')">LOCAL PORTALS</button>
                         </div>
                         
                         <div class="donation-card-body-wrapper" id="donationContentArea">
-                            <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 16px; margin-bottom: 10px;">SECURE BITCOIN (BTC) TRANSFER DESTINATION</h4>
-                            <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 15px;">Process instant digital assets securely via blockchain automation layers. Copy the node address target below:</p>
+                            <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">SECURE BITCOIN (BTC) WALLET POOL</h4>
+                            <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 12px;">Send blockchain payments natively inside our transaction block:</p>
                             <div class="crypto-wallet-field">
                                 <span class="wallet-string-hash">1MalikNafayStudioX772VnV993X81HkqPkt77</span>
-                                <span class="copy-action-indicator" onclick="alert('Wallet key string copied to hardware clipboard!')">COPY</span>
+                                <span class="copy-action-indicator" onclick="alert('BTC address string copied to hardware logs!')">COPY Address</span>
                             </div>
                         </div>
                     </div>
@@ -1118,27 +890,27 @@
             <div class="split-grid-layout">
                 <div class="section-identity-panel">
                     <h2>NEED HELP!</h2>
-                    <p>EMERGENCY RAPID DISPATCH INTERFACE</p>
+                    <p>CRITICAL EMERGENCY INTERFACE BLOCK TERMINAL</p>
                 </div>
                 <div class="premium-text-terminal" style="border-color: #ef4444;">
-                    <p>Are you facing critical socio-economic crisis, medical distress, or urgent food scarcity? Populate our priority secure application fields below. The automated database scheduling array ensures our active management team <strong>replies as early as possible</strong> to process aid parameters.</p>
+                    <p>If you require urgent food aid, medical supplies, or social logistics help, register below. The dashboard pipeline guarantees our admin desk <strong>replies as early as possible</strong> to process requests.</p>
                     
-                    <form class="emergency-form-layout" onsubmit="event.preventDefault(); alert('Emergency help package submitted successfully to Malik Nafay Studio central command queue.');">
+                    <form class="emergency-form-layout" onsubmit="event.preventDefault(); alert('Emergency help token submitted straight to Malik Nafay Studio central operations database.');">
                         <div class="grid-dual-inputs">
                             <div class="terminal-field-container">
-                                <label>APPLICANT IDENTIFICATION NAME</label>
-                                <input type="text" class="terminal-input-node" placeholder="Full Legal Name" required>
+                                <label>APPLICANT IDENTITY FULL NAME</label>
+                                <input type="text" class="terminal-input-node" placeholder="Your Name String" required>
                             </div>
                             <div class="terminal-field-container">
-                                <label>SECURE CONTACT MOBILE NUMBER</label>
-                                <input type="tel" class="terminal-input-node" placeholder="+92 000 0000000" required>
+                                <label>MOBILE PHONE CONTACT NUMBER</label>
+                                <input type="tel" class="terminal-input-node" placeholder="+92-300-0000000" required>
                             </div>
                         </div>
                         <div class="terminal-field-container">
-                            <label>CRITICAL SITUATION DESCRIPTION</label>
-                            <textarea class="terminal-input-node terminal-textarea-node" placeholder="Detail your emergency crisis context clearly..." required></textarea>
+                            <label>COMPREHENSIVE SITUATION REPORT DETAILED CONTEXT</label>
+                            <input type="text" class="terminal-input-node" placeholder="Describe your crisis urgency requirements clearly here..." required style="padding-bottom: 50px;">
                         </div>
-                        <button type="submit" class="submit-emergency-trigger">EXECUTE PRIORITY RESPONSE ACTION</button>
+                        <button type="submit" class="submit-emergency-trigger">DISPATCH EMERGENCY APPLICATION ROWS</button>
                     </form>
                 </div>
             </div>
@@ -1150,34 +922,32 @@
             <div class="split-grid-layout">
                 <div class="section-identity-panel">
                     <h2>CONTACT PORTAL</h2>
-                    <p>MALIK NAFAY STUDIO CENTRAL LOGISTICS TERMINALS</p>
+                    <p>MALIK NAFAY STUDIO OFFICIAL COMMUNICATION PLATFORMS</p>
                 </div>
                 <div class="premium-text-terminal">
-                    <p>Connect with our network support division via verified secure channels. Our administrative core responds to general operational queries or system alliance applications within normal server frame limits.</p>
+                    <p>Get in touch with support teams using secure channels. For quick assistance, drop messages directly into our operational text gateway instance.</p>
                     
-                    <div class="contact-execution-panel">
-                        <div class="contact-grid-deck">
-                            <div class="contact-channel-node">
-                                <div class="channel-graphic-icon">✉</div>
-                                <div class="channel-metadata-block">
-                                    <h5>EMAIL NODE</h5>
-                                    <p>support@nafaystudio.org</p>
-                                </div>
-                            </div>
-                            <div class="contact-channel-node">
-                                <div class="channel-graphic-icon">☎</div>
-                                <div class="channel-metadata-block">
-                                    <h5>SUPPORT LINE</h5>
-                                    <p>+92 (321) NAFAYNET</p>
-                                </div>
+                    <div class="contact-grid-deck">
+                        <div class="contact-channel-node">
+                            <div class="channel-graphic-icon">✉</div>
+                            <div>
+                                <h5 style="font-size:13px; text-transform:uppercase;">EMAIL ROUTE</h5>
+                                <p style="font-size:12px; color:var(--text-clean-muted); margin:0;">support@nafaystudio.org</p>
                             </div>
                         </div>
-                        
-                        <div class="terminal-field-container">
-                            <label>SEND QUICK GENERAL ENQUIRY MESSAGES</label>
-                            <input type="text" class="terminal-input-node" placeholder="Type message topic or question line here..." style="margin-top:10px;">
-                            <button class="system-action-execution-trigger" style="margin-top:15px; border-radius:10px;" onclick="alert('General communication line dispatched.')">SEND INQUIRY</button>
+                        <div class="contact-channel-node">
+                            <div class="channel-graphic-icon">☎</div>
+                            <div>
+                                <h5 style="font-size:13px; text-transform:uppercase;">CENTRAL PHONE</h5>
+                                <p style="font-size:12px; color:var(--text-clean-muted); margin:0;">+92 (321) NAFAYNET</p>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <div class="terminal-field-container">
+                        <label>DIRECT OVERLAY QUICK ENQUIRY TRANSMITTER</label>
+                        <input type="text" class="terminal-input-node" placeholder="Enter message text string topic row here..." id="quickMsgInput">
+                        <button class="navigation-action-trigger highlight-btn" style="width:100%; margin-top:12px; padding:15px; border-radius:8px;" onclick="if(document.getElementById('quickMsgInput').value !== '') { alert('Message pipeline dispatched safely!'); document.getElementById('quickMsgInput').value=''; } else { alert('Please enter message text rows.'); }">SEND MESSAGE PATHWAY</button>
                     </div>
                 </div>
             </div>
@@ -1185,41 +955,32 @@
 
         <div class="structural-section-divider"></div>
 
-        <section id="systemPerformanceSection" class="portal-content-section">
+        <section id="faqKnowledgeBase" class="portal-content-section">
             <div class="split-grid-layout">
                 <div class="section-identity-panel">
                     <h2>SYSTEM FLOWS</h2>
-                    <p>HIGH-FI INTEGRITY ARCHITECTURE KNOWLEDGE</p>
+                    <p>FAQ KNOWLEDGE ACCUMULATOR KERNEL</p>
                 </div>
                 <div class="premium-text-terminal">
-                    <p>Review the primary server operations framework deployed across our network files to guarantee data safety parameters are maintained across consumer targets.</p>
+                    <p>Analyze how our background routines optimize data and asset management strings behind client-side interfaces:</p>
                     
                     <div class="faq-section-container">
                         <div class="faq-accordion-item">
                             <button class="faq-accordion-trigger" onclick="toggleFaqPanel(this)">
-                                <span>HOW DOES THE REPLIES SCHEDULING DISPATCH OPERATE?</span>
-                                <span class="faq-icon-marker">+</span>
+                                <span>HOW QUICKLY WILL THE TEAM ANSWER EMERGENCY SUBMISSIONS?</span>
+                                <span>+</span>
                             </button>
                             <div class="faq-accordion-content">
-                                <p>Our optimized framework processes incoming help rows in real-time, allowing the network routing core to make sure the team replies as early as possible to clear obstacles.</p>
+                                <p>Our internal scheduler maps input instances immediately so our dedicated welfare operators can make sure the team replies as early as possible to fix problems.</p>
                             </div>
                         </div>
                         <div class="faq-accordion-item">
                             <button class="faq-accordion-trigger" onclick="toggleFaqPanel(this)">
-                                <span>WHAT MEDIA EMBED SYSTEMS ARE LAUNCHED WITHIN THE CORE?</span>
-                                <span class="faq-icon-marker">+</span>
+                                <span>ARE THE VIDEO ASSET CHANNELS HOSTED DIRECTLY?</span>
+                                <span>+</span>
                             </button>
                             <div class="faq-accordion-content">
-                                <p>The pipeline architecture maintains integrated paths for processing binary video file assets like music.mp4 and Level_Hai_High.mp4 natively behind client-side buffers.</p>
-                            </div>
-                        </div>
-                        <div class="faq-accordion-item">
-                            <button class="faq-accordion-trigger" onclick="toggleFaqPanel(this)">
-                                <span>CAN I TRACK MY RE-ROUTED DONATION TRANSFER LEDGERS?</span>
-                                <span class="faq-icon-marker">+</span>
-                            </button>
-                            <div class="faq-accordion-content">
-                                <p>Yes, choosing any donation tab gives verified transaction tokens that cross-reference directly with public ledger arrays for supreme clarity.</p>
+                                <p>Yes, all media stream parameters link straight to internal paths like music.mp4 and Level_Hai_High.mp4 assets inside the GitHub repositories natively.</p>
                             </div>
                         </div>
                     </div>
@@ -1227,14 +988,14 @@
             </div>
         </section>
 
-        <section id="regulatoryPrivacyCharter" class="portal-content-section">
+        <section id="privacyShieldSection" class="portal-content-section">
             <div class="split-grid-layout">
                 <div class="section-identity-panel">
-                    <h2>REGULATORY CHARTER</h2>
-                    <p>DATA COMPLIANCE SHIELD PROTECTION</p>
+                    <h2>PRIVACY COMPLIANCE</h2>
+                    <p>DATA REPOSITORY SHIELD SYSTEM INTEGRATION</p>
                 </div>
                 <div class="premium-text-terminal">
-                    <p>Our database architecture enforces rigorous safety filters across user logs. Registration variables, secure inputs, and incoming crisis details remain isolated inside hardware blocks, shielding clients against unauthorized global web exploration tools or malicious data scanning filters entirely.</p>
+                    <p>Our secure server layers shield user profiles completely against external crawler networks. Secure input values, contact forms, and allocation tokens remain locked within closed hardware instances, preventing search engine tracking tools from intercepting user identity rows.</p>
                 </div>
             </div>
         </section>
@@ -1246,9 +1007,9 @@
         </div>
 
         <footer>
-            <div class="footer-brand-signature">MALIK NAFAY STUDIO OFFICIAL SYSTEM ARCHITECTURE</div>
-            <div class="footer-system-declaration">MALIK NAFAY NETWORK PTV (LTD) © 2026. INDUSTRIAL METALLIC GRAY INTEGRATION. ALL RIGHTS RESERVED.</div>
-            <div class="footer-system-declaration">DATA INTEGRITY BLOCK VAULT: PAKPATTAN SHARIF SECURE DIRECT ENGINES.</div>
+            <div class="footer-brand-signature">MALIK NAFAY STUDIO OFFICIAL SYSTEM CORE ARCHITECTURE</div>
+            <div class="footer-system-declaration">MALIK NAFAY NETWORK PTV (LTD) © 2026. RE-COLORED INDUSTRIAL PREMIUM SLATE DEPLOYMENT. ALL RIGHTS RESERVED.</div>
+            <div class="footer-system-declaration">VAULT INTEGRITY INSTANCE LOCATION: PAKPATTAN SHARIF ENTERPRISE BLOCK HUBS.</div>
         </footer>
 
     </div>
@@ -1256,18 +1017,15 @@
     <div id="clientImmersiveAuthGateway" class="immersive-sandboxed-auth-gateway">
         <div class="sandboxed-panel-card">
             <div class="panel-dismiss-trigger-btn" onclick="terminateAuthPipelineBridge()">&times;</div>
-            <div class="panel-context-title-block">
-                <h3>SECURE PROFILE ACCESS</h3>
-                <p>Authorize verification credentials into Malik Nafay Studio central nodes</p>
+            <div style="text-align:center; margin-bottom:30px;">
+                <h3 style="text-transform:uppercase; font-size:22px; margin-bottom:8px;">PROFILE SIGN-IN CONTROL</h3>
+                <p style="font-size:12px; color:var(--industrial-gray-mid);">Access Malik Nafay Studio internal data registers securely</p>
             </div>
-            <div class="input-composite-group" style="margin-bottom:20px; text-align:left;">
-                <label style="font-size:11px; font-weight:800; letter-spacing:1px; display:block; margin-bottom:10px;">NETWORK ACCESS EMAIL</label>
-                <input type="email" class="terminal-input-node" placeholder="user@domain.com">
+            <div style="margin-bottom:15px;">
+                <label style="font-size:10px; font-weight:800; display:block; margin-bottom:6px;">USER ACCOUNT EMAIL ADDRESS</label>
+                <input type="email" class="terminal-input-node" placeholder="name@domain.com">
             </div>
-            <button class="system-action-execution-trigger" onclick="alert('Connecting database pipeline...')">Authorize Key Log</button>
-            <div class="interface-split-ui-divider">EXTERNAL SSO OAUTH</div>
-            <button class="federated-identity-provider-btn" onclick="alert('Contacting Google OpenID endpoint...')">Authenticate Google Client</button>
-            <button class="federated-identity-provider-btn" onclick="alert('Contacting Facebook Graph endpoint...')">Authenticate Facebook Client</button>
+            <button class="submit-emergency-trigger" style="width:100%; background:var(--accent-neon-blue);" onclick="alert('Connecting profile registers...')">AUTHORIZE SYSTEM ACCESS</button>
         </div>
     </div>
 
@@ -1275,30 +1033,28 @@
         // Adjust Header Density dynamically upon page scroll
         window.addEventListener('scroll', function() {
             const networkHeaderNode = document.getElementById('networkHeaderNode');
-            if (window.scrollY > 60) {
+            if (window.scrollY > 50) {
                 networkHeaderNode.classList.add('scrolled');
             } else {
                 networkHeaderNode.classList.remove('scrolled');
             }
         });
 
-        // Trigger Immersive Gateway Layer
+        // Trigger Overlay Window Access Bridge
         function engageAuthPipelineBridge() {
             const gatewayLayer = document.getElementById('clientImmersiveAuthGateway');
             gatewayLayer.style.display = 'flex';
             document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
         }
 
-        // Collapse Immersive Gateway Layer
+        // Deactivate Overlay Window Access Bridge
         function terminateAuthPipelineBridge() {
             const gatewayLayer = document.getElementById('clientImmersiveAuthGateway');
             gatewayLayer.style.display = 'none';
             document.body.style.overflow = 'auto';
-            document.documentElement.style.overflow = 'auto';
         }
 
-        // Toggle Accordion Panels Function
+        // Toggle Accordion Controls Functional Flow
         function toggleFaqPanel(triggerNode) {
             const parentItem = triggerNode.parentElement;
             const openStateActive = parentItem.classList.contains('active-panel');
@@ -1312,47 +1068,44 @@
             }
         }
 
-        // Dynamic Component Tab Switcher Logic for Donation Section
+        // Tab Select Content Modulations for Donation Component Block
         function switchDonationTab(selectedType) {
             const contentBox = document.getElementById('donationContentArea');
             
-            // Clear current selection highlight state across elements
             document.querySelectorAll('.tab-select-trigger').forEach(btn => {
                 btn.classList.remove('active-tab');
             });
             
-            // Apply unique layout strings inside view node depending on category active
             if (selectedType === 'crypto') {
                 event.target.classList.add('active-tab');
                 contentBox.innerHTML = `
-                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 16px; margin-bottom: 10px;">SECURE BITCOIN (BTC) TRANSFER DESTINATION</h4>
-                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 15px;">Process instant digital assets securely via blockchain automation layers. Copy the node address target below:</p>
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">SECURE BITCOIN (BTC) WALLET POOL</h4>
+                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 12px;">Send blockchain payments natively inside our transaction block:</p>
                     <div class="crypto-wallet-field">
                         <span class="wallet-string-hash">1MalikNafayStudioX772VnV993X81HkqPkt77</span>
-                        <span class="copy-action-indicator" onclick="alert('Wallet key string copied to hardware clipboard!')">COPY</span>
+                        <span class="copy-action-indicator" onclick="alert('BTC address string copied to hardware logs!')">COPY Address</span>
                     </div>
                 `;
             } else if (selectedType === 'bank') {
                 event.target.classList.add('active-tab');
                 contentBox.innerHTML = `
-                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 16px; margin-bottom: 10px;">OFFICIAL BANK WIRE TRANSACTIONS</h4>
-                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 5px;"><strong>BANK INSTANCE NAME:</strong> MALIK NAFAY STUDIO CENTRAL LOGISTICS BANK</p>
-                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 5px;"><strong>IBAN TRANSACTION ROUTE:</strong> PK77MNSTUDIO0000123456789</p>
-                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 15px;"><strong>CLEARING BIC CODE:</strong> MNSTUDIOPKXXX</p>
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">OFFICIAL BANK TRANSFER DETAILED ROUTE</h4>
+                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 4px;"><strong>BANK HOUSING:</strong> MALIK NAFAY WELFARE CENTRAL LOGISTICS ACC</p>
+                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 12px;"><strong>IBAN NUMBER STRING:</strong> PK77MNSTUDIO0000123456789</p>
                     <div class="crypto-wallet-field">
-                        <span class="wallet-string-hash">IBAN SECURE PATHWAY VERIFIED</span>
-                        <span class="copy-action-indicator" onclick="alert('IBAN path saved.')">COPY IBAN</span>
+                        <span class="wallet-string-hash">VERIFIED BANK CHANNELS ACTIVE</span>
+                        <span class="copy-action-indicator" onclick="alert('IBAN saved to logs.')">COPY IBAN</span>
                     </div>
                 `;
             } else if (selectedType === 'local') {
                 event.target.classList.add('active-tab');
                 contentBox.innerHTML = `
-                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 16px; margin-bottom: 10px;">LOCALIZED REGIONAL TRANSFER CHANNELS</h4>
-                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 5px;"><strong>EASYPAISA PROFILE INSTANCE:</strong> +92 321 7778889 (MALIK NAFAY NETWORK)</p>
-                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 15px;"><strong>JAZZCASH ROUTING ACC:</strong> +92 321 9991112 (MALIK NAFAY VELOCITY)</p>
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">LOCAL MOBILE DIGITAL CHANNELS</h4>
+                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 4px;"><strong>EASYPAISA TARGET PROFILE:</strong> +92 321 7778889 (MALIK NAFAY)</p>
+                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 12px;"><strong>JAZZCASH TARGET PROFILE:</strong> +92 321 9991112 (MALIK VELOCITY)</p>
                     <div class="crypto-wallet-field">
-                        <span class="wallet-string-hash">LOCAL MOBILE ACCOUNTS LINKED</span>
-                        <span class="copy-action-indicator" onclick="alert('Local transfer configuration logged.')">CONFIRM</span>
+                        <span class="wallet-string-hash">MOBILE ACCOUNT NUMBERS LINKED</span>
+                        <span class="copy-action-indicator" onclick="alert('Configuration confirmed.')">OK</span>
                     </div>
                 `;
             }

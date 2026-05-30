@@ -3,68 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAFAY & TEAMS | Official Portal</title>
+    <title>NAFAY & TEAMS | MALIK NAFAY STUDIO</title>
     <style>
-        /* INDUSTRIAL GRADE STYLING */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
-        body { background-color: #0a0a0a; color: #ffffff; line-height: 1.6; }
+        /* Global Styles & Heavy Black-Purple Gradient Background */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #000000 30%, #2e0854 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
 
-        /* HEADER & NAVIGATION */
-        header { padding: 30px 10%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; }
-        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
-        nav a { color: #aaa; text-decoration: none; margin-left: 30px; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: #d4af37; }
+        /* Upper Header Navigation Bar */
+        header {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+        nav a, nav button {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav button:hover {
+            color: #3b82f6; /* Blue hover effect */
+        }
 
-        /* HERO SECTION */
-        .hero { padding: 150px 10%; text-align: center; }
-        .hero h1 { font-size: 4rem; margin-bottom: 20px; color: #fff; }
-        .hero p { font-size: 1.2rem; color: #d4af37; letter-spacing: 5px; text-transform: uppercase; }
+        /* Main Home Page Content */
+        .hero-section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .large-text {
+            font-size: 70px;
+            font-weight: 900;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .extra-text {
+            font-size: 24px;
+            font-weight: 500;
+            color: #3b82f6; /* Blue Color for Small/Extra Text */
+            margin-bottom: 50px;
+        }
 
-        /* ABOUT SECTION - REPLICATING YOUR PROFESSIONAL STYLE */
-        .content-section { padding: 100px 20%; text-align: center; }
-        .content-section h2 { font-size: 2.5rem; margin-bottom: 30px; }
-        .content-section p { color: #888; font-size: 1.1rem; }
+        /* About & Privacy Sections Container */
+        .content-container {
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 80px;
+            text-align: left;
+        }
+        .content-container h2 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            border-left: 4px solid #3b82f6;
+            padding-left: 10px;
+        }
+        .content-container p {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .project-link {
+            display: inline-block;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .project-link:hover {
+            text-decoration: underline;
+        }
 
-        /* MODAL FOR SIGN IN/LOG IN */
-        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
-        .modal-box { background: #111; padding: 50px; border: 1px solid #d4af37; width: 400px; text-align: center; }
-        input { width: 100%; padding: 12px; margin: 10px 0; background: #222; border: 1px solid #333; color: white; }
-        .btn { padding: 15px; width: 100%; background: #d4af37; border: none; cursor: pointer; font-weight: bold; }
+        /* Footer Small Text in Last Middle */
+        footer {
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #3b82f6; /* Blue Small Text */
+            font-weight: 500;
+        }
+
+        /* PROPER SIGN UP / LOG IN MODAL (No Scroll Page Override) */
+        .auth-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000; /* Proper flat solid background */
+            z-index: 1000;
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Can't scroll */
+        }
+        .modal-content {
+            background: #120224;
+            border: 2px solid #3b82f6;
+            padding: 40px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 30px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .modal-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            font-size: 16px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #3b82f6;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: #2563eb;
+        }
+        .divider {
+            color: #888;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .social-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .google-btn { background: #db4437; }
+        .fb-btn { background: #4267B2; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">NAFAY & TEAMS</div>
         <nav>
-            <a href="#" onclick="openModal()">SIGN IN</a>
-            <a href="#" onclick="openModal()">LOG IN</a>
+            <button onclick="openModal()">SIGN IN</button>
+            <button onclick="openModal()">LOG IN</button>
             <a href="#about">ABOUT</a>
-            <a href="#policy">PRIVATE POLICY</a>
+            <a href="#privacy">PRIVACY POLICY</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>NAFAY & TEAMS</h1>
-        <p>WE ARE READY FOR ANY KIND OF HELP</p>
-    </section>
+    <div class="hero-section">
+        <h1 class="large-text">NAFAY & TEAMS</h1>
+        <p class="extra-text">WE ARE READY FOR ANY KIND OF HELP</p>
 
-    <section id="about" class="content-section">
-        <h2>ABOUT US</h2>
-        <p>I am Malik Nafay from Pakpattan Sharif. I am a helper of poor people for donate & help. Contact us and our team will reply as early as possible. This is a project of Malik Nafay Studio. Our previous projects are a testament to our commitment to excellence and community welfare.</p>
-    </section>
+        <div id="about" class="content-container">
+            <h2>ABOUT US</h2>
+            <p>I am Malik Nafay from Pakpattan Sharif. I am a helper of poor people. For donations and help, contact us. Our team replies as early as possible. It's a project of MALIK NAFAY STUDIO.</p>
+            <p><strong>Previous Projects:</strong><br>
+                1. <a class="project-link" href="https://maliknafaytop10.github.io/nafay-industries/" target="_blank">Malik Nafay Industries</a>
+            </p>
+        </div>
 
-    <div id="modal" class="modal" onclick="closeModal(event)">
-        <div class="modal-box" onclick="event.stopPropagation()">
-            <h2>PORTAL ACCESS</h2>
-            <input type="email" placeholder="Email Address">
-            <button class="btn">CONTINUE</button>
+        <div id="privacy" class="content-container">
+            <h2>PRIVACY POLICY</h2>
+            <p>Welcome to Nafay & Teams. Your privacy is highly important to us. This Privacy Policy outlines how we manage and protect any information you share when reaching out to us for donations or help. We ensure that any contact information or email provided during registration is kept 100% secure within the Malik Nafay Studio network and is never shared with third parties. By logging in with Google or Facebook, you agree to allow us to securely verify your identity to prevent spam and maintain a safe platform for helping the community.</p>
+        </div>
+
+        <footer>
+            A PROJECT OF MALIK NAFAY STUDIO © 2026
+        </footer>
+    </div>
+
+    <div id="authModal" class="auth-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-title">JOIN NAFAY & TEAMS</div>
+            
+            <input type="email" class="input-field" placeholder="Enter Email Address">
+            <button class="submit-btn">Continue with Email</button>
+            
+            <div class="divider">OR</div>
+            
+            <button class="social-btn google-btn">Continue with Google</button>
+            <button class="social-btn fb-btn">Continue with Facebook</button>
         </div>
     </div>
 
     <script>
-        function openModal() { document.getElementById('modal').style.display = 'flex'; }
-        function closeModal(e) { document.getElementById('modal').style.display = 'none'; }
+        function openModal() {
+            document.getElementById('authModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; /* Locks home page scroll */
+        }
+        function closeModal() {
+            document.getElementById('authModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; /* Unlocks home page scroll */
+        }
     </script>
+
 </body>
 </html>

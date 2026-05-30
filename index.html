@@ -837,4 +837,526 @@
             font-size: 14px;
             color: var(--accent-neon-blue);
             font-weight: 700;
-            letter-spacing: 5px
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-system-declaration {
+            font-size: 12px;
+            color: var(--industrial-gray-mid);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        /* ==========================================================================
+           14. SECURE AUTHENTICATION TERMINAL OVERLAY LAYOUTS
+           ========================================================================== */
+        .immersive-sandboxed-auth-gateway {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #03060f;
+            z-index: 99999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sandboxed-panel-card {
+            background: var(--industrial-slate-solid);
+            border: 1px solid var(--accent-neon-blue);
+            width: 100%;
+            max-width: 500px;
+            padding: 50px;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.9);
+        }
+
+        .panel-dismiss-trigger-btn {
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            font-size: 30px;
+            color: var(--text-clean-muted);
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .panel-dismiss-trigger-btn:hover {
+            color: #ef4444;
+        }
+
+        .panel-context-title-block {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .panel-context-title-block h3 {
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .panel-context-title-block p {
+            font-size: 13px;
+            color: var(--industrial-gray-mid);
+        }
+
+        .system-action-execution-trigger {
+            width: 100%;
+            padding: 18px;
+            border-radius: 10px;
+            background: var(--accent-neon-blue);
+            color: white;
+            border: none;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            margin-top: 15px;
+        }
+
+        .system-action-execution-trigger:hover {
+            background: var(--accent-neon-glow);
+            box-shadow: var(--neon-shadow);
+        }
+
+        .interface-split-ui-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 35px 0;
+            color: var(--industrial-gray-mid);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .interface-split-ui-divider::before, .interface-split-ui-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--industrial-gray-dark);
+        }
+
+        .interface-split-ui-divider:not(:empty)::before { margin-right: 1.5em; }
+        .interface-split-ui-divider:not(:empty)::after { margin-left: 1.5em; }
+
+        .federated-identity-provider-btn {
+            width: 100%;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid var(--industrial-gray-dark);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: all 0.25s ease;
+        }
+
+        .federated-identity-provider-btn:hover {
+            background: var(--industrial-gray-dark);
+            border-color: var(--industrial-gray-mid);
+        }
+
+        @media (max-width: 1024px) {
+            header, header.scrolled { padding: 20px 40px; }
+            .split-grid-layout, .brand-visual-grid, .grid-dual-inputs, .contact-grid-deck { grid-template-columns: 1fr; }
+            .hero-large-title { font-size: 65px; }
+            .performance-matrix-container { grid-template-columns: repeat(2, 1fr); }
+            .premium-text-terminal { padding: 35px; }
+            .mother-devotion-banner { padding: 20px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cyber-mesh-grid"></div>
+    <div class="ambient-glow-orbs"></div>
+    <div class="ambient-glow-orbs-two"></div>
+
+    <div class="viewport-master-pipeline">
+
+        <header id="networkHeaderNode">
+            <div class="network-brand-title" onclick="window.scrollTo(0,0)">
+                NAFAY <span>& TEAMS</span>
+            </div>
+            <nav>
+                <a href="#visualGalleryPanel">GALLERY</a>
+                <a href="#aboutWelfareSection">ABOUT</a>
+                <a href="#donationPortalSection">DONATE</a>
+                <a href="#emergencyHelpSection">NEED HELP!</a>
+                <a href="#contactPortalSection">CONTACT</a>
+                <button class="navigation-action-trigger" onclick="engageAuthPipelineBridge()">SIGN IN</button>
+                <button class="navigation-action-trigger highlight-btn" onclick="engageAuthPipelineBridge()">LOG IN</button>
+            </nav>
+        </header>
+
+        <section class="hero-view-module">
+            <div class="studio-version-tag">MALIK NAFAY STUDIO OFFICIAL V4 DEPLOYMENT</div>
+            
+            <h1 class="hero-large-title">NAFAY & TEAMS</h1>
+            <p class="hero-extra-subtitle">WE ARE READY FOR ANY KIND OF HELP</p>
+
+            <div class="performance-matrix-container">
+                <div class="matrix-metric-node">
+                    <h3>6+</h3>
+                    <p>ACTIVE MODULES</p>
+                </div>
+                <div class="matrix-metric-node">
+                    <h3>2000+</h3>
+                    <p>LINE CODES</p>
+                </div>
+                <div class="matrix-metric-node">
+                    <h3>SECURE</h3>
+                    <p>SSL SHIELD</p>
+                </div>
+                <div class="matrix-metric-node">
+                    <h3>CHARCOAL</h3>
+                    <p>GRAY CORE</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="structural-section-divider"></div>
+
+        <section id="visualGalleryPanel" class="media-showcase-section">
+            <div class="gallery-header">
+                <h2>VERIFIED STUDIO GRAPHICS</h2>
+                <p>MALIK NAFAY PREMIUM ARCHIVE REPOSITORY</p>
+            </div>
+            <div class="brand-visual-grid">
+                <div class="visual-card-frame">
+                    <img src="image_196d8c.jpg" alt="Malik Nafay Jatt Mehkma Production Layout Asset Frame">
+                    <div class="visual-caption">THEME: <span>JATT MEHKMA EDITION</span></div>
+                </div>
+                <div class="visual-card-frame">
+                    <img src="image.jpg" alt="Malik Nafay Authentic Base Portrait Verification System">
+                    <div class="visual-caption">IDENTITY: <span>MALIK NAFAY OFFICIAL VISUAL</span></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="structural-section-divider"></div>
+
+        <section id="aboutWelfareSection" class="portal-content-section">
+            <div class="split-grid-layout">
+                <div class="section-identity-panel">
+                    <h2>ABOUT OPERATIONAL NET</h2>
+                    <p>COMMUNITY HUMAN RESOURCE EXPANSION LOGISTICS</p>
+                </div>
+                <div class="premium-text-terminal">
+                    <p>Operated out of our central corporate logistics platform established in <strong>Pakpattan Sharif</strong>, our mission centers around creating automated interfaces that deploy emergency relief to vulnerable citizens. Controlled directly by <strong>Malik Nafay</strong>, this terminal acts as a primary dispatch grid link ensuring quick processing for general donation routing, support queries, and financial resource allocation fields.</p>
+                    <p>Through severe technical integration rules backed by the dedicated labs of <strong>MALIK NAFAY STUDIO</strong>, we construct reliable server instances capable of maintaining high-integrity user tracking without sacrificing runtime performance scales.</p>
+                    
+                    <div class="social-linkage-showcase">
+                        <h4>PUBLIC COMMUNICATIONS DECK</h4>
+                        <div class="social-gateway-deck">
+                            <a href="https://www.tiktok.com/@pakpattan321" class="social-gateway-card" target="_blank">
+                                <div class="social-card-meta">
+                                    <div class="platform-label">TikTok Database</div>
+                                    <div class="handle-identity">@pakpattan321</div>
+                                </div>
+                                <div class="social-card-action-pointer">→</div>
+                            </a>
+                            <a href="https://www.instagram.com/maliknafay321" class="social-gateway-card" target="_blank">
+                                <div class="social-card-meta">
+                                    <div class="platform-label">Instagram Base</div>
+                                    <div class="handle-identity">@maliknafay321</div>
+                                </div>
+                                <div class="social-card-action-pointer">→</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="structural-section-divider"></div>
+
+        <section id="donationPortalSection" class="portal-content-section">
+            <div class="split-grid-layout">
+                <div class="section-identity-panel">
+                    <h2>DONATION SYSTEMS</h2>
+                    <p>FINANCIAL AID ROUTING MODULES</p>
+                </div>
+                <div class="premium-text-terminal">
+                    <p>Support our distributed community programs directly through verified network ledgers. Select your preferred transaction pathway underneath to fetch active server collection parameters.</p>
+                    
+                    <div class="donation-tab-system">
+                        <div class="donation-tab-headers">
+                            <button class="tab-select-trigger active-tab" onclick="switchDonationTab('crypto')">CRYPTOCURRENCY</button>
+                            <button class="tab-select-trigger" onclick="switchDonationTab('bank')">BANK WIRE</button>
+                            <button class="tab-select-trigger" onclick="switchDonationTab('local')">LOCAL PORTAL</button>
+                        </div>
+                        
+                        <div class="donation-card-body-wrapper" id="donationContentArea">
+                            <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 16px; margin-bottom: 10px;">SECURE BITCOIN (BTC) TRANSFER DESTINATION</h4>
+                            <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 15px;">Process instant digital assets securely via blockchain automation layers. Copy the node address target below:</p>
+                            <div class="crypto-wallet-field">
+                                <span class="wallet-string-hash">1MalikNafayStudioX772VnV993X81HkqPkt77</span>
+                                <span class="copy-action-indicator" onclick="alert('Wallet key string copied to hardware clipboard!')">COPY</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="structural-section-divider"></div>
+
+        <section id="emergencyHelpSection" class="portal-content-section">
+            <div class="split-grid-layout">
+                <div class="section-identity-panel">
+                    <h2>NEED HELP!</h2>
+                    <p>EMERGENCY RAPID DISPATCH INTERFACE</p>
+                </div>
+                <div class="premium-text-terminal" style="border-color: #ef4444;">
+                    <p>Are you facing critical socio-economic crisis, medical distress, or urgent food scarcity? Populate our priority secure application fields below. The automated database scheduling array ensures our active management team <strong>replies as early as possible</strong> to process aid parameters.</p>
+                    
+                    <form class="emergency-form-layout" onsubmit="event.preventDefault(); alert('Emergency help package submitted successfully to Malik Nafay Studio central command queue.');">
+                        <div class="grid-dual-inputs">
+                            <div class="terminal-field-container">
+                                <label>APPLICANT IDENTIFICATION NAME</label>
+                                <input type="text" class="terminal-input-node" placeholder="Full Legal Name" required>
+                            </div>
+                            <div class="terminal-field-container">
+                                <label>SECURE CONTACT MOBILE NUMBER</label>
+                                <input type="tel" class="terminal-input-node" placeholder="+92 000 0000000" required>
+                            </div>
+                        </div>
+                        <div class="terminal-field-container">
+                            <label>CRITICAL SITUATION DESCRIPTION</label>
+                            <textarea class="terminal-input-node terminal-textarea-node" placeholder="Detail your emergency crisis context clearly..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-emergency-trigger">EXECUTE PRIORITY RESPONSE ACTION</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="structural-section-divider"></div>
+
+        <section id="contactPortalSection" class="portal-content-section">
+            <div class="split-grid-layout">
+                <div class="section-identity-panel">
+                    <h2>CONTACT PORTAL</h2>
+                    <p>MALIK NAFAY STUDIO CENTRAL LOGISTICS TERMINALS</p>
+                </div>
+                <div class="premium-text-terminal">
+                    <p>Connect with our network support division via verified secure channels. Our administrative core responds to general operational queries or system alliance applications within normal server frame limits.</p>
+                    
+                    <div class="contact-execution-panel">
+                        <div class="contact-grid-deck">
+                            <div class="contact-channel-node">
+                                <div class="channel-graphic-icon">✉</div>
+                                <div class="channel-metadata-block">
+                                    <h5>EMAIL NODE</h5>
+                                    <p>support@nafaystudio.org</p>
+                                </div>
+                            </div>
+                            <div class="contact-channel-node">
+                                <div class="channel-graphic-icon">☎</div>
+                                <div class="channel-metadata-block">
+                                    <h5>SUPPORT LINE</h5>
+                                    <p>+92 (321) NAFAYNET</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="terminal-field-container">
+                            <label>SEND QUICK GENERAL ENQUIRY MESSAGES</label>
+                            <input type="text" class="terminal-input-node" placeholder="Type message topic or question line here..." style="margin-top:10px;">
+                            <button class="system-action-execution-trigger" style="margin-top:15px; border-radius:10px;" onclick="alert('General communication line dispatched.')">SEND INQUIRY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="structural-section-divider"></div>
+
+        <section id="systemPerformanceSection" class="portal-content-section">
+            <div class="split-grid-layout">
+                <div class="section-identity-panel">
+                    <h2>SYSTEM FLOWS</h2>
+                    <p>HIGH-FI INTEGRITY ARCHITECTURE KNOWLEDGE</p>
+                </div>
+                <div class="premium-text-terminal">
+                    <p>Review the primary server operations framework deployed across our network files to guarantee data safety parameters are maintained across consumer targets.</p>
+                    
+                    <div class="faq-section-container">
+                        <div class="faq-accordion-item">
+                            <button class="faq-accordion-trigger" onclick="toggleFaqPanel(this)">
+                                <span>HOW DOES THE REPLIES SCHEDULING DISPATCH OPERATE?</span>
+                                <span class="faq-icon-marker">+</span>
+                            </button>
+                            <div class="faq-accordion-content">
+                                <p>Our optimized framework processes incoming help rows in real-time, allowing the network routing core to make sure the team replies as early as possible to clear obstacles.</p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item">
+                            <button class="faq-accordion-trigger" onclick="toggleFaqPanel(this)">
+                                <span>WHAT MEDIA EMBED SYSTEMS ARE LAUNCHED WITHIN THE CORE?</span>
+                                <span class="faq-icon-marker">+</span>
+                            </button>
+                            <div class="faq-accordion-content">
+                                <p>The pipeline architecture maintains integrated paths for processing binary video file assets like music.mp4 and Level_Hai_High.mp4 natively behind client-side buffers.</p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item">
+                            <button class="faq-accordion-trigger" onclick="toggleFaqPanel(this)">
+                                <span>CAN I TRACK MY RE-ROUTED DONATION TRANSFER LEDGERS?</span>
+                                <span class="faq-icon-marker">+</span>
+                            </button>
+                            <div class="faq-accordion-content">
+                                <p>Yes, choosing any donation tab gives verified transaction tokens that cross-reference directly with public ledger arrays for supreme clarity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="regulatoryPrivacyCharter" class="portal-content-section">
+            <div class="split-grid-layout">
+                <div class="section-identity-panel">
+                    <h2>REGULATORY CHARTER</h2>
+                    <p>DATA COMPLIANCE SHIELD PROTECTION</p>
+                </div>
+                <div class="premium-text-terminal">
+                    <p>Our database architecture enforces rigorous safety filters across user logs. Registration variables, secure inputs, and incoming crisis details remain isolated inside hardware blocks, shielding clients against unauthorized global web exploration tools or malicious data scanning filters entirely.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="end-devotion-container">
+            <div class="mother-devotion-banner">
+                <h2>I LOVE MY MOTHER</h2>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-brand-signature">MALIK NAFAY STUDIO OFFICIAL SYSTEM ARCHITECTURE</div>
+            <div class="footer-system-declaration">MALIK NAFAY NETWORK PTV (LTD) © 2026. INDUSTRIAL METALLIC GRAY INTEGRATION. ALL RIGHTS RESERVED.</div>
+            <div class="footer-system-declaration">DATA INTEGRITY BLOCK VAULT: PAKPATTAN SHARIF SECURE DIRECT ENGINES.</div>
+        </footer>
+
+    </div>
+
+    <div id="clientImmersiveAuthGateway" class="immersive-sandboxed-auth-gateway">
+        <div class="sandboxed-panel-card">
+            <div class="panel-dismiss-trigger-btn" onclick="terminateAuthPipelineBridge()">&times;</div>
+            <div class="panel-context-title-block">
+                <h3>SECURE PROFILE ACCESS</h3>
+                <p>Authorize verification credentials into Malik Nafay Studio central nodes</p>
+            </div>
+            <div class="input-composite-group" style="margin-bottom:20px; text-align:left;">
+                <label style="font-size:11px; font-weight:800; letter-spacing:1px; display:block; margin-bottom:10px;">NETWORK ACCESS EMAIL</label>
+                <input type="email" class="terminal-input-node" placeholder="user@domain.com">
+            </div>
+            <button class="system-action-execution-trigger" onclick="alert('Connecting database pipeline...')">Authorize Key Log</button>
+            <div class="interface-split-ui-divider">EXTERNAL SSO OAUTH</div>
+            <button class="federated-identity-provider-btn" onclick="alert('Contacting Google OpenID endpoint...')">Authenticate Google Client</button>
+            <button class="federated-identity-provider-btn" onclick="alert('Contacting Facebook Graph endpoint...')">Authenticate Facebook Client</button>
+        </div>
+    </div>
+
+    <script>
+        // Adjust Header Density dynamically upon page scroll
+        window.addEventListener('scroll', function() {
+            const networkHeaderNode = document.getElementById('networkHeaderNode');
+            if (window.scrollY > 60) {
+                networkHeaderNode.classList.add('scrolled');
+            } else {
+                networkHeaderNode.classList.remove('scrolled');
+            }
+        });
+
+        // Trigger Immersive Gateway Layer
+        function engageAuthPipelineBridge() {
+            const gatewayLayer = document.getElementById('clientImmersiveAuthGateway');
+            gatewayLayer.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        }
+
+        // Collapse Immersive Gateway Layer
+        function terminateAuthPipelineBridge() {
+            const gatewayLayer = document.getElementById('clientImmersiveAuthGateway');
+            gatewayLayer.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            document.documentElement.style.overflow = 'auto';
+        }
+
+        // Toggle Accordion Panels Function
+        function toggleFaqPanel(triggerNode) {
+            const parentItem = triggerNode.parentElement;
+            const openStateActive = parentItem.classList.contains('active-panel');
+            
+            document.querySelectorAll('.faq-accordion-item').forEach(item => {
+                item.classList.remove('active-panel');
+            });
+            
+            if (!openStateActive) {
+                parentItem.classList.add('active-panel');
+            }
+        }
+
+        // Dynamic Component Tab Switcher Logic for Donation Section
+        function switchDonationTab(selectedType) {
+            const contentBox = document.getElementById('donationContentArea');
+            
+            // Clear current selection highlight state across elements
+            document.querySelectorAll('.tab-select-trigger').forEach(btn => {
+                btn.classList.remove('active-tab');
+            });
+            
+            // Apply unique layout strings inside view node depending on category active
+            if (selectedType === 'crypto') {
+                event.target.classList.add('active-tab');
+                contentBox.innerHTML = `
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 16px; margin-bottom: 10px;">SECURE BITCOIN (BTC) TRANSFER DESTINATION</h4>
+                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 15px;">Process instant digital assets securely via blockchain automation layers. Copy the node address target below:</p>
+                    <div class="crypto-wallet-field">
+                        <span class="wallet-string-hash">1MalikNafayStudioX772VnV993X81HkqPkt77</span>
+                        <span class="copy-action-indicator" onclick="alert('Wallet key string copied to hardware clipboard!')">COPY</span>
+                    </div>
+                `;
+            } else if (selectedType === 'bank') {
+                event.target.classList.add('active-tab');
+                contentBox.innerHTML = `
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 16px; margin-bottom: 10px;">OFFICIAL BANK WIRE TRANSACTIONS</h4>
+                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 5px;"><strong>BANK INSTANCE NAME:</strong> MALIK NAFAY STUDIO CENTRAL LOGISTICS BANK</p>
+                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 5px;"><strong>IBAN TRANSACTION ROUTE:</strong> PK77MNSTUDIO0000123456789</p>
+                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 15px;"><strong>CLEARING BIC CODE:</strong> MNSTUDIOPKXXX</p>
+                    <div class="crypto-wallet-field">
+                        <span class="wallet-string-hash">IBAN SECURE PATHWAY VERIFIED</span>
+                        <span class="copy-action-indicator" onclick="alert('IBAN path saved.')">COPY IBAN</span>
+                    </div>
+                `;
+            } else if (selectedType === 'local') {
+                event.target.classList.add('active-tab');
+                contentBox.innerHTML = `
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 16px; margin-bottom: 10px;">LOCALIZED REGIONAL TRANSFER CHANNELS</h4>
+                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 5px;"><strong>EASYPAISA PROFILE INSTANCE:</strong> +92 321 7778889 (MALIK NAFAY NETWORK)</p>
+                    <p style="font-size: 14px; color: var(--text-clean-muted); margin-bottom: 15px;"><strong>JAZZCASH ROUTING ACC:</strong> +92 321 9991112 (MALIK NAFAY VELOCITY)</p>
+                    <div class="crypto-wallet-field">
+                        <span class="wallet-string-hash">LOCAL MOBILE ACCOUNTS LINKED</span>
+                        <span class="copy-action-indicator" onclick="alert('Local transfer configuration logged.')">CONFIRM</span>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

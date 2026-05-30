@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Malik Nafay Studio | Official</title>
-    <style>
-        body { margin: 0; background: linear-gradient(135deg, #000000, #2e003e, #4b0082); color: white; font-family: 'Arial', sans-serif; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .header { position: absolute; top: 20px; display: flex; gap: 30px; font-weight: bold; }
-        .header a { color: white; text-decoration: none; }
-        .content { text-align: center; }
-        .title { font-size: 50px; font-weight: 800; }
-        .subtitle { color: #007bff; font-size: 20px; margin-top: 10px; }
-        .about-section { margin-top: 50px; width: 80%; text-align: center; line-height: 1.8; }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Malik Nafay Studio</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="#">SIGN IN</a>
+            <a href="#">LOG IN</a>
+            <a href="about.html">ABOUT</a>
+            <a href="#">PRIVATE POLICY</a>
+        </nav>
+    </header>
 
-    <div class="header">
-        <a href="#">SIGN IN</a> <a href="#">LOG IN</a> <a href="#">ABOUT</a> <a href="#">POLICY</a>
-    </div>
+    <main>
+        <h1>NAFAY & TEAMS</h1>
+        <p class="small-text">WE ARE READY FOR ANY KIND OF HELP</p>
+    </main>
 
-    <div class="content">
-        <div class="title">NAFAY & TEAMS</div>
-        <div class="subtitle">WE ARE READY FOR ANY KIND OF HELP</div>
-    </div>
-
-    <div class="about-section">
-        <h3>ABOUT US</h3>
-        <p>I am Malik Nafay from Pakpattan Sharif. I am a helper of poor people for donate & help. Contact us and our team will reply as early as possible. This is a project of Malik Nafay Studio. Our previous work: 
-        <br><a href="https://maliknafaytop10.github.io/nafay-industries/" style="color: cyan;">Nafay Industries</a></p>
-    </div>
-
+    <footer>
+        <p>A Project of Malik Nafay Studio | Helping Hands</p>
+    </footer>
 </body>
 </html>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #2e003e, #000000);
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 { font-size: 4rem; color: white; margin-top: 20vh; }
+.small-text { color: #00d4ff; font-size: 1.5rem; }
+
+footer { position: fixed; bottom: 20px; text-align: center; color: #00d4ff; }

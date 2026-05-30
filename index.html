@@ -3,31 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MALIK NAFAY NETWORK PTV (LTD) | CORE PLATFORM V5</title>
+    <title>NAFAY & TEAMS | MALIK NAFAY STUDIO OFFICIAL NETWORK</title>
     <style>
         /* ==========================================================================
-           1. RE-COLORED INDUSTRIAL PREMIUM SLATE DEPLOYMENT - INITIALIZATION
+           1. CORE RESET & VARIABLES (PREMIUM SYSTEM)
            ========================================================================== */
         :root {
-            --bg-master-dark: #060913;
-            --bg-gradient-start: #0a0e1a;
-            --bg-gradient-mid: #121824; 
-            --bg-gradient-end: #0b0f19;
-            --accent-neon-blue: #3b82f6;
-            --accent-neon-glow: #1d4ed8;
-            --accent-purple-glow: #7c3aed;
-            --accent-pink-devotion: #ec4899;
-            --industrial-gray-light: #e2e8f0;
-            --industrial-gray-mid: #64748b;
-            --industrial-gray-dark: #1e293b;
-            --industrial-slate-solid: #0f172a;
-            --text-ultra-white: #ffffff;
-            --text-clean-muted: #94a3b8;
-            --cyber-grid-line: rgba(148, 163, 184, 0.04);
-            --interface-glass-bg: rgba(18, 24, 36, 0.75);
-            --interface-border-glow: rgba(59, 130, 246, 0.2);
-            --neon-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
-            --neon-pink-shadow: 0 0 30px rgba(236, 72, 153, 0.4);
+            --bg-dark: #05010d;
+            --bg-purple-deep: #120224;
+            --accent-blue: #3b82f6;
+            --accent-blue-hover: #1d4ed8;
+            --text-pure: #ffffff;
+            --text-muted: #94a3b8;
+            --grid-color: rgba(147, 51, 234, 0.07);
+            --glow-color: rgba(59, 130, 246, 0.3);
         }
 
         * {
@@ -35,143 +24,148 @@
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            font-family: 'Cabinet Grotesk', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
         }
 
         body, html {
             width: 100%;
             min-height: 100vh;
-            background-color: var(--bg-master-dark);
-            background-image: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%);
-            color: var(--text-ultra-white);
+            background-color: var(--bg-dark);
+            background-image: 
+                linear-gradient(135deg, var(--bg-dark) 20%, var(--bg-purple-deep) 100%);
+            color: var(--text-pure);
             overflow-x: hidden;
         }
 
+        /* Custom Scrollbar to maintain VIP looks */
         ::-webkit-scrollbar {
-            width: 12px;
+            width: 10px;
         }
         ::-webkit-scrollbar-track {
-            background: var(--bg-master-dark);
+            background: var(--bg-dark);
         }
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #1e293b, var(--accent-neon-blue), #475569);
-            border-radius: 6px;
+            background: #2e0854;
+            border-radius: 5px;
+            border: 2px solid var(--bg-dark);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-blue);
         }
 
-        .cyber-mesh-grid {
+        /* ==========================================================================
+           2. CYBER GRID BACKGROUND EFFECT
+           ========================================================================== */
+        .cyber-grid {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(to right, var(--cyber-grid-line) 1px, transparent 1px),
-                linear-gradient(to bottom, var(--cyber-grid-line) 1px, transparent 1px);
-            background-size: 50px 50px;
+                linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+            background-size: 40px 40px;
             z-index: 1;
             pointer-events: none;
         }
 
-        .cyber-mesh-grid::after {
+        .cyber-grid::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 50% 50%, transparent 10%, var(--bg-master-dark) 90%);
-        }
-
-        .ambient-glow-orbs {
-            position: fixed;
-            width: 700px;
-            height: 700px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
-            top: -200px;
-            left: -200px;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .ambient-glow-orbs-right {
-            position: fixed;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.06) 0%, transparent 70%);
-            bottom: -100px;
-            right: -100px;
-            z-index: 2;
-            pointer-events: none;
+            background: radial-gradient(circle at 50% 50%, transparent 10%, var(--bg-dark) 80%);
         }
 
         /* ==========================================================================
-           2. HEADER MAIN NAVIGATION PIPELINE
+           3. PREMIUM NAVIGATION HEADER (GLASSMORPHISM)
            ========================================================================== */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 30px 60px;
+            padding: 25px 80px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: rgba(6, 9, 19, 0.5);
+            background: rgba(5, 1, 13, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         header.scrolled {
-            padding: 15px 60px;
-            background: rgba(18, 24, 36, 0.96);
-            border-bottom: 2px solid var(--accent-neon-blue);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+            padding: 15px 80px;
+            background: rgba(18, 2, 36, 0.85);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .network-brand-title {
-            font-size: 24px;
+        .brand-logo {
+            font-size: 20px;
             font-weight: 900;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--text-ultra-white);
-            cursor: pointer;
+            color: var(--text-pure);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .network-brand-title span {
-            color: var(--accent-neon-blue);
-            text-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+        .brand-logo span {
+            color: var(--accent-blue);
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 35px;
         }
 
         nav a {
-            color: var(--text-clean-muted);
+            color: var(--text-muted);
             text-decoration: none;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-blue);
+            transition: width 0.3s ease;
         }
 
         nav a:hover {
-            color: var(--text-ultra-white);
+            color: var(--text-pure);
         }
 
-        .navigation-action-trigger {
-            background: var(--industrial-gray-dark);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-ultra-white);
-            padding: 10px 22px;
-            border-radius: 6px;
-            font-size: 11px;
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-pure);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 13px;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -179,32 +173,34 @@
             transition: all 0.3s ease;
         }
 
-        .navigation-action-trigger:hover {
-            background: var(--industrial-gray-light);
-            color: var(--bg-master-dark);
+        .nav-btn:hover {
+            background: var(--text-pure);
+            color: var(--bg-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
         }
 
-        .navigation-action-trigger.highlight-btn {
-            background: var(--accent-neon-blue);
-            border-color: var(--accent-neon-blue);
+        .nav-btn.primary-btn {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
         }
 
-        .navigation-action-trigger.highlight-btn:hover {
-            background: var(--accent-neon-glow);
-            box-shadow: var(--neon-shadow);
-            color: white;
+        .nav-btn.primary-btn:hover {
+            background: var(--accent-blue-hover);
+            color: var(--text-pure);
+            box-shadow: 0 5px 20px var(--glow-color);
         }
 
         /* ==========================================================================
-           3. HERO ZONE ARCHITECTURE
+           4. HERO SECTION
            ========================================================================== */
-        .viewport-master-pipeline {
+        .main-wrapper {
             position: relative;
             z-index: 10;
             width: 100%;
         }
 
-        .hero-view-module {
+        .hero-container {
             width: 100%;
             min-height: 100vh;
             display: flex;
@@ -212,1060 +208,627 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 180px 20px 80px 20px;
+            padding: 150px 20px 100px 20px;
         }
 
-        .studio-version-tag {
-            background: var(--industrial-gray-dark);
-            border: 1px solid var(--industrial-gray-mid);
-            color: var(--industrial-gray-light);
-            padding: 10px 25px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 3px;
+        .badge {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--accent-blue);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            animation: pulseGlow 2s infinite alternate;
         }
 
-        .hero-large-title {
-            font-size: 100px;
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.2); }
+            100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+        }
+
+        .large-text {
+            font-size: 85px;
             font-weight: 900;
             line-height: 0.95;
             letter-spacing: -2px;
             text-transform: uppercase;
-            color: var(--text-ultra-white);
-            margin-bottom: 25px;
-            background: linear-gradient(to bottom, #ffffff 60%, var(--text-clean-muted) 100%);
+            color: var(--text-pure);
+            margin-bottom: 20px;
+            background: linear-gradient(to bottom, #ffffff 60%, #a5b4fc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero-extra-subtitle {
+        .extra-text {
             font-size: 22px;
-            font-weight: 700;
-            color: var(--accent-neon-blue);
-            letter-spacing: 6px;
+            font-weight: 500;
+            color: var(--accent-blue);
+            letter-spacing: 4px;
             text-transform: uppercase;
             margin-bottom: 60px;
+            max-width: 800px;
+            line-height: 1.4;
         }
 
-        .performance-matrix-container {
+        /* Feature Matrix Cards */
+        .feature-grid {
             display: grid;
-            grid-template-columns: repeat(4, 180px);
-            gap: 20px;
+            grid-template-columns: repeat(3, 130px);
+            gap: 30px;
+            margin-bottom: 100px;
         }
 
-        .matrix-metric-node {
-            background: var(--industrial-slate-solid);
-            border: 1px solid var(--industrial-gray-dark);
-            padding: 30px 15px;
-            border-radius: 10px;
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
             transition: all 0.3s ease;
         }
 
-        .matrix-metric-node:hover {
-            border-color: var(--accent-neon-blue);
-            transform: translateY(-4px);
-            box-shadow: var(--neon-shadow);
-        }
-
-        .matrix-metric-node h3 {
-            font-size: 34px;
-            font-weight: 900;
+        .stat-card h3 {
+            font-size: 28px;
+            color: var(--text-pure);
             margin-bottom: 5px;
         }
 
-        .matrix-metric-node p {
-            font-size: 10px;
-            color: var(--industrial-gray-light);
+        .stat-card p {
+            font-size: 11px;
+            color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
         }
 
         /* ==========================================================================
-           4. VISUAL PORTRAIT GALLERY BLOCK
+           5. DETAILED CONTENT CONTAINERS (ABOUT & PRIVACY)
            ========================================================================== */
-        .media-showcase-section {
+        .section-divider {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 100px 40px;
-            text-align: center;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
         }
 
-        .gallery-header {
-            margin-bottom: 60px;
-        }
-
-        .gallery-header h2 {
-            font-size: 40px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .gallery-header p {
-            color: var(--industrial-gray-mid);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        .brand-visual-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .visual-card-frame {
-            background: var(--industrial-slate-solid);
-            border: 1px solid var(--industrial-gray-dark);
-            padding: 20px;
-            border-radius: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .visual-card-frame:hover {
-            border-color: var(--accent-purple-glow);
-        }
-
-        .visual-card-frame img {
+        .content-section {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: block;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 120px 40px;
         }
 
-        .visual-caption {
-            margin-top: 20px;
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .section-meta h2 {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-meta h2::before {
+            content: '//';
+            color: var(--accent-blue);
+            margin-right: 10px;
+            font-weight: 400;
+        }
+
+        .section-meta p {
+            color: var(--accent-blue);
             font-size: 13px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        .visual-caption span {
-            color: var(--accent-neon-blue);
-        }
-
-        .structural-section-divider {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--industrial-gray-dark), transparent);
-        }
-
-        /* ==========================================================================
-           5. INTERACTIVE VIDEO MEDIA PLAYER HUB MODULE
-           ========================================================================== */
-        .media-streaming-hub {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 40px;
-        }
-
-        .streaming-grid-layout {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 40px;
-        }
-
-        .main-video-display-frame {
-            background: var(--industrial-slate-solid);
-            border: 2px solid var(--industrial-gray-dark);
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-        }
-
-        .video-element-wrapper {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .video-element-wrapper video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .video-control-rack {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 20px;
-            background: rgba(0,0,0,0.3);
-            padding: 12px 20px;
-            border-radius: 8px;
-        }
-
-        .video-playback-btn {
-            background: var(--accent-neon-blue);
-            color: white;
-            border: none;
-            padding: 8px 18px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 700;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        .video-playback-btn:hover {
-            background: var(--accent-neon-glow);
-        }
-
-        .playlist-deck-panel {
-            background: var(--interface-glass-bg);
-            border: 1px solid var(--industrial-gray-dark);
-            border-radius: 16px;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .playlist-track-node {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: var(--industrial-slate-solid);
-            border: 1px solid transparent;
-            padding: 15px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .playlist-track-node:hover, .playlist-track-node.active-track {
-            border-color: var(--accent-neon-blue);
-            background: rgba(59, 130, 246, 0.05);
-        }
-
-        .track-index-digit {
-            font-size: 18px;
-            font-weight: 900;
-            color: var(--accent-neon-blue);
-            width: 30px;
-        }
-
-        .track-meta-data h4 {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 2px;
-        }
-
-        .track-meta-data p {
-            font-size: 11px;
-            color: var(--text-clean-muted);
-        }
-
-        /* ==========================================================================
-           6. PORTAL CONTENT SECTION ARCHITECTURE
-           ========================================================================== */
-        .portal-content-section {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 40px;
-        }
-
-        .split-grid-layout {
-            display: grid;
-            grid-template-columns: 1fr 1.4fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .section-identity-panel h2 {
-            font-size: 42px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            line-height: 1.1;
-        }
-
-        .section-identity-panel p {
-            color: var(--accent-neon-blue);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        .premium-text-terminal {
-            background: var(--interface-glass-bg);
-            border: 1px solid var(--industrial-gray-dark);
+        .detailed-text {
+            background: rgba(18, 2, 36, 0.4);
+            border: 1px solid rgba(147, 51, 234, 0.1);
             padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
-        .premium-text-terminal p {
-            color: var(--industrial-gray-light);
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
-
-        /* ==========================================================================
-           7. DONATE OPTION BLOCK DEPLOYMENT
-           ========================================================================== */
-        .donation-tab-system {
-            margin-top: 30px;
-        }
-
-        .donation-tab-headers {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 25px;
-        }
-
-        .tab-select-trigger {
-            background: var(--industrial-slate-solid);
-            border: 1px solid var(--industrial-gray-dark);
-            padding: 14px;
-            border-radius: 6px;
-            color: var(--text-ultra-white);
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .tab-select-trigger.active-tab, .tab-select-trigger:hover {
-            background: var(--accent-neon-blue);
-            border-color: var(--accent-neon-blue);
-            box-shadow: var(--neon-shadow);
-        }
-
-        .donation-card-body-wrapper {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            padding: 30px;
-            border-radius: 12px;
-        }
-
-        .crypto-wallet-field {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--industrial-slate-solid);
-            padding: 14px 20px;
-            border-radius: 8px;
-            border: 1px solid var(--industrial-gray-dark);
-            margin-top: 15px;
-        }
-
-        .wallet-string-hash {
-            font-family: 'Courier New', monospace;
-            color: var(--industrial-gray-light);
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .copy-action-indicator {
-            color: var(--accent-neon-blue);
-            font-size: 11px;
-            font-weight: 800;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        /* ==========================================================================
-           8. NEED HELP! PROTOCOL PANEL
-           ========================================================================== */
-        .emergency-form-layout {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .grid-dual-inputs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .terminal-field-container {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .terminal-field-container label {
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            color: var(--industrial-gray-light);
-            text-transform: uppercase;
-        }
-
-        .terminal-input-node {
-            width: 100%;
-            padding: 15px 20px;
-            background: var(--industrial-slate-solid);
-            border: 1px solid var(--industrial-gray-dark);
-            border-radius: 8px;
-            color: var(--text-ultra-white);
-            font-size: 13px;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .terminal-input-node:focus {
-            border-color: var(--accent-neon-blue);
-        }
-
-        .submit-emergency-trigger {
-            background: #ef4444;
-            border: none;
-            padding: 16px;
-            border-radius: 8px;
-            color: white;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .submit-emergency-trigger:hover {
-            background: #dc2626;
-            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
-        }
-
-        /* ==========================================================================
-           9. CONTACT INTERFACE MODULE
-           ========================================================================== */
-        .contact-grid-deck {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+        .detailed-text p {
+            color: var(--text-muted);
+            font-size: 17px;
+            line-height: 1.85;
             margin-bottom: 30px;
+            text-align: justify;
         }
 
-        .contact-channel-node {
-            background: var(--industrial-slate-solid);
-            border: 1px solid var(--industrial-gray-dark);
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
+        .detailed-text p strong {
+            color: var(--text-pure);
         }
 
-        .channel-graphic-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--accent-neon-blue);
-            font-weight: bold;
-        }
-
-        .social-linkage-showcase {
-            margin-top: 35px;
-            border-top: 1px solid var(--industrial-gray-dark);
+        /* Project Showcase Cards */
+        .project-showcase {
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding-top: 30px;
         }
 
-        .social-gateway-deck {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .social-gateway-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--industrial-slate-solid);
-            border: 1px solid var(--industrial-gray-dark);
-            padding: 15px 25px;
-            border-radius: 10px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-gateway-card:hover {
-            border-color: var(--accent-neon-blue);
-            transform: translateY(-2px);
-        }
-
-        .platform-label {
-            color: var(--text-ultra-white);
+        .project-showcase h4 {
             font-size: 14px;
-            font-weight: 700;
-        }
-
-        .handle-identity {
-            color: var(--industrial-gray-light);
-            font-size: 11px;
-        }
-
-        /* ==========================================================================
-           10. INTERACTIVE ACCORDION & KNOWLEDGE MODULES
-           ========================================================================== */
-        .faq-section-container {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .faq-accordion-item {
-            background: rgba(0,0,0,0.1);
-            border: 1px solid var(--industrial-gray-dark);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .faq-accordion-trigger {
-            width: 100%;
-            padding: 18px 22px;
-            background: transparent;
-            border: none;
-            color: var(--text-ultra-white);
-            text-align: left;
-            font-size: 13px;
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-accordion-content p {
-            padding: 20px;
-            color: var(--industrial-gray-light);
-            font-size: 13px;
-            line-height: 1.6;
-        }
-
-        .faq-accordion-item.active-panel .faq-accordion-content {
-            max-height: 200px;
-        }
-
-        /* ==========================================================================
-           11. "I LOVE MY MOTHER" SHIFTED AT THE END OF THE PAGE
-           ========================================================================== */
-        .end-devotion-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 60px 20px;
-            background: rgba(18, 24, 36, 0.4);
-            border-top: 1px solid var(--industrial-gray-dark);
-        }
-
-        .mother-devotion-banner {
-            background: linear-gradient(90deg, rgba(15, 23, 42, 0.9) 0%, rgba(236, 72, 153, 0.08) 50%, rgba(15, 23, 42, 0.9) 100%);
-            border: 2px solid var(--accent-pink-devotion);
-            padding: 25px 90px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: var(--neon-pink-shadow);
-            transform: skewX(-6deg);
-        }
-
-        .mother-devotion-banner h2 {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: 6px;
             text-transform: uppercase;
-            color: var(--text-ultra-white);
-            text-shadow: 0 0 20px rgba(236, 72, 153, 0.7);
-            transform: skewX(6deg);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: var(--text-pure);
+        }
+
+        .project-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px 30px;
+            border-radius: 14px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+        }
+
+        .project-box:hover {
+            background: rgba(59, 130, 246, 0.05);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .project-info .p-title {
+            color: var(--text-pure);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .project-info .p-url {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .project-arrow {
+            color: var(--accent-blue);
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-box:hover .project-arrow {
+            transform: translateX(5px);
+        }
+
+        /* Privacy Policy Extended Clauses */
+        .policy-block {
+            margin-bottom: 25px;
+        }
+
+        .policy-block h3 {
+            font-size: 16px;
+            color: var(--text-pure);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .policy-block p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 0;
         }
 
         /* ==========================================================================
-           12. MASTER SYSTEM FOOTER ARCHITECTURE
+           6. FOOTER STYLING (BOTTOM MIDDLE)
            ========================================================================== */
         footer {
             width: 100%;
             padding: 60px 20px;
             text-align: center;
-            border-top: 1px solid var(--industrial-gray-dark);
-            background: #080c14;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            position: relative;
+            z-index: 10;
+            background: rgba(5, 1, 13, 0.8);
         }
 
-        .footer-brand-signature {
+        .footer-text {
             font-size: 13px;
-            color: var(--accent-neon-blue);
-            font-weight: 700;
-            letter-spacing: 4px;
+            color: var(--accent-blue);
+            font-weight: 600;
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 15px;
         }
 
-        .footer-system-declaration {
-            font-size: 11px;
-            color: var(--industrial-gray-mid);
-            letter-spacing: 0.5px;
-            margin-bottom: 5px;
+        .footer-copyright {
+            font-size: 12px;
+            color: var(--text-muted);
         }
 
-        /* Immersive Sandboxed Auth Gateway Panel overlay UI */
-        .immersive-sandboxed-auth-gateway {
+        /* ==========================================================================
+           7. ADVANCED SIGN UP & LOG IN IMMERSIVE OVERLAY (NO SCROLL WINDOW)
+           ========================================================================== */
+        .auth-overlay-window {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #050811;
-            z-index: 99999;
-            display: none;
+            background-color: #030008;
+            background-image: 
+                radial-gradient(circle at 100% 0%, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+            z-index: 9999;
+            display: none; /* Controlled via JS */
             justify-content: center;
             align-items: center;
+            overflow: hidden; /* Strict no-scroll mechanism */
         }
 
-        .sandboxed-panel-card {
-            background: var(--industrial-slate-solid);
-            border: 1px solid var(--accent-neon-blue);
+        .auth-card-panel {
+            background: #0d0614;
+            border: 1px solid rgba(59, 130, 246, 0.25);
             width: 100%;
-            max-width: 450px;
-            padding: 40px;
-            border-radius: 16px;
+            max-width: 480px;
+            padding: 50px 45px;
+            border-radius: 28px;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 50px rgba(147, 51, 234, 0.1);
+            position: relative;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .auth-overlay-window.active .auth-card-panel {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .panel-close-trigger {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-pure);
+            font-size: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .panel-close-trigger:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: rgba(239, 68, 68, 0.4);
+            color: #ef4444;
+        }
+
+        .panel-header-desc {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .panel-header-desc h3 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .panel-header-desc p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Form Mechanics */
+        .form-group-block {
+            width: 100%;
+            margin-bottom: 20px;
             position: relative;
         }
 
-        .panel-dismiss-trigger-btn {
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            font-size: 26px;
-            color: var(--text-clean-muted);
-            cursor: pointer;
+        .form-label-text {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            text-align: left;
         }
 
-        @media (max-width: 1024px) {
-            header { padding: 15px 30px; }
-            .split-grid-layout, .brand-visual-grid, .grid-dual-inputs, .contact-grid-deck, .streaming-grid-layout { grid-template-columns: 1fr; }
-            .hero-large-title { font-size: 55px; }
-            .performance-matrix-container { grid-template-columns: repeat(2, 1fr); }
-            .premium-text-terminal { padding: 30px; }
+        .vault-input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-pure);
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .vault-input:focus {
+            border-color: var(--accent-blue);
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+        }
+
+        .action-execute-btn {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            background: var(--accent-blue);
+            color: var(--text-pure);
+            border: none;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .action-execute-btn:hover {
+            background: var(--accent-blue-hover);
+            box-shadow: 0 8px 25px var(--glow-color);
+            transform: translateY(-1px);
+        }
+
+        .auth-ui-separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 30px 0;
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .auth-ui-separator::before, .auth-ui-separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .auth-ui-separator:not(:empty)::before { margin-right: .5em; }
+        .auth-ui-separator:not(:empty)::after { margin-left: .5em; }
+
+        /* Provider Gateway Integrations */
+        .gateway-provider-btn {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-pure);
+            transition: all 0.2s ease;
+        }
+
+        .gateway-provider-btn.google-gateway {
+            background: #1a0f0e;
+            border-color: rgba(219, 68, 55, 0.2);
+        }
+
+        .gateway-provider-btn.google-gateway:hover {
+            background: #db4437;
+            border-color: #db4437;
+            box-shadow: 0 5px 20px rgba(219, 68, 55, 0.3);
+        }
+
+        .gateway-provider-btn.facebook-gateway {
+            background: #0f1424;
+            border-color: rgba(66, 103, 178, 0.2);
+        }
+
+        .gateway-provider-btn.facebook-gateway:hover {
+            background: #4267b2;
+            border-color: #4267b2;
+            box-shadow: 0 5px 20px rgba(66, 103, 178, 0.3);
+        }
+
+        /* Responsive Layout Optimization */
+        @media (max-width: 968px) {
+            header { padding: 20px 40px; }
+            header.scrolled { padding: 15px 40px; }
+            .grid-layout { grid-template-columns: 1fr; gap: 40px; }
+            .large-text { font-size: 55px; }
+            .extra-text { font-size: 18px; }
+            .detailed-text { padding: 30px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="cyber-mesh-grid"></div>
-    <div class="ambient-glow-orbs"></div>
-    <div class="ambient-glow-orbs-right"></div>
+    <div class="cyber-grid"></div>
 
-    <div class="viewport-master-pipeline">
+    <div class="main-wrapper">
 
-        <header id="networkHeaderNode">
-            <div class="network-brand-title" onclick="window.scrollTo(0,0)">
+        <header id="networkHeader">
+            <div class="brand-logo">
                 NAFAY <span>& TEAMS</span>
             </div>
             <nav>
-                <a href="#visualGalleryPanel">GALLERY</a>
-                <a href="#mediaStreamSection">STREAMS</a>
-                <a href="#aboutWelfareSection">ABOUT</a>
-                <a href="#donationPortalSection">DONATE</a>
-                <a href="#emergencyHelpSection">NEED HELP!</a>
-                <a href="#contactPortalSection">CONTACT</a>
-                <button class="navigation-action-trigger" onclick="engageAuthPipelineBridge()">SIGN IN</button>
-                <button class="navigation-action-trigger highlight-btn" onclick="engageAuthPipelineBridge()">LOG IN</button>
+                <a href="#aboutSection">ABOUT</a>
+                <a href="#privacySection">PRIVACY POLICY</a>
+                <button class="nav-btn" onclick="executeAuthBridge()">SIGN IN</button>
+                <button class="nav-btn primary-btn" onclick="executeAuthBridge()">LOG IN</button>
             </nav>
         </header>
 
-        <section class="hero-view-module">
-            <div class="studio-version-tag">MALIK NAFAY STUDIO OFFICIAL PLATFORM PRO V5</div>
-            <h1 class="hero-large-title">NAFAY & TEAMS</h1>
-            <p class="hero-extra-subtitle">WE ARE READY FOR ANY KIND OF HELP</p>
+        <section class="hero-container">
+            <div class="badge">MALIK NAFAY STUDIO PROJECT V3</div>
+            <h1 class="large-text">NAFAY & TEAMS</h1>
+            <p class="extra-text">WE ARE READY FOR ANY KIND OF HELP</p>
 
-            <div class="performance-matrix-container">
-                <div class="matrix-metric-node">
-                    <h3>6+</h3>
-                    <p>CORE MODULES</p>
+            <div class="feature-grid">
+                <div class="stat-card">
+                    <h3>3+</h3>
+                    <p>PROJ. TOP</p>
                 </div>
-                <div class="matrix-metric-node">
-                    <h3>2000+</h3>
-                    <p>TOTAL CODE LINES</p>
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>SECURE</p>
                 </div>
-                <div class="matrix-metric-node">
-                    <h3>SECURE</h3>
-                    <p>SSL SHIELD ACTIVE</p>
-                </div>
-                <div class="matrix-metric-node">
-                    <h3>CHARCOAL</h3>
-                    <p>METALLIC ZONE</p>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>SUPPORT</p>
                 </div>
             </div>
         </section>
 
-        <div class="structural-section-divider"></div>
+        <div class="section-divider"></div>
 
-        <section id="visualGalleryPanel" class="media-showcase-section">
-            <div class="gallery-header">
-                <h2>VERIFIED STUDIO GRAPHICS</h2>
-                <p>MALIK NAFAY CORE GRAPHICS CONTAINER STORAGE</p>
-            </div>
-            <div class="brand-visual-grid">
-                <div class="visual-card-frame">
-                    <img src="malik own.png" alt="Malik Edition Graphic Frame Container Design">
-                    <div class="visual-caption">THEME: <span>MALIK EDITION GRAPHIC</span></div>
+        <section id="aboutSection" class="content-section">
+            <div class="grid-layout">
+                <div class="section-meta">
+                    <h2>ABOUT US</h2>
+                    <p>WHO WE ARE & OUR CORE MISSION</p>
                 </div>
-                <div class="visual-card-frame">
-                    <img src="image.jpg" alt="Malik Nafay Official Identity Portrait Asset Matrix">
-                    <div class="visual-caption">IDENTITY: <span>MALIK NAFAY VERIFIED PORTRAIT</span></div>
-                </div>
-            </div>
-        </section>
-
-        <div class="structural-section-divider"></div>
-
-        <section id="mediaStreamSection" class="media-streaming-hub">
-            <div class="gallery-header">
-                <h2>PRODUCTION MEDIA STREAMER</h2>
-                <p>NATIVE SYSTEM CONTROLLER FOR GITHUB REPOSITORY STORAGE SEGMENTS</p>
-            </div>
-            <div class="streaming-grid-layout">
-                <div class="main-video-display-frame">
-                    <div class="video-element-wrapper">
-                        <video id="studioMainVideoPlayer" src="Level_Hai_High.mp4" poster="malik own.png" controls></video>
-                    </div>
-                    <div class="video-control-rack">
-                        <button class="video-playback-btn" onclick="document.getElementById('studioMainVideoPlayer').play()">PLAY ASSET</button>
-                        <button class="video-playback-btn" style="background:#475569;" onclick="document.getElementById('studioMainVideoPlayer').pause()">PAUSE</button>
-                        <span style="font-size:11px; text-transform:uppercase; color:var(--text-clean-muted);">STREAM PIPELINE READY</span>
-                    </div>
-                </div>
-                <div class="playlist-deck-panel">
-                    <h3 style="font-size:14px; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px;">AVAILABLE STREAMS</h3>
-                    <div class="playlist-track-node active-track" onclick="changeStudioVideoSource('Level_Hai_High.mp4', this)">
-                        <div class="track-index-digit">01</div>
-                        <div class="track-meta-data">
-                            <h4>Level_Hai_High.mp4</h4>
-                            <p>Official Studio Production Track</p>
-                        </div>
-                    </div>
-                    <div class="playlist-track-node" onclick="changeStudioVideoSource('music.mp4', this)">
-                        <div class="track-index-digit">02</div>
-                        <div class="track-meta-data">
-                            <h4>music.mp4</h4>
-                            <p>Lyric Writing Sound Composition Audio Module</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="structural-section-divider"></div>
-
-        <section id="aboutWelfareSection" class="portal-content-section">
-            <div class="split-grid-layout">
-                <div class="section-identity-panel">
-                    <h2>ABOUT LOGISTICS</h2>
-                    <p>COMMUNITY HUMAN SERVICE SYSTEM IN PAKPATTAN SHARIF</p>
-                </div>
-                <div class="premium-text-terminal">
-                    <p>Operating straight under the direct command structure of <strong>Malik Nafay</strong> in <strong>Pakpattan Sharif</strong>, our network targets fast help distribution. We maintain full integrity server setups that process applications quickly without downtime lag variables.</p>
-                    <p>Supported via technical setups produced inside the computing structures of <strong>MALIK NAFAY STUDIO</strong>, this dashboard links client targets with help workflows safely.</p>
+                <div class="detailed-text">
+                    <p>I am <strong>Malik Nafay</strong> from the historical city of <strong>Pakpattan Sharif</strong>. Driven by empathy and a strong dedication to the community, I serve as a primary coordinator and helper for underprivileged and poor people. Our core mission is to provide support, gather essential donations, and bridge the gap between resources and those who need them most desperately.</p>
+                    <p>Whenever someone reaches out through our server channels, our specialized support infrastructure ensures that our dedicated team processes the request and replies as early as possible. This portal is a verified, custom digital asset proudly designed and managed as an official production project of <strong>MALIK NAFAY STUDIO</strong>.</p>
                     
-                    <div class="social-linkage-showcase">
-                        <h4 style="font-size:12px; margin-bottom:15px; letter-spacing:2px;">OFFICIAL PUBLIC OUTLETS</h4>
-                        <div class="social-gateway-deck">
-                            <a href="https://www.tiktok.com/@pakpattan321" class="social-gateway-card" target="_blank">
-                                <div class="social-card-meta">
-                                    <div class="platform-label">TikTok System</div>
-                                    <div class="handle-identity">@pakpattan321</div>
-                                </div>
-                                <div class="social-card-action-pointer">→</div>
-                            </a>
-                            <a href="https://www.instagram.com/maliknafay321" class="social-gateway-card" target="_blank">
-                                <div class="social-card-meta">
-                                    <div class="platform-label">Instagram System</div>
-                                    <div class="handle-identity">@maliknafay321</div>
-                                </div>
-                                <div class="social-card-action-pointer">→</div>
-                            </a>
-                        </div>
+                    <div class="project-showcase">
+                        <h4>PREVIOUS CORE PROJECTS LIVE ON TOP</h4>
+                        <a href="https://maliknafaytop10.github.io/nafay-industries/" class="project-box" target="_blank">
+                            <div class="project-info">
+                                <div class="p-title">Malik Nafay Industries</div>
+                                <div class="p-url">maliknafaytop10.github.io/nafay-industries/</div>
+                            </div>
+                            <div class="project-arrow">→</div>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="structural-section-divider"></div>
+        <div class="section-divider"></div>
 
-        <section id="donationPortalSection" class="portal-content-section">
-            <div class="split-grid-layout">
-                <div class="section-identity-panel">
-                    <h2>DONATION SYSTEMS</h2>
-                    <p>FINANCIAL WELFARE DISPATCH COMPONENT</p>
+        <section id="privacySection" class="content-section">
+            <div class="grid-layout">
+                <div class="section-meta">
+                    <h2>PRIVACY POLICY</h2>
+                    <p>DATA SECURE ENVIRONMENT SYSTEM</p>
                 </div>
-                <div class="premium-text-terminal">
-                    <p>Select your active gateway route block below to access safe ledger transfer details. All allocations route automatically through encrypted network hashes.</p>
-                    
-                    <div class="donation-tab-system">
-                        <div class="donation-tab-headers">
-                            <button class="tab-select-trigger active-tab" onclick="switchDonationTab('crypto', event)">CRYPTOCURRENCY</button>
-                            <button class="tab-select-trigger" onclick="switchDonationTab('bank', event)">BANK WIRE TRANSFER</button>
-                            <button class="tab-select-trigger" onclick="switchDonationTab('local', event)">LOCAL PORTALS</button>
-                        </div>
-                        
-                        <div class="donation-card-body-wrapper" id="donationContentArea">
-                            <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">SECURE BITCOIN (BTC) WALLET POOL</h4>
-                            <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 12px;">Send blockchain payments natively inside our transaction block:</p>
-                            <div class="crypto-wallet-field">
-                                <span class="wallet-string-hash">1MalikNafayStudioX772VnV993X81HkqPkt77</span>
-                                <span class="copy-action-indicator" onclick="alert('BTC address string copied to hardware logs!')">COPY Address</span>
-                            </div>
-                        </div>
+                <div class="detailed-text">
+                    <div class="policy-block">
+                        <h3>1. DATA ARCHITECTURE AND SECURITY</h3>
+                        <p>Welcome to the official web portal of Nafay & Teams. Your data protection is critical to our network architecture. This document legally specifies how we manage, store, and shield any identifying or transactional parameters you share when initiating communication for donation handling or social welfare verification. All data pathways are protected under secure modern frameworks within the Malik Nafay Studio local database nodes.</p>
+                    </div>
+                    <div class="policy-block">
+                        <h3>2. CREDENTIAL AUTHENTICATION AND ZERO TRADING</h3>
+                        <p>When you choose to provide your email address or account details through our registration terminal, we guarantee a 100% closed-loop execution. Your credentials are strictly processed to verify identity and maintain non-duplicity. We hold a strict Zero Third-Party Trading policy: no information, contact number, or registration footprint is ever leased, shared, or exposed to external third-party servers.</p>
+                    </div>
+                    <div class="policy-block">
+                        <h3>3. FEDERATED OAUTH SINGLE SIGN-ON PROTOCOL</h3>
+                        <p>By executing login transactions via Google Open Authentication (OAuth) or Facebook API frameworks, you grant permission to fetch securely audited public verification fragments (such as your verified name and profile email address). This integration strictly exists to build user credibility, eradicate automation bots, maintain structural server sanitization, and preserve a completely safe ecosystem for legitimate charity distribution.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <div class="structural-section-divider"></div>
-
-        <section id="emergencyHelpSection" class="portal-content-section">
-            <div class="split-grid-layout">
-                <div class="section-identity-panel">
-                    <h2>NEED HELP!</h2>
-                    <p>CRITICAL EMERGENCY INTERFACE BLOCK TERMINAL</p>
-                </div>
-                <div class="premium-text-terminal" style="border-color: #ef4444;">
-                    <p>If you require urgent food aid, medical supplies, or social logistics help, register below. The dashboard pipeline guarantees our admin desk <strong>replies as early as possible</strong> to process requests.</p>
-                    
-                    <form class="emergency-form-layout" onsubmit="event.preventDefault(); alert('Emergency help token submitted straight to Malik Nafay Studio central operations database.');">
-                        <div class="grid-dual-inputs">
-                            <div class="terminal-field-container">
-                                <label>APPLICANT IDENTITY FULL NAME</label>
-                                <input type="text" class="terminal-input-node" placeholder="Your Name String" required>
-                            </div>
-                            <div class="terminal-field-container">
-                                <label>MOBILE PHONE CONTACT NUMBER</label>
-                                <input type="tel" class="terminal-input-node" placeholder="+92-300-0000000" required>
-                            </div>
-                        </div>
-                        <div class="terminal-field-container">
-                            <label>COMPREHENSIVE SITUATION REPORT DETAILED CONTEXT</label>
-                            <input type="text" class="terminal-input-node" placeholder="Describe your crisis urgency requirements clearly here..." required style="padding-bottom: 50px;">
-                        </div>
-                        <button type="submit" class="submit-emergency-trigger">DISPATCH EMERGENCY APPLICATION ROWS</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <div class="structural-section-divider"></div>
-
-        <section id="contactPortalSection" class="portal-content-section">
-            <div class="split-grid-layout">
-                <div class="section-identity-panel">
-                    <h2>CONTACT PORTAL</h2>
-                    <p>MALIK NAFAY STUDIO OFFICIAL COMMUNICATION PLATFORMS</p>
-                </div>
-                <div class="premium-text-terminal">
-                    <p>Get in touch with support teams using secure channels. For quick assistance, drop messages directly into our operational text gateway instance.</p>
-                    
-                    <div class="contact-grid-deck">
-                        <div class="contact-channel-node">
-                            <div class="channel-graphic-icon">✉</div>
-                            <div>
-                                <h5 style="font-size:13px; text-transform:uppercase;">EMAIL ROUTE</h5>
-                                <p style="font-size:12px; color:var(--text-clean-muted); margin:0;">support@nafaystudio.org</p>
-                            </div>
-                        </div>
-                        <div class="contact-channel-node">
-                            <div class="channel-graphic-icon">☎</div>
-                            <div>
-                                <h5 style="font-size:13px; text-transform:uppercase;">CENTRAL PHONE</h5>
-                                <p style="font-size:12px; color:var(--text-clean-muted); margin:0;">+92 (321) NAFAYNET</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="terminal-field-container">
-                        <label>DIRECT OVERLAY QUICK ENQUIRY TRANSMITTER</label>
-                        <input type="text" class="terminal-input-node" placeholder="Enter message text string topic row here..." id="quickMsgInput">
-                        <button class="navigation-action-trigger highlight-btn" style="width:100%; margin-top:12px; padding:15px; border-radius:8px;" onclick="if(document.getElementById('quickMsgInput').value !== '') { alert('Message pipeline dispatched safely!'); document.getElementById('quickMsgInput').value=''; } else { alert('Please enter message text rows.'); }">SEND MESSAGE PATHWAY</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="structural-section-divider"></div>
-
-        <section id="faqKnowledgeBase" class="portal-content-section">
-            <div class="split-grid-layout">
-                <div class="section-identity-panel">
-                    <h2>SYSTEM FLOWS</h2>
-                    <p>FAQ KNOWLEDGE ACCUMULATOR KERNEL</p>
-                </div>
-                <div class="premium-text-terminal">
-                    <p>Analyze how our background routines optimize data and asset management strings behind client-side interfaces:</p>
-                    
-                    <div class="faq-section-container">
-                        <div class="faq-accordion-item">
-                            <button class="faq-accordion-trigger" onclick="toggleFaqPanel(this)">
-                                <span>HOW QUICKLY WILL THE TEAM ANSWER EMERGENCY SUBMISSIONS?</span>
-                                <span>+</span>
-                            </button>
-                            <div class="faq-accordion-content">
-                                <p>Our internal scheduler maps input instances immediately so our dedicated welfare operators can make sure the team replies as early as possible to fix problems.</p>
-                            </div>
-                        </div>
-                        <div class="faq-accordion-item">
-                            <button class="faq-accordion-trigger" onclick="toggleFaqPanel(this)">
-                                <span>ARE THE VIDEO ASSET CHANNELS HOSTED DIRECTLY?</span>
-                                <span>+</span>
-                            </button>
-                            <div class="faq-accordion-content">
-                                <p>Yes, all media stream parameters link straight to internal paths like music.mp4 and Level_Hai_High.mp4 assets inside the GitHub repositories natively.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="privacyShieldSection" class="portal-content-section">
-            <div class="split-grid-layout">
-                <div class="section-identity-panel">
-                    <h2>PRIVACY COMPLIANCE</h2>
-                    <p>DATA REPOSITORY SHIELD SYSTEM INTEGRATION</p>
-                </div>
-                <div class="premium-text-terminal">
-                    <p>Our secure server layers shield user profiles completely against external crawler networks. Secure input values, contact forms, and allocation tokens remain locked within closed hardware instances, preventing search engine tracking tools from intercepting user identity rows.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="end-devotion-container">
-            <div class="mother-devotion-banner">
-                <h2>I LOVE MY MOTHER</h2>
-            </div>
-        </div>
 
         <footer>
-            <div class="footer-brand-signature">MALIK NAFAY STUDIO OFFICIAL SYSTEM CORE ARCHITECTURE</div>
-            <div class="footer-system-declaration">MALIK NAFAY NETWORK PTV (LTD) © 2026. RE-COLORED INDUSTRIAL PREMIUM SLATE DEPLOYMENT. ALL RIGHTS RESERVED.</div>
-            <div class="footer-system-declaration">VAULT INTEGRITY INSTANCE LOCATION: PAKPATTAN SHARIF ENTERPRISE BLOCK HUBS.</div>
+            <div class="footer-text">A PROJECT OF MALIK NAFAY STUDIO</div>
+            <div class="footer-copyright">MALIK NAFAY NETWORK PTV (LTD) © 2026. ALL RIGHTS RESERVED.</div>
         </footer>
 
     </div>
 
-    <div id="clientImmersiveAuthGateway" class="immersive-sandboxed-auth-gateway">
-        <div class="sandboxed-panel-card">
-            <div class="panel-dismiss-trigger-btn" onclick="terminateAuthPipelineBridge()">&times;</div>
-            <div style="text-align:center; margin-bottom:30px;">
-                <h3 style="text-transform:uppercase; font-size:22px; margin-bottom:8px;">PROFILE SIGN-IN CONTROL</h3>
-                <p style="font-size:12px; color:var(--industrial-gray-mid);">Access Malik Nafay Studio internal data registers securely</p>
+    <div id="immersiveAuthGateway" class="auth-overlay-window">
+        <div class="auth-card-panel">
+            <div class="panel-close-trigger" onclick="terminateAuthBridge()">&times;</div>
+            
+            <div class="panel-header-desc">
+                <h3>JOIN NAFAY & TEAMS</h3>
+                <p>Authorize access to enter the secure network portal</p>
             </div>
-            <div style="margin-bottom:15px;">
-                <label style="font-size:10px; font-weight:800; display:block; margin-bottom:6px;">USER ACCOUNT EMAIL ADDRESS</label>
-                <input type="email" class="terminal-input-node" placeholder="name@domain.com">
+            
+            <div class="form-group-block">
+                <label class="form-label-text">ENTER CORPORATE / PERSONAL EMAIL</label>
+                <input type="email" class="vault-input" placeholder="name@example.com" id="emailNode">
             </div>
-            <button class="submit-emergency-trigger" style="width:100%; background:var(--accent-neon-blue);" onclick="alert('Connecting profile registers...')">AUTHORIZE SYSTEM ACCESS</button>
+            
+            <button class="action-execute-btn" onclick="alert('System Redirecting via Secure Channel...')">Continue with Enterprise Identity</button>
+            
+            <div class="auth-ui-separator">OR CHOOSE FEDERATED SECURE GATEWAY</div>
+            
+            <button class="gateway-provider-btn google-gateway" onclick="alert('Connecting to Google OAuth Gateway...')">
+                <span>Continue with Google Account</span>
+            </button>
+            <button class="gateway-provider-btn facebook-gateway" onclick="alert('Connecting to Facebook Secure API...')">
+                <span>Continue with Facebook Identity</span>
+            </button>
         </div>
     </div>
 
     <script>
+        // Dynamic Header Transformative Logic on Page Scroll
         window.addEventListener('scroll', function() {
-            const networkHeaderNode = document.getElementById('networkHeaderNode');
+            const headerElement = document.getElementById('networkHeader');
             if (window.scrollY > 50) {
-                networkHeaderNode.classList.add('scrolled');
+                headerElement.classList.add('scrolled');
             } else {
-                networkHeaderNode.classList.remove('scrolled');
+                headerElement.classList.remove('scrolled');
             }
         });
 
-        function engageAuthPipelineBridge() {
-            const gatewayLayer = document.getElementById('clientImmersiveAuthGateway');
-            gatewayLayer.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function terminateAuthPipelineBridge() {
-            const gatewayLayer = document.getElementById('clientImmersiveAuthGateway');
-            gatewayLayer.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        function toggleFaqPanel(triggerNode) {
-            const parentItem = triggerNode.parentElement;
-            const openStateActive = parentItem.classList.contains('active-panel');
-            document.querySelectorAll('.faq-accordion-item').forEach(item => {
-                item.classList.remove('active-panel');
-            });
-            if (!openStateActive) {
-                parentItem.classList.add('active-panel');
-            }
-        }
-
-        function changeStudioVideoSource(sourceString, elementNode) {
-            const player = document.getElementById('studioMainVideoPlayer');
-            player.src = sourceString;
-            player.play();
-            document.querySelectorAll('.playlist-track-node').forEach(node => {
-                node.classList.remove('active-track');
-            });
-            elementNode.classList.add('active-track');
-        }
-
-        function switchDonationTab(selectedType, eventInstance) {
-            const contentBox = document.getElementById('donationContentArea');
-            document.querySelectorAll('.tab-select-trigger').forEach(btn => {
-                btn.classList.remove('active-tab');
-            });
-            eventInstance.target.classList.add('active-tab');
+        // Strict No-Scroll Window Activation Flow
+        function executeAuthBridge() {
+            const overlayContainer = document.getElementById('immersiveAuthGateway');
+            overlayContainer.style.display = 'flex';
             
-            if (selectedType === 'crypto') {
-                contentBox.innerHTML = `
-                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">SECURE BITCOIN (BTC) WALLET POOL</h4>
-                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 12px;">Send blockchain payments natively inside our transaction block:</p>
-                    <div class="crypto-wallet-field">
-                        <span class="wallet-string-hash">1MalikNafayStudioX772VnV993X81HkqPkt77</span>
-                        <span class="copy-action-indicator" onclick="alert('BTC address string copied to hardware logs!')">COPY Address</span>
-                    </div>`;
-            } else if (selectedType === 'bank') {
-                contentBox.innerHTML = `
-                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">OFFICIAL BANK TRANSFER DETAILED ROUTE</h4>
-                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 4px;"><strong>BANK HOUSING:</strong> MALIK NAFAY WELFARE CENTRAL LOGISTICS ACC</p>
-                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 12px;"><strong>IBAN NUMBER STRING:</strong> PK77MNSTUDIO0000123456789</p>
-                    <div class="crypto-wallet-field">
-                        <span class="wallet-string-hash">VERIFIED BANK CHANNELS ACTIVE</span>
-                        <span class="copy-action-indicator" onclick="alert('IBAN saved to logs.')">COPY IBAN</span>
-                    </div>`;
-            } else if (selectedType === 'local') {
-                contentBox.innerHTML = `
-                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">LOCAL MOBILE DIGITAL CHANNELS</h4>
-                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 4px;"><strong>EASYPAISA TARGET PROFILE:</strong> +92 321 7778889 (MALIK NAFAY)</p>
-                    <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 12px;"><strong>JAZZCASH TARGET PROFILE:</strong> +92 321 9991112 (MALIK VELOCITY)</p>
-                    <div class="crypto-wallet-field">
-                        <span class="wallet-string-hash">MOBILE ACCOUNT NUMBERS LINKED</span>
-                        <span class="copy-action-indicator" onclick="alert('Configuration confirmed.')">OK</span>
-                    </div>`;
-            }
+            // Micro-task timeout to ensure CSS transitions trigger correctly
+            setTimeout(() => {
+                overlayContainer.classList.add('active');
+            }, 10);
+            
+            // Freeze background viewport completely
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        }
+
+        // Window Deactivation & Viewport Normalization Flow
+        function terminateAuthBridge() {
+            const overlayContainer = document.getElementById('immersiveAuthGateway');
+            overlayContainer.classList.remove('active');
+            
+            setTimeout(() => {
+                overlayContainer.style.display = 'none';
+                // Restore body and document scroll components
+                document.body.style.overflow = 'auto';
+                document.documentElement.style.overflow = 'auto';
+            }, 400);
         }
     </script>
+
 </body>
 </html>

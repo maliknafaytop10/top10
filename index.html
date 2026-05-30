@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAFAY & TEAMS | MALIK NAFAY STUDIO OFFICIAL NETWORK V5</title>
+    <title>MALIK NAFAY NETWORK PTV (LTD) | CORE PLATFORM V5</title>
     <style>
         /* ==========================================================================
-           1. CORE INDUSTRIAL ARCHITECTURE & SYSTEM RE-COLORATION
+           1. RE-COLORED INDUSTRIAL PREMIUM SLATE DEPLOYMENT - INITIALIZATION
            ========================================================================== */
         :root {
             --bg-master-dark: #060913;
             --bg-gradient-start: #0a0e1a;
-            --bg-gradient-mid: #121824; /* Deep Industrial Gray/Charcoal injected */
+            --bg-gradient-mid: #121824; 
             --bg-gradient-end: #0b0f19;
             --accent-neon-blue: #3b82f6;
             --accent-neon-glow: #1d4ed8;
@@ -27,6 +27,7 @@
             --interface-glass-bg: rgba(18, 24, 36, 0.75);
             --interface-border-glow: rgba(59, 130, 246, 0.2);
             --neon-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+            --neon-pink-shadow: 0 0 30px rgba(236, 72, 153, 0.4);
         }
 
         * {
@@ -41,13 +42,11 @@
             width: 100%;
             min-height: 100vh;
             background-color: var(--bg-master-dark);
-            background-image: 
-                linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%);
+            background-image: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%);
             color: var(--text-ultra-white);
             overflow-x: hidden;
         }
 
-        /* Webkit Scrollbar Layout */
         ::-webkit-scrollbar {
             width: 12px;
         }
@@ -59,7 +58,6 @@
             border-radius: 6px;
         }
 
-        /* Cybernetic Mesh Grid Overlays */
         .cyber-mesh-grid {
             position: fixed;
             top: 0;
@@ -84,7 +82,6 @@
             background: radial-gradient(circle at 50% 50%, transparent 10%, var(--bg-master-dark) 90%);
         }
 
-        /* Ambient Lights */
         .ambient-glow-orbs {
             position: fixed;
             width: 700px;
@@ -96,8 +93,19 @@
             pointer-events: none;
         }
 
+        .ambient-glow-orbs-right {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.06) 0%, transparent 70%);
+            bottom: -100px;
+            right: -100px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
         /* ==========================================================================
-           2. HEADER MAIN PANEL ARCHITECTURE
+           2. HEADER MAIN NAVIGATION PIPELINE
            ========================================================================== */
         header {
             position: fixed;
@@ -188,7 +196,7 @@
         }
 
         /* ==========================================================================
-           3. HERO LANDING ENGINE (CLEAN ZONE - NO TOP MOTHER BANNER)
+           3. HERO ZONE ARCHITECTURE
            ========================================================================== */
         .viewport-master-pipeline {
             position: relative;
@@ -242,7 +250,6 @@
             margin-bottom: 60px;
         }
 
-        /* Metrics Counter Boxes */
         .performance-matrix-container {
             display: grid;
             grid-template-columns: repeat(4, 180px);
@@ -343,7 +350,6 @@
             color: var(--accent-neon-blue);
         }
 
-        /* Structural Divider Line */
         .structural-section-divider {
             width: 100%;
             max-width: 1200px;
@@ -353,7 +359,118 @@
         }
 
         /* ==========================================================================
-           5. PORTAL CONTENT SECTION ARCHITECTURE
+           5. INTERACTIVE VIDEO MEDIA PLAYER HUB MODULE
+           ========================================================================== */
+        .media-streaming-hub {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 40px;
+        }
+
+        .streaming-grid-layout {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 40px;
+        }
+
+        .main-video-display-frame {
+            background: var(--industrial-slate-solid);
+            border: 2px solid var(--industrial-gray-dark);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+
+        .video-element-wrapper {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-element-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-control-rack {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+            background: rgba(0,0,0,0.3);
+            padding: 12px 20px;
+            border-radius: 8px;
+        }
+
+        .video-playback-btn {
+            background: var(--accent-neon-blue);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .video-playback-btn:hover {
+            background: var(--accent-neon-glow);
+        }
+
+        .playlist-deck-panel {
+            background: var(--interface-glass-bg);
+            border: 1px solid var(--industrial-gray-dark);
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .playlist-track-node {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--industrial-slate-solid);
+            border: 1px solid transparent;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .playlist-track-node:hover, .playlist-track-node.active-track {
+            border-color: var(--accent-neon-blue);
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .track-index-digit {
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--accent-neon-blue);
+            width: 30px;
+        }
+
+        .track-meta-data h4 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .track-meta-data p {
+            font-size: 11px;
+            color: var(--text-clean-muted);
+        }
+
+        /* ==========================================================================
+           6. PORTAL CONTENT SECTION ARCHITECTURE
            ========================================================================== */
         .portal-content-section {
             width: 100%;
@@ -401,7 +518,7 @@
         }
 
         /* ==========================================================================
-           6. DEMAND 1: DONATE OPTION BLOCK DEPLOYMENT
+           7. DONATE OPTION BLOCK DEPLOYMENT
            ========================================================================== */
         .donation-tab-system {
             margin-top: 30px;
@@ -467,7 +584,7 @@
         }
 
         /* ==========================================================================
-           7. DEMAND 2: NEED HELP! PROTOCOL PANEL
+           8. NEED HELP! PROTOCOL PANEL
            ========================================================================== */
         .emergency-form-layout {
             display: flex;
@@ -532,7 +649,7 @@
         }
 
         /* ==========================================================================
-           8. DEMAND 3: CONTACT INTERFACE MODULE
+           9. CONTACT INTERFACE MODULE
            ========================================================================== */
         .contact-grid-deck {
             display: grid;
@@ -563,7 +680,6 @@
             font-weight: bold;
         }
 
-        /* Social Cards Grid */
         .social-linkage-showcase {
             margin-top: 35px;
             border-top: 1px solid var(--industrial-gray-dark);
@@ -604,7 +720,9 @@
             font-size: 11px;
         }
 
-        /* Accordion Structure System */
+        /* ==========================================================================
+           10. INTERACTIVE ACCORDION & KNOWLEDGE MODULES
+           ========================================================================== */
         .faq-section-container {
             margin-top: 30px;
             display: flex;
@@ -652,14 +770,14 @@
         }
 
         /* ==========================================================================
-           9. DEMAND ACTION: "I LOVE MY MOTHER" SHIFTED AT THE END OF THE PAGE
+           11. "I LOVE MY MOTHER" SHIFTED AT THE END OF THE PAGE
            ========================================================================== */
         .end-devotion-container {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
             background: rgba(18, 24, 36, 0.4);
             border-top: 1px solid var(--industrial-gray-dark);
         }
@@ -667,15 +785,15 @@
         .mother-devotion-banner {
             background: linear-gradient(90deg, rgba(15, 23, 42, 0.9) 0%, rgba(236, 72, 153, 0.08) 50%, rgba(15, 23, 42, 0.9) 100%);
             border: 2px solid var(--accent-pink-devotion);
-            padding: 22px 80px;
+            padding: 25px 90px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.2);
+            box-shadow: var(--neon-pink-shadow);
             transform: skewX(-6deg);
         }
 
         .mother-devotion-banner h2 {
-            font-size: 30px;
+            font-size: 32px;
             font-weight: 900;
             letter-spacing: 6px;
             text-transform: uppercase;
@@ -685,7 +803,7 @@
         }
 
         /* ==========================================================================
-           10. MASTER SYSTEM FOOTER
+           12. MASTER SYSTEM FOOTER ARCHITECTURE
            ========================================================================== */
         footer {
             width: 100%;
@@ -708,9 +826,10 @@
             font-size: 11px;
             color: var(--industrial-gray-mid);
             letter-spacing: 0.5px;
+            margin-bottom: 5px;
         }
 
-        /* Popups / Login Windows */
+        /* Immersive Sandboxed Auth Gateway Panel overlay UI */
         .immersive-sandboxed-auth-gateway {
             position: fixed;
             top: 0;
@@ -745,7 +864,7 @@
 
         @media (max-width: 1024px) {
             header { padding: 15px 30px; }
-            .split-grid-layout, .brand-visual-grid, .grid-dual-inputs, .contact-grid-deck { grid-template-columns: 1fr; }
+            .split-grid-layout, .brand-visual-grid, .grid-dual-inputs, .contact-grid-deck, .streaming-grid-layout { grid-template-columns: 1fr; }
             .hero-large-title { font-size: 55px; }
             .performance-matrix-container { grid-template-columns: repeat(2, 1fr); }
             .premium-text-terminal { padding: 30px; }
@@ -756,6 +875,7 @@
 
     <div class="cyber-mesh-grid"></div>
     <div class="ambient-glow-orbs"></div>
+    <div class="ambient-glow-orbs-right"></div>
 
     <div class="viewport-master-pipeline">
 
@@ -765,6 +885,7 @@
             </div>
             <nav>
                 <a href="#visualGalleryPanel">GALLERY</a>
+                <a href="#mediaStreamSection">STREAMS</a>
                 <a href="#aboutWelfareSection">ABOUT</a>
                 <a href="#donationPortalSection">DONATE</a>
                 <a href="#emergencyHelpSection">NEED HELP!</a>
@@ -775,14 +896,14 @@
         </header>
 
         <section class="hero-view-module">
-            <div class="studio-version-tag">MALIK NAFAY STUDIO OFFICIAL PLATFORM PRO V4</div>
+            <div class="studio-version-tag">MALIK NAFAY STUDIO OFFICIAL PLATFORM PRO V5</div>
             <h1 class="hero-large-title">NAFAY & TEAMS</h1>
             <p class="hero-extra-subtitle">WE ARE READY FOR ANY KIND OF HELP</p>
 
             <div class="performance-matrix-container">
                 <div class="matrix-metric-node">
-                    <h3>5+</h3>
-                    <p>ACTIVE MODULES</p>
+                    <h3>6+</h3>
+                    <p>CORE MODULES</p>
                 </div>
                 <div class="matrix-metric-node">
                     <h3>2000+</h3>
@@ -790,11 +911,11 @@
                 </div>
                 <div class="matrix-metric-node">
                     <h3>SECURE</h3>
-                    <p>SSL DATA SHIELD</p>
+                    <p>SSL SHIELD ACTIVE</p>
                 </div>
                 <div class="matrix-metric-node">
                     <h3>CHARCOAL</h3>
-                    <p>GRAY THEME</p>
+                    <p>METALLIC ZONE</p>
                 </div>
             </div>
         </section>
@@ -808,12 +929,50 @@
             </div>
             <div class="brand-visual-grid">
                 <div class="visual-card-frame">
-                    <img src="malik own.png" alt="Malik Nafay Jatt Mehkma Production Layout Asset Frame">
+                    <img src="malik own.png" alt="Malik Edition Graphic Frame Container Design">
                     <div class="visual-caption">THEME: <span>MALIK EDITION GRAPHIC</span></div>
                 </div>
                 <div class="visual-card-frame">
-                    <img src="image.jpg" alt="Malik Nafay Authentic Base Portrait Verification System">
+                    <img src="image.jpg" alt="Malik Nafay Official Identity Portrait Asset Matrix">
                     <div class="visual-caption">IDENTITY: <span>MALIK NAFAY VERIFIED PORTRAIT</span></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="structural-section-divider"></div>
+
+        <section id="mediaStreamSection" class="media-streaming-hub">
+            <div class="gallery-header">
+                <h2>PRODUCTION MEDIA STREAMER</h2>
+                <p>NATIVE SYSTEM CONTROLLER FOR GITHUB REPOSITORY STORAGE SEGMENTS</p>
+            </div>
+            <div class="streaming-grid-layout">
+                <div class="main-video-display-frame">
+                    <div class="video-element-wrapper">
+                        <video id="studioMainVideoPlayer" src="Level_Hai_High.mp4" poster="malik own.png" controls></video>
+                    </div>
+                    <div class="video-control-rack">
+                        <button class="video-playback-btn" onclick="document.getElementById('studioMainVideoPlayer').play()">PLAY ASSET</button>
+                        <button class="video-playback-btn" style="background:#475569;" onclick="document.getElementById('studioMainVideoPlayer').pause()">PAUSE</button>
+                        <span style="font-size:11px; text-transform:uppercase; color:var(--text-clean-muted);">STREAM PIPELINE READY</span>
+                    </div>
+                </div>
+                <div class="playlist-deck-panel">
+                    <h3 style="font-size:14px; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px;">AVAILABLE STREAMS</h3>
+                    <div class="playlist-track-node active-track" onclick="changeStudioVideoSource('Level_Hai_High.mp4', this)">
+                        <div class="track-index-digit">01</div>
+                        <div class="track-meta-data">
+                            <h4>Level_Hai_High.mp4</h4>
+                            <p>Official Studio Production Track</p>
+                        </div>
+                    </div>
+                    <div class="playlist-track-node" onclick="changeStudioVideoSource('music.mp4', this)">
+                        <div class="track-index-digit">02</div>
+                        <div class="track-meta-data">
+                            <h4>music.mp4</h4>
+                            <p>Lyric Writing Sound Composition Audio Module</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -824,7 +983,7 @@
             <div class="split-grid-layout">
                 <div class="section-identity-panel">
                     <h2>ABOUT LOGISTICS</h2>
-                    <p>COMMUNITY HUMAN SERVICE SYSTEM INPAKPATTAN SHARIF</p>
+                    <p>COMMUNITY HUMAN SERVICE SYSTEM IN PAKPATTAN SHARIF</p>
                 </div>
                 <div class="premium-text-terminal">
                     <p>Operating straight under the direct command structure of <strong>Malik Nafay</strong> in <strong>Pakpattan Sharif</strong>, our network targets fast help distribution. We maintain full integrity server setups that process applications quickly without downtime lag variables.</p>
@@ -866,9 +1025,9 @@
                     
                     <div class="donation-tab-system">
                         <div class="donation-tab-headers">
-                            <button class="tab-select-trigger active-tab" onclick="switchDonationTab('crypto')">CRYPTOCURRENCY</button>
-                            <button class="tab-select-trigger" onclick="switchDonationTab('bank')">BANK WIRE TRANSFER</button>
-                            <button class="tab-select-trigger" onclick="switchDonationTab('local')">LOCAL PORTALS</button>
+                            <button class="tab-select-trigger active-tab" onclick="switchDonationTab('crypto', event)">CRYPTOCURRENCY</button>
+                            <button class="tab-select-trigger" onclick="switchDonationTab('bank', event)">BANK WIRE TRANSFER</button>
+                            <button class="tab-select-trigger" onclick="switchDonationTab('local', event)">LOCAL PORTALS</button>
                         </div>
                         
                         <div class="donation-card-body-wrapper" id="donationContentArea">
@@ -1030,7 +1189,6 @@
     </div>
 
     <script>
-        // Adjust Header Density dynamically upon page scroll
         window.addEventListener('scroll', function() {
             const networkHeaderNode = document.getElementById('networkHeaderNode');
             if (window.scrollY > 50) {
@@ -1040,54 +1198,55 @@
             }
         });
 
-        // Trigger Overlay Window Access Bridge
         function engageAuthPipelineBridge() {
             const gatewayLayer = document.getElementById('clientImmersiveAuthGateway');
             gatewayLayer.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
 
-        // Deactivate Overlay Window Access Bridge
         function terminateAuthPipelineBridge() {
             const gatewayLayer = document.getElementById('clientImmersiveAuthGateway');
             gatewayLayer.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
-        // Toggle Accordion Controls Functional Flow
         function toggleFaqPanel(triggerNode) {
             const parentItem = triggerNode.parentElement;
             const openStateActive = parentItem.classList.contains('active-panel');
-            
             document.querySelectorAll('.faq-accordion-item').forEach(item => {
                 item.classList.remove('active-panel');
             });
-            
             if (!openStateActive) {
                 parentItem.classList.add('active-panel');
             }
         }
 
-        // Tab Select Content Modulations for Donation Component Block
-        function switchDonationTab(selectedType) {
+        function changeStudioVideoSource(sourceString, elementNode) {
+            const player = document.getElementById('studioMainVideoPlayer');
+            player.src = sourceString;
+            player.play();
+            document.querySelectorAll('.playlist-track-node').forEach(node => {
+                node.classList.remove('active-track');
+            });
+            elementNode.classList.add('active-track');
+        }
+
+        function switchDonationTab(selectedType, eventInstance) {
             const contentBox = document.getElementById('donationContentArea');
-            
             document.querySelectorAll('.tab-select-trigger').forEach(btn => {
                 btn.classList.remove('active-tab');
             });
+            eventInstance.target.classList.add('active-tab');
             
             if (selectedType === 'crypto') {
-                event.target.classList.add('active-tab');
                 contentBox.innerHTML = `
                     <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">SECURE BITCOIN (BTC) WALLET POOL</h4>
                     <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 12px;">Send blockchain payments natively inside our transaction block:</p>
                     <div class="crypto-wallet-field">
                         <span class="wallet-string-hash">1MalikNafayStudioX772VnV993X81HkqPkt77</span>
                         <span class="copy-action-indicator" onclick="alert('BTC address string copied to hardware logs!')">COPY Address</span>
-                    </div>
-                `;
+                    </div>`;
             } else if (selectedType === 'bank') {
-                event.target.classList.add('active-tab');
                 contentBox.innerHTML = `
                     <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">OFFICIAL BANK TRANSFER DETAILED ROUTE</h4>
                     <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 4px;"><strong>BANK HOUSING:</strong> MALIK NAFAY WELFARE CENTRAL LOGISTICS ACC</p>
@@ -1095,10 +1254,8 @@
                     <div class="crypto-wallet-field">
                         <span class="wallet-string-hash">VERIFIED BANK CHANNELS ACTIVE</span>
                         <span class="copy-action-indicator" onclick="alert('IBAN saved to logs.')">COPY IBAN</span>
-                    </div>
-                `;
+                    </div>`;
             } else if (selectedType === 'local') {
-                event.target.classList.add('active-tab');
                 contentBox.innerHTML = `
                     <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 14px; margin-bottom: 8px;">LOCAL MOBILE DIGITAL CHANNELS</h4>
                     <p style="font-size: 13px; color: var(--text-clean-muted); margin-bottom: 4px;"><strong>EASYPAISA TARGET PROFILE:</strong> +92 321 7778889 (MALIK NAFAY)</p>
@@ -1106,8 +1263,7 @@
                     <div class="crypto-wallet-field">
                         <span class="wallet-string-hash">MOBILE ACCOUNT NUMBERS LINKED</span>
                         <span class="copy-action-indicator" onclick="alert('Configuration confirmed.')">OK</span>
-                    </div>
-                `;
+                    </div>`;
             }
         }
     </script>

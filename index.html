@@ -3,70 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malik Nafay Studio | Official</title>
+    <title>NAFAY & TEAMS | Official Portal</title>
     <style>
-        /* --- CSS DESIGN START --- */
-        :root { --main-bg: #000; --accent: #8a2be2; --text-blue: #00d4ff; }
-        body { margin: 0; background: linear-gradient(135deg, #000, #1a0026, #000); color: #fff; font-family: 'Segoe UI', sans-serif; }
-        
-        nav { display: flex; justify-content: space-between; padding: 20px 50px; background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); }
-        .nav-links a { margin-left: 20px; color: #fff; text-decoration: none; cursor: pointer; }
-        
-        .hero { text-align: center; padding: 150px 20px; }
-        .large-text { font-size: 5rem; color: #fff; text-transform: uppercase; }
-        .blue-text { font-size: 1.5rem; color: var(--text-blue); margin-top: 10px; }
-        
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
-        .content { width: 350px; margin: 15% auto; background: #111; padding: 30px; border: 1px solid var(--accent); text-align: center; }
-        input { width: 90%; padding: 10px; margin: 10px 0; }
-        .btn { padding: 10px 20px; cursor: pointer; border: none; width: 90%; margin: 5px; }
-        
-        footer { text-align: center; padding: 50px; color: #555; }
-        /* --- CSS DESIGN END --- */
+        /* INDUSTRIAL GRADE STYLING */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        body { background-color: #0a0a0a; color: #ffffff; line-height: 1.6; }
+
+        /* HEADER & NAVIGATION */
+        header { padding: 30px 10%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; }
+        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+        nav a { color: #aaa; text-decoration: none; margin-left: 30px; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: #d4af37; }
+
+        /* HERO SECTION */
+        .hero { padding: 150px 10%; text-align: center; }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; color: #fff; }
+        .hero p { font-size: 1.2rem; color: #d4af37; letter-spacing: 5px; text-transform: uppercase; }
+
+        /* ABOUT SECTION - REPLICATING YOUR PROFESSIONAL STYLE */
+        .content-section { padding: 100px 20%; text-align: center; }
+        .content-section h2 { font-size: 2.5rem; margin-bottom: 30px; }
+        .content-section p { color: #888; font-size: 1.1rem; }
+
+        /* MODAL FOR SIGN IN/LOG IN */
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+        .modal-box { background: #111; padding: 50px; border: 1px solid #d4af37; width: 400px; text-align: center; }
+        input { width: 100%; padding: 12px; margin: 10px 0; background: #222; border: 1px solid #333; color: white; }
+        .btn { padding: 15px; width: 100%; background: #d4af37; border: none; cursor: pointer; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <nav>
+    <header>
         <div class="logo">NAFAY & TEAMS</div>
-        <div class="nav-links">
-            <a onclick="showAuth()">SIGN IN</a>
-            <a onclick="showAuth()">LOG IN</a>
+        <nav>
+            <a href="#" onclick="openModal()">SIGN IN</a>
+            <a href="#" onclick="openModal()">LOG IN</a>
             <a href="#about">ABOUT</a>
             <a href="#policy">PRIVATE POLICY</a>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <main class="hero">
-        <h1 class="large-text">NAFAY & TEAMS</h1>
-        <p class="blue-text">WE ARE READY FOR ANY KIND OF HELP</p>
-    </main>
+    <section class="hero">
+        <h1>NAFAY & TEAMS</h1>
+        <p>WE ARE READY FOR ANY KIND OF HELP</p>
+    </section>
 
-    <div id="authModal" class="modal">
-        <div class="content">
-            <h2 onclick="closeAuth()" style="cursor:pointer; text-align:right;">X</h2>
-            <h2>ACCESS PORTAL</h2>
+    <section id="about" class="content-section">
+        <h2>ABOUT US</h2>
+        <p>I am Malik Nafay from Pakpattan Sharif. I am a helper of poor people for donate & help. Contact us and our team will reply as early as possible. This is a project of Malik Nafay Studio. Our previous projects are a testament to our commitment to excellence and community welfare.</p>
+    </section>
+
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <h2>PORTAL ACCESS</h2>
             <input type="email" placeholder="Email Address">
-            <button class="btn" style="background:var(--text-blue)">CONTINUE WITH GOOGLE</button>
-            <button class="btn" style="background:var(--accent); color:white;">CONTINUE WITH FACEBOOK</button>
+            <button class="btn">CONTINUE</button>
         </div>
     </div>
 
-    <section id="about" style="padding: 50px;">
-        <h2>ABOUT</h2>
-        <p>I am Malik Nafay from Pakpattan Sharif. I am a helper of poor people for donate & help. Contact us and our team will reply as early as possible. This is a project of Malik Nafay Studio. Previous Projects: <a href="https://maliknafaytop10.github.io/nafay-industries/">Nafay Industries</a></p>
-    </section>
-
-    <footer id="policy">
-        <p>PRIVATE POLICY: We collect only necessary info. All data is secure. Project of Malik Nafay Studio © 2026</p>
-        <p style="margin-top: 20px;">[SMALL TEXT: WE ARE READY FOR ANY KIND OF HELP]</p>
-    </footer>
-
     <script>
-        /* --- LOGIC START --- */
-        function showAuth() { document.getElementById('authModal').style.display = 'block'; }
-        function closeAuth() { document.getElementById('authModal').style.display = 'none'; }
-        /* --- LOGIC END --- */
+        function openModal() { document.getElementById('modal').style.display = 'flex'; }
+        function closeModal(e) { document.getElementById('modal').style.display = 'none'; }
     </script>
 </body>
 </html>
